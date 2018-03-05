@@ -1,5 +1,5 @@
-# jslib_base [![release](https://img.shields.io/badge/release-v0.1.0-orange.svg)]() [![license](https://img.shields.io/badge/license-MIT-blue.svg)]()
-最好用的第三方仓库脚手架
+# [jslib-base](https://github.com/yanhaijing/jslib-base) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
+最好用的js第三方库脚手架
 
 ## 特性
 
@@ -111,7 +111,7 @@ $ npm publish
 [CHANGELOG.md](./CHANGELOG.md)
 
 ## 计划列表
-[TODO.md](TODO.md)
+[TODO.md](./TODO.md)
 
 ## 谁在使用
 
