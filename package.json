@@ -1,0 +1,30 @@
+{
+  "name": "jslib_base",
+  "version": "0.1.0",
+  "description": "描述信息",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build:webpack": "webpack --config webpack.config.js",
+    "build:rollup": "./node_modules/rollup/bin/rollup -c",
+    "build:cjs": "babel ./src -d ./dist",
+    "build": "npm run clean && npm run build:cjs && npm run build:rollup",
+    "test": "npm run build:cjs && mocha",
+    "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags",
+  },
+  "author": "yanhaijing",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "~6.26.0",
+    "babel-core": "~6.26.0",
+    "babel-loader": "~7.1.3",
+    "babel-preset-env": "~1.6.1",
+    "expect.js": "~0.3.1",
+    "mocha": "~5.0.1",
+    "rollup": "~0.56.4",
+    "rollup-plugin-babel": "~3.0.3",
+    "rollup-plugin-commonjs": "~8.3.0",
+    "rollup-plugin-node-resolve": "~3.0.3",
+    "webpack": "~3.11.0"
+  }
+}

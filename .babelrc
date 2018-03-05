@@ -1,0 +1,12 @@
+{
+    "presets": [
+        ["env",
+        {
+            "targets": {
+                "browsers": "last 2 versions, > 1%, ie >= 6",
+                "node": "0.10"
+            },
+            "modules": "commonjs"
+        }]
+    ]
+}

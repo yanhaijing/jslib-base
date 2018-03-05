@@ -1,0 +1,10 @@
+node_modules
+demo
+src
+test
+.babelrc
+CHANGELOG.md
+package-lock.json
+rollup.config.js
+TODO.md
+webpack.config.js
