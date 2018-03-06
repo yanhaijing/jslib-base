@@ -10,6 +10,7 @@
 - 支持Webpack，Rollup，fis等
 - 支持Node
 - 集成单元测试环境
+- 集成[travis-ci](https://www.travis-ci.org/)
 
 ## 兼容性
 单元测试保证支持如下环境：
