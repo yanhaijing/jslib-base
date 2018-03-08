@@ -5,12 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf ./dist",
+    "lint": "./node_modules/.bin/eslint src",
     "build:webpack": "webpack --config webpack.config.js",
     "build:rollup": "./node_modules/rollup/bin/rollup -c",
     "build:cjs": "babel ./src -d ./dist",
     "build": "npm run clean && npm run build:cjs && npm run build:rollup",
-    "lint": "./node_modules/.bin/eslint src",
-    "test": "npm run build:cjs && mocha",
+    "test": "npm run lint && npm run build:cjs && mocha",
     "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "author": "yanhaijing",
