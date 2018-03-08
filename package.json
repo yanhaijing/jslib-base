@@ -9,6 +9,7 @@
     "build:rollup": "./node_modules/rollup/bin/rollup -c",
     "build:cjs": "babel ./src -d ./dist",
     "build": "npm run clean && npm run build:cjs && npm run build:rollup",
+    "lint": "./node_modules/.bin/eslint src",
     "test": "npm run build:cjs && mocha",
     "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
@@ -26,6 +27,7 @@
     "babel-core": "~6.26.0",
     "babel-loader": "~7.1.3",
     "babel-preset-env": "~1.6.1",
+    "eslint": "~4.18.2",
     "expect.js": "~0.3.1",
     "mocha": "~5.0.1",
     "rollup": "~0.56.4",

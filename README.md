@@ -10,6 +10,7 @@
 - 支持Webpack，Rollup，fis等
 - 支持Node
 - 集成单元测试环境
+- 集成eslint
 - 集成[travis-ci](https://www.travis-ci.org/)
 
 ## 兼容性
