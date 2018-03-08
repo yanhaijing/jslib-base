@@ -1,10 +1,11 @@
 node_modules
+config
 demo
 src
 test
 .babelrc
+.editorconfig
+.travis.yml
 CHANGELOG.md
 package-lock.json
-rollup.config.js
 TODO.md
-webpack.config.js

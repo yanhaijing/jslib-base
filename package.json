@@ -5,11 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "lint": "./node_modules/.bin/eslint src",
-    "build:rollup": "./node_modules/rollup/bin/rollup -c",
-    "build:cjs": "babel ./src -d ./dist",
-    "build": "npm run clean && npm run build:cjs && npm run build:rollup",
-    "test": "npm run lint && npm run build:cjs && mocha",
+    "lint": "./node_modules/.bin/eslint -c ./config/.eslintrc.js src",
+    "build:self": "./node_modules/rollup/bin/rollup -c config/rollup.config.js",
+    "build:aio": "./node_modules/rollup/bin/rollup -c config/rollup.config.aio.js",
+    "build": "npm run clean && npm run build:self && npm run build:aio",
+    "test": "npm run lint && npm run build && mocha",
     "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "author": "yanhaijing",
@@ -22,9 +22,7 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "devDependencies": {
-    "babel-cli": "~6.26.0",
     "babel-core": "~6.26.0",
-    "babel-loader": "~7.1.3",
     "babel-preset-env": "~1.6.1",
     "eslint": "~4.18.2",
     "expect.js": "~0.3.1",

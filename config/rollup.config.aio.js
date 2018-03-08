@@ -19,18 +19,7 @@ export default {
             include: 'node_modules/**',
         }),
         babel({
-            sourceMap: true,
-            exclude: 'node_modules/**',
-            babelrc: false,
-            presets: [
-                ['env', {
-                    modules: false,
-                    targets: {
-                        "browsers": "last 2 versions, > 1%, ie >= 6",
-                        "node": "0.10"
-                    }
-                }]
-            ]
+            exclude: 'node_modules/**'
         })
     ]
 };
