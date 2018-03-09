@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "description": "最好用的js第三方库脚手架",
   "main": "dist/index.js",
+  "jsnext:main": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
   "scripts": {
     "clean": "rm -rf ./dist",
     "lint": "./node_modules/.bin/eslint -c ./config/.eslintrc.js src",
     "build:self": "./node_modules/rollup/bin/rollup -c config/rollup.config.js",
+    "build:esm": "./node_modules/rollup/bin/rollup -c config/rollup.config.esm.js",
     "build:aio": "./node_modules/rollup/bin/rollup -c config/rollup.config.aio.js",
-    "build": "npm run clean && npm run build:self && npm run build:aio",
+    "build": "npm run clean && npm run build:self && npm run build:esm &&  npm run build:aio",
     "test": "npm run lint && npm run build && mocha",
     "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
