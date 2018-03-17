@@ -16,7 +16,7 @@
 ## 兼容性
 单元测试保证支持如下环境：
 
-- Node 0.10+
+- Node 4+
 - Safari 6+ (Mac)
 - iOS 5+ Safari
 - Chrome 23+ (Windows, Mac, Android, iOS, Linux, Chrome OS)
