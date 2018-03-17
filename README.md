@@ -117,3 +117,4 @@ $ npm publish
 
 ## 谁在使用
 
+- [inherits.js](https://github.com/yanhaijing/inherits.js)
