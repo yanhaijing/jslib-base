@@ -12,8 +12,8 @@
     "build:esm": "./node_modules/rollup/bin/rollup -c config/rollup.config.esm.js",
     "build:aio": "./node_modules/rollup/bin/rollup -c config/rollup.config.aio.js",
     "build": "npm run clean && npm run build:self && npm run build:esm &&  npm run build:aio",
-    "test": "npm run lint && npm run build && mocha",
-    "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
+    "test": "npm run build && mocha",
+    "release": "npm run lint && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "author": "yanhaijing",
   "license": "MIT",
