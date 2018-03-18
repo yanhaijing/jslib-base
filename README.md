@@ -92,7 +92,7 @@ $ npm run build
 $ npm test
 ```
 
-修改package.json中的版本号，发布新版
+修改package.json中的版本号，修改README.md中的版本号，修改CHANGELOG.md，然后发布新版
 
 ```bash
 $ npm run release
@@ -103,9 +103,12 @@ $ npm run release
 ```bash
 $ npm publish
 ```
+
 可能需要你自己修改的地方如下：
 
+- README.md 中的信息
 - package.json 中的信息
+- config/rollup.js 中的信息
 - test/browser/index.html 中的仓库名称
 
 ## 更新日志
