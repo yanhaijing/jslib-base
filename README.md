@@ -120,4 +120,5 @@ $ npm publish
 ## 谁在使用
 
 - [type.js](https://github.com/yanhaijing/type.js)
+- [is.js](https://github.com/yanhaijing/is.js)
 - [inherits.js](https://github.com/yanhaijing/inherits.js)
