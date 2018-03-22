@@ -41,7 +41,7 @@
 通过npm下载安装代码
 
 ```bash
-$ npm install --save-dev jslib_base
+$ npm install --save jslib_base
 ```
 
 如果你是node环境
