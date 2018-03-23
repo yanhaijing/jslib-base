@@ -71,7 +71,7 @@ requirejs(['node_modules/jslib_base/dist/index.aio.js'], function (base) {
 ```
 
 ## 文档
-[API](./doc/api.md)
+[API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
 
 ## 贡献指南
 首次运行需要先安装依赖
@@ -112,10 +112,10 @@ $ npm publish
 - test/browser/index.html 中的仓库名称
 
 ## 更新日志
-[CHANGELOG.md](./CHANGELOG.md)
+[CHANGELOG.md](https://github.com/yanhaijing/jslib-base/blob/master/CHANGELOG.md)
 
 ## 计划列表
-[TODO.md](./TODO.md)
+[TODO.md](https://github.com/yanhaijing/jslib-base/blob/master/TODO.md)
 
 ## 谁在使用
 
