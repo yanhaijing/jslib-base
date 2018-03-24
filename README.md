@@ -123,3 +123,4 @@ $ npm publish
 - [is.js](https://github.com/yanhaijing/is.js)
 - [inherits.js](https://github.com/yanhaijing/inherits.js)
 - [guid.js](https://github.com/yanhaijing/guid.js)
+- [console.js](https://github.com/yanhaijing/console.js)
