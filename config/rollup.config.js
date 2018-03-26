@@ -8,8 +8,9 @@ export default {
     output: {
         file: 'dist/index.js',
         format: 'cjs',
+        // legacy: true,
+        banner: common.banner,
     },
-    banner: common.banner,
     plugins: [
         babel({
             exclude: 'node_modules/**'

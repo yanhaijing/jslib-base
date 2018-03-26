@@ -11,9 +11,10 @@ export default {
     output: {
         file: 'dist/index.aio.js',
         format: 'umd',
-        name: common.name
+        // legacy: true,
+        name: common.name,
+        banner: common.banner,
     },
-    banner: common.banner,
     plugins: [
         nodeResolve({
             main: true
