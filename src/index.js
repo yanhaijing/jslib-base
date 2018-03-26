@@ -1,5 +1,7 @@
 import { yan } from './test.js';
 
+import yan2 from './test.js';
+
 console.log(yan);
 
 var a = 1 + 1;
@@ -8,3 +10,5 @@ console.log(a);
 console.log(b);
 
 export const name = 'base';
+
+export default a;
