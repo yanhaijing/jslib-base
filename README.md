@@ -4,6 +4,7 @@
 ## 特性
 
 - ES6编写源码，编译生成生产代码
+- 集成 babel-runtime (默认关闭)
 - 第三方依赖自动注入
 - 支持浏览器原生
 - 支持AMD，CMD
@@ -13,6 +14,8 @@
 - 集成eslint
 - 集成[travis-ci](https://www.travis-ci.org/)
 - 支持banner
+
+**注意:** 如果不同时使用 export 与 export default 可打开legacy模式，legacy模式下的模块系统可以兼容ie6-8，见rollup配置文件
 
 ## 兼容性
 单元测试保证支持如下环境：
