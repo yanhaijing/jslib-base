@@ -11,6 +11,7 @@ export default {
     output: {
         file: 'dist/index.aio.js',
         format: 'umd',
+        // 如果不同时使用 export 与 export default 可打开legacy
         // legacy: true,
         name: common.name,
         banner: common.banner,
@@ -23,6 +24,7 @@ export default {
             include: 'node_modules/**',
         }),
         babel({
+            runtimeHelpers: true,
             exclude: 'node_modules/**'
         })
     ]
