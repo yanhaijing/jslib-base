@@ -123,9 +123,10 @@ $ npm publish
 
 ## 谁在使用
 
-- [type.js](https://github.com/yanhaijing/type.js)
-- [is.js](https://github.com/yanhaijing/is.js)
-- [inherits.js](https://github.com/yanhaijing/inherits.js)
-- [guid.js](https://github.com/yanhaijing/guid.js)
+- [@jsmini/base](https://github.com/jsmini/base)
+- [@jsmini/type](https://github.com/jsmini/type)
+- [@jsmini/is](https://github.com/jsmini/is)
+- [@jsmini/guid](https://github.com/jsmini/guid)
+- [@jsmini/event](https://github.com/jsmini/event)
+- [@jsmini/inherits](https://github.com/jsmini/inherits)
 - [console.js](https://github.com/yanhaijing/console.js)
-- [event.js](https://github.com/yanhaijing/event.js)
