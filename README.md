@@ -129,4 +129,4 @@ $ npm publish
 - [@jsmini/guid](https://github.com/jsmini/guid)
 - [@jsmini/event](https://github.com/jsmini/event)
 - [@jsmini/inherits](https://github.com/jsmini/inherits)
-- [console.js](https://github.com/yanhaijing/console.js)
+- [@jsmini/console](https://github.com/jsmini/console)
