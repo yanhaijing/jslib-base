@@ -22,6 +22,7 @@
 - 集成[travis-ci](https://www.travis-ci.org/)
 - 支持banner
 - 集成[jsmini](https://github.com/jsmini)
+- 集成ISSUE_TEMPLATE
 
 **注意:** 如果不同时使用 export 与 export default 可打开legacy模式，legacy模式下的模块系统可以兼容ie6-8，见rollup配置文件
 
