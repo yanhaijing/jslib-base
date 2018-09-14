@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
+  "sideEffects": false,
   "scripts": {
     "clean": "rm -rf ./dist",
     "lint": "./node_modules/.bin/eslint -c ./config/.eslintrc.js src",
