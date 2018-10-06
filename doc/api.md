@@ -8,7 +8,6 @@
 
 函数参数和返回值（要遵守下面的例子的规则）
 
-- description 描述
 - param {string} name1 name1描述
 - param {number} [name2] name2描述 ([]代表可选参数)
 - param {string|number} name3 name3描述 (| 代表多种类型)
