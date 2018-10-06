@@ -12,31 +12,26 @@
 
 - ES6编写源码，编译生成生产代码
 - 集成 babel-runtime (默认关闭)
-- 第三方依赖自动注入
-- 支持浏览器原生
-- 支持AMD，CMD
-- 支持Webpack，Rollup，fis等
-- 支持Node
+- 第三方依赖自动注入（自动剔除第三方依赖无用代码tree shaking）
+- 多环境支持（支持浏览器原生，支持AMD，CMD，支持Webpack，Rollup，fis等，支持Node）
 - 集成单元测试环境
-- 集成eslint
-- 集成[travis-ci](https://www.travis-ci.org/)
-- 支持banner
+- 集成代码风格校验eslint
+- 集成可持续构建工具[travis-ci](https://www.travis-ci.org/)
+- 支持自定义banner
 - 集成[jsmini](https://github.com/jsmini)
 - 集成ISSUE_TEMPLATE
 - 支持[sideEffects](https://juejin.im/post/5b4ff9ece51d45190c18bb65)
 
-**注意:** 如果不同时使用 export 与 export default 可打开legacy模式，legacy模式下的模块系统可以兼容ie6-8，见rollup配置文件
+**注意: 如果不同时使用 export 与 export default 可打开legacy模式，legacy模式下的模块系统可以兼容ie6-8，见rollup配置文件**
 
 ## 兼容性
 单元测试保证支持如下环境：
 
-- Node 4+
-- Safari 6+ (Mac)
-- iOS 5+ Safari
-- Chrome 23+ (Windows, Mac, Android, iOS, Linux, Chrome OS)
-- Firefox 4+ (Windows, Mac, Android, Linux)
-- Internet Explorer 6+ (Windows, Windows Phone)
-- Opera 10+ (Windows, linux, Android)
+| IE   | CH   | FF   | SF   | OP   | IOS  | 安卓   | Node  |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
+| 6+   | 23+  | 4+   | 6+   | 10+  | 5+   | 2.3+ | 0.10+ |
+
+**注意：编译代码依赖ES5环境，对于ie6-8需要引入[es5-shim](http://github.com/es-shims/es5-shim/)才可以兼容，可以查看[demo/demo-global.html](../demo/demo-global.html)中的例子**
 
 ## 目录介绍
 
@@ -51,7 +46,7 @@
 └── TODO.md 计划功能
 ```
 
-## 如何使用
+## 使用者指南
 通过npm下载安装代码
 
 ```bash
@@ -87,7 +82,7 @@ requirejs(['node_modules/jslib_base/dist/index.aio.js'], function (base) {
 ## 文档
 [API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
 
-## 贡献指南
+## 贡献者指南
 首次运行需要先安装依赖
 
 ```bash
