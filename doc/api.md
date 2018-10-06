@@ -1,3 +1,25 @@
 # 文档
+这是一个xxx库，有xxx功能
 
-**注意:** 编译代码依赖ES5环境，对于ie6-8需要引入[es5-shim](http://github.com/es-shims/es5-shim/)才可以兼容，可以查看[demo/demo-global.html](../demo/demo-global.html)中的例子
+## api模版
+函数简单介绍
+
+函数详细介绍
+
+函数参数和返回值（要遵守下面的例子的规则）
+
+- description 描述
+- param {string} name1 name1描述
+- param {number} [name2] name2描述 ([]代表可选参数)
+- param {string|number} name3 name3描述 (| 代表多种类型)
+- param {*} name3 name3描述 (*代表任意类型)
+- param {boolean} obj.sex 复合参数定义
+- return {string} 返回值描述
+
+举个例子（要包含代码用例）
+
+```js
+// 代码
+```
+
+特殊说明，比如特殊情况下会报错等
