@@ -1,5 +1,5 @@
 {
-  "name": "jslib_base",
+  "name": "jslib-base",
   "version": "0.2.0",
   "description": "最好用的js第三方库脚手架",
   "main": "dist/index.js",
@@ -7,6 +7,7 @@
   "module": "dist/index.esm.js",
   "sideEffects": false,
   "scripts": {
+    "rename": "node rename.js",
     "clean": "rimraf ./dist",
     "lint": "eslint -c config/.eslintrc.js src",
     "build:self": "rollup -c config/rollup.config.js",
@@ -29,6 +30,7 @@
     "babel-core": "6.26.0",
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-preset-env": "1.6.1",
+    "cdkit": "1.1.0",
     "es5-shim": "4.5.10",
     "eslint": "4.18.2",
     "expect.js": "0.3.1",
