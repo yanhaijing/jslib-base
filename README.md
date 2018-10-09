@@ -124,6 +124,8 @@ $ npm publish
 ```bash
 $ npm run rename # 重命名命令
 ```
+## 贡献者列表
+[contributors](https://github.com/yanhaijing/jslib-base/graphs/contributors)
 
 ## 更新日志
 [CHANGELOG.md](https://github.com/yanhaijing/jslib-base/blob/master/CHANGELOG.md)
