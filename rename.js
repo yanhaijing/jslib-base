@@ -35,4 +35,4 @@ const config = [
     },
 ];
 
-cdkit.run('find', config);
+cdkit.run('replace', config);
