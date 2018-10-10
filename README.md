@@ -139,6 +139,7 @@ $ npm run rename # 重命名命令
 - [@jsmini/type](https://github.com/jsmini/type)
 - [@jsmini/is](https://github.com/jsmini/is)
 - [@jsmini/guid](https://github.com/jsmini/guid)
+- [@jsmini/clone](https://github.com/jsmini/clone)
 - [@jsmini/event](https://github.com/jsmini/event)
 - [@jsmini/inherits](https://github.com/jsmini/inherits)
 - [@jsmini/console](https://github.com/jsmini/console)
