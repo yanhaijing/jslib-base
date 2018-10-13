@@ -81,7 +81,8 @@ requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
 ```
 
 ## 文档
-[API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
+- [API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
+- [2018年如何写一个现代的JavaScript库](https://yanhaijing.com/javascript/2018/08/17/2020-js-lib/)
 
 ## 贡献者指南
 首次运行需要先安装依赖
