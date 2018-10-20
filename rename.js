@@ -12,6 +12,7 @@ var map = [
     curPathName + '/README.md',
     curPathName + '/config/rollup.js',
     curPathName + '/test/browser/index.html',
+    curPathName + '/demo/demo-global.html',
 ];
 
 const config = [
