@@ -5,14 +5,16 @@ var cdkit = require('cdkit')
 var fromName = 'jslib-base';
 var toName = 'yanhajing';
 
-var curPathName = __dirname.split('/').pop();
+function getFullPath (filename) {
+    return path.join(__dirname, filename)
+}
 
 var map = [
-    curPathName + '/package.json',
-    curPathName + '/README.md',
-    curPathName + '/config/rollup.js',
-    curPathName + '/test/browser/index.html',
-    curPathName + '/demo/demo-global.html',
+    getFullPath('package.json'),
+    getFullPath('README.md'),
+    getFullPath('config/rollup.js'),
+    getFullPath('test/browser/index.html'),
+    getFullPath('demo/demo-global.html'),
 ];
 
 const config = [
