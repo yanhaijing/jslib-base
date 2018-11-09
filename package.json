@@ -42,19 +42,18 @@
     "rollup-plugin-node-resolve": "3.0.3"
   },
   "dependencies": {
+    "@jsmini/clone": "0.3.0",
     "@jsmini/console": "0.6.0",
     "@jsmini/event": "0.5.1",
+    "@jsmini/extend": "0.2.0",
     "@jsmini/guid": "0.6.0",
     "@jsmini/inherits": "0.5.0",
     "@jsmini/is": "0.4.0",
+    "@jsmini/load": "0.1.0",
+    "@jsmini/pubsub": "0.1.0",
+    "@jsmini/querystring": "0.1.0",
     "@jsmini/type": "0.4.0",
-    "babel-runtime": "6.26.0",
-    "clone": "2.1.2",
-    "extend": "3.0.2",
-    "load": "1.0.2",
-    "md5": "2.2.1",
-    "pubsub": "3.2.1",
-    "querystring": "0.2.0",
-    "url": "0.11.0"
+    "@jsmini/url": "0.1.0",
+    "babel-runtime": "6.26.0"
   }
 }
