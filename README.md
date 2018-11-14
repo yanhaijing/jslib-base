@@ -151,3 +151,4 @@ $ npm run rename # 重命名命令
 - [load](https://github.com/jsmini/load)
 - [md5](https://github.com/jsmini/md5)
 - [console](https://github.com/jsmini/console)
+- [axios-miniprogram-adapter](https://github.com/bigmeow/axios-miniprogram-adapter)
