@@ -152,3 +152,5 @@ $ npm run rename # 重命名命令
 - [md5](https://github.com/jsmini/md5)
 - [console](https://github.com/jsmini/console)
 - [axios-miniprogram-adapter](https://github.com/bigmeow/axios-miniprogram-adapter)
+- [react-compare](https://github.com/fXy-during/react-compare)
+- [z](https://github.com/PinghuaZhuang/z)
