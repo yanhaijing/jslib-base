@@ -138,6 +138,8 @@ $ npm run rename # 重命名命令
 
 ## 谁在使用
 
+jsmini
+
 - [type](https://github.com/jsmini/type)
 - [is](https://github.com/jsmini/is)
 - [inherits](https://github.com/jsmini/inherits)
@@ -151,6 +153,16 @@ $ npm run rename # 重命名命令
 - [load](https://github.com/jsmini/load)
 - [md5](https://github.com/jsmini/md5)
 - [console](https://github.com/jsmini/console)
+
+other
+
+- [littlejs](https://github.com/Zenquan/littlejs)
 - [axios-miniprogram-adapter](https://github.com/bigmeow/axios-miniprogram-adapter)
 - [react-compare](https://github.com/fXy-during/react-compare)
 - [z](https://github.com/PinghuaZhuang/z)
+- [xidux](https://github.com/ximolang/xidux)
+
+## 相关链接
+
+- [typescript-library-template](https://github.com/jiumao-fe/typescript-library-template)
+
