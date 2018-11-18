@@ -74,7 +74,7 @@ requirejs(['node_modules/jslib_base/dist/index.aio.js'], function (base) {
 ## :bookmark_tabs: 文档
 [API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
 
-## 贡献指南
+## :kissing_heart: 贡献指南
 首次运行需要先安装依赖
 
 ```bash
