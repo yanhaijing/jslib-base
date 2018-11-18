@@ -4,3 +4,4 @@
 - [X] 已完成
 - [ ] 升级babel7
 - [ ] 增加typescript的支持
+- [ ] 提供CLI支持
