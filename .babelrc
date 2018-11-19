@@ -1,12 +1,21 @@
 {
-    "presets": [
-        ["env",
-        {
-            "targets": {
-                "browsers": "last 2 versions, > 1%, ie >= 6, Android >= 4, iOS >= 6, and_uc > 9",
-                "node": "0.10"
-            },
-            "modules": false
-        }]
-    ]
+  "presets": [
+    ["env",
+    {
+      "targets": {
+        "browsers": "last 2 versions, > 1%, ie >= 6, Android >= 4, iOS >= 6, and_uc > 9",
+        "node": "0.10"
+      },
+      "modules": false,
+      "loose": false
+    }]
+  ],
+  "plugins": [
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": false,
+      "moduleName": "babel-runtime"
+    }]
+  ]
 }
