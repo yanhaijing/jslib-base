@@ -1,29 +1,39 @@
-# [jslib-base](https://github.com/yanhaijing/jslib-base) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.2.0-orange.svg)](https://www.npmjs.com/package/jslib-base) [![Build Status](https://travis-ci.org/yanhaijing/jslib-base.svg?branch=master)](https://travis-ci.org/yanhaijing/jslib-base) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
+# [jslib-base](https://github.com/yanhaijing/jslib-base)
+[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/yanhaijing/jslib-base.svg?branch=master)](https://travis-ci.org/yanhaijing/jslib-base)
+[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/jslib-base)
+[![NPM downloads](http://img.shields.io/npm/dm/jslib-base.svg?style=flat-square)](http://www.npmtrends.com/jslib-base)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/yanhaijing/jslib-base.svg)](http://isitmaintained.com/project/yanhaijing/jslib-base "Percentage of issues still open")
+
 最好用的js第三方库脚手架，fork或clone本仓库，即可搭建完成一个新库的基础框架
 
 ## :star: 特性
 
 - ES6编写源码，编译生成生产代码
-- 第三方依赖自动注入
-- 支持浏览器原生
-- 支持AMD，CMD
-- 支持Webpack，Rollup，fis等
-- 支持Node
+- 集成 babel-runtime (默认关闭)
+- 第三方依赖自动注入（自动剔除第三方依赖无用代码tree shaking）
+- 多环境支持（支持浏览器原生，支持AMD，CMD，支持Webpack，Rollup，fis等，支持Node）
 - 集成单元测试环境
-- 集成eslint
-- 集成[travis-ci](https://www.travis-ci.org/)
-- 支持banner
+- 集成代码风格校验eslint
+- 集成可持续构建工具[travis-ci](https://www.travis-ci.org/)
+- 支持自定义banner
+- 集成[jsmini](https://github.com/jsmini)
+- 集成ISSUE_TEMPLATE
+- 支持[sideEffects](https://juejin.im/post/5b4ff9ece51d45190c18bb65)
+- 支持一键重命名
+- 支持TypeScript
+
+**注意: 如果不同时使用 export 与 export default 可打开legacy模式，legacy模式下的模块系统可以兼容ie6-8，见rollup配置文件**
 
 ## :pill: 兼容性
 单元测试保证支持如下环境：
 
-- Node 4+
-- Safari 6+ (Mac)
-- iOS 5+ Safari
-- Chrome 23+ (Windows, Mac, Android, iOS, Linux, Chrome OS)
-- Firefox 4+ (Windows, Mac, Android, Linux)
-- Internet Explorer 6+ (Windows, Windows Phone)
-- Opera 10+ (Windows, linux, Android)
+| IE   | CH   | FF   | SF   | OP   | IOS  | 安卓   | Node  |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
+| 6+   | 23+  | 4+   | 6+   | 10+  | 5+   | 2.3+ | 0.10+ |
+
+**注意：编译代码依赖ES5环境，对于ie6-8需要引入[es5-shim](http://github.com/es-shims/es5-shim/)才可以兼容，可以查看[demo/demo-global.html](../demo/demo-global.html)中的例子**
 
 ## :open_file_folder: 目录介绍
 
@@ -38,29 +48,29 @@
 └── TODO.md 计划功能
 ```
 
-## :rocket: 如何使用
+## :rocket: 使用者指南
 通过npm下载安装代码
 
 ```bash
-$ npm install --save jslib_base
+$ npm install --save jslib-base
 ```
 
 如果你是node环境
 
 ```js
-var base = require('jslib_base');
+var base = require('jslib-base');
 ```
 
 如果你是webpack等环境
 
 ```js
-import base from 'jslib_base';
+import base from 'jslib-base';
 ```
 
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/jslib_base/dist/index.aio.js'], function (base) {
+requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
     // xxx
 })
 ```
@@ -68,13 +78,13 @@ requirejs(['node_modules/jslib_base/dist/index.aio.js'], function (base) {
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/jslib_base/dist/index.aio.js"></script>
+<script src="node_modules/jslib-base/dist/index.aio.js"></script>
 ```
 
 ## :bookmark_tabs: 文档
 [API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
 
-## :kissing_heart: 贡献指南
+## :kissing_heart: 贡献者指南
 首次运行需要先安装依赖
 
 ```bash
@@ -105,12 +115,19 @@ $ npm run release
 $ npm publish
 ```
 
-可能需要你自己修改的地方如下：
+重命名项目名称，首次初始化项目是需要修改名字，或者后面项目要改名时使用，需要修改`rename.js`中的`fromName`和`toName`，会自动重命名下面文件中的名字
 
 - README.md 中的信息
 - package.json 中的信息
 - config/rollup.js 中的信息
 - test/browser/index.html 中的仓库名称
+- demo/demo-global.html 中的仓库名称
+
+```bash
+$ npm run rename # 重命名命令
+```
+## 贡献者列表
+[contributors](https://github.com/yanhaijing/jslib-base/graphs/contributors)
 
 ## :gear: 更新日志
 [CHANGELOG.md](https://github.com/yanhaijing/jslib-base/blob/master/CHANGELOG.md)
@@ -120,9 +137,31 @@ $ npm publish
 
 ## :bulb: 谁在使用
 
-- [type.js](https://github.com/yanhaijing/type.js)
-- [is.js](https://github.com/yanhaijing/is.js)
-- [inherits.js](https://github.com/yanhaijing/inherits.js)
-- [guid.js](https://github.com/yanhaijing/guid.js)
-- [console.js](https://github.com/yanhaijing/console.js)
-- [event.js](https://github.com/yanhaijing/event.js)
+jsmini
+
+- [type](https://github.com/jsmini/type)
+- [is](https://github.com/jsmini/is)
+- [inherits](https://github.com/jsmini/inherits)
+- [guid](https://github.com/jsmini/guid)
+- [clone](https://github.com/jsmini/clone)
+- [extend](https://github.com/jsmini/extend)
+- [event](https://github.com/jsmini/event)
+- [url](https://github.com/jsmini/url)
+- [querystring](https://github.com/jsmini/querystring)
+- [pubsub](https://github.com/jsmini/pubsub)
+- [load](https://github.com/jsmini/load)
+- [md5](https://github.com/jsmini/md5)
+- [console](https://github.com/jsmini/console)
+
+other
+
+- [littlejs](https://github.com/Zenquan/littlejs)
+- [axios-miniprogram-adapter](https://github.com/bigmeow/axios-miniprogram-adapter)
+- [react-compare](https://github.com/fXy-during/react-compare)
+- [z](https://github.com/PinghuaZhuang/z)
+- [xidux](https://github.com/ximolang/xidux)
+
+## 相关链接
+
+- [typescript-library-template](https://github.com/jiumao-fe/typescript-library-template)
+
