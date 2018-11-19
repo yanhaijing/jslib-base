@@ -8,7 +8,7 @@
 
 最好用的js第三方库脚手架，fork或clone本仓库，即可搭建完成一个新库的基础框架
 
-## 特性
+## :star: 特性
 
 - ES6编写源码，编译生成生产代码
 - 集成 babel-runtime (默认关闭)
@@ -26,7 +26,7 @@
 
 **注意: 如果不同时使用 export 与 export default 可打开legacy模式，legacy模式下的模块系统可以兼容ie6-8，见rollup配置文件**
 
-## 兼容性
+## :pill: 兼容性
 单元测试保证支持如下环境：
 
 | IE   | CH   | FF   | SF   | OP   | IOS  | 安卓   | Node  |
@@ -35,7 +35,7 @@
 
 **注意：编译代码依赖ES5环境，对于ie6-8需要引入[es5-shim](http://github.com/es-shims/es5-shim/)才可以兼容，可以查看[demo/demo-global.html](../demo/demo-global.html)中的例子**
 
-## 目录介绍
+## :open_file_folder: 目录介绍
 
 ```
 .
@@ -48,7 +48,7 @@
 └── TODO.md 计划功能
 ```
 
-## 使用者指南
+## :rocket: 使用者指南
 通过npm下载安装代码
 
 ```bash
@@ -81,11 +81,10 @@ requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
 <script src="node_modules/jslib-base/dist/index.aio.js"></script>
 ```
 
-## 文档
-- [API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
-- [2018年如何写一个现代的JavaScript库](https://yanhaijing.com/javascript/2018/08/17/2020-js-lib/)
+## :bookmark_tabs: 文档
+[API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
 
-## 贡献者指南
+## :kissing_heart: 贡献者指南
 首次运行需要先安装依赖
 
 ```bash
@@ -130,13 +129,13 @@ $ npm run rename # 重命名命令
 ## 贡献者列表
 [contributors](https://github.com/yanhaijing/jslib-base/graphs/contributors)
 
-## 更新日志
+## :gear: 更新日志
 [CHANGELOG.md](https://github.com/yanhaijing/jslib-base/blob/master/CHANGELOG.md)
 
-## 计划列表
+## :airplane: 计划列表
 [TODO.md](https://github.com/yanhaijing/jslib-base/blob/master/TODO.md)
 
-## 谁在使用
+## :bulb: 谁在使用
 
 jsmini
 
