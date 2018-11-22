@@ -16,7 +16,8 @@
     "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
     "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
     "test": "npm run lint && npm run build && mocha",
-    "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
+    "cover": "npm run lint && npm run build && istanbul cover _mocha && istanbul check-coverage",
+    "release": "npm run cover && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "author": "yanhaijing",
   "license": "MIT",
@@ -36,6 +37,7 @@
     "es5-shim": "4.5.10",
     "eslint": "4.18.2",
     "expect.js": "0.3.1",
+    "istanbul": "0.4.5",
     "mocha": "3.5.3",
     "rimraf": "2.6.2",
     "rollup": "0.57.1",

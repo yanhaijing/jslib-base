@@ -6,6 +6,7 @@ test
 .babelrc
 .editorconfig
 .travis.yml
+.istanbul.yml
 CHANGELOG.md
 package-lock.json
 TODO.md
