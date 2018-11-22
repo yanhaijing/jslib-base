@@ -3,7 +3,7 @@
 var babel = require('rollup-plugin-babel');
 var nodeResolve = require('rollup-plugin-node-resolve');
 var commonjs = require('rollup-plugin-commonjs');
-var uglify = require('rollup-plugin-uglify').uglify;
+var uglify = require('rollup-plugin-uglify');
 
 var common = require('./rollup.js');
 
