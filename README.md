@@ -14,8 +14,9 @@
 - 集成 babel-runtime (默认关闭)
 - 第三方依赖自动注入（自动剔除第三方依赖无用代码tree shaking）
 - 多环境支持（支持浏览器原生，支持AMD，CMD，支持Webpack，Rollup，fis等，支持Node）
-- 集成单元测试环境
 - 集成代码风格校验eslint
+- 集成单元测试环境（mocha）
+- 集成测试覆盖率（istanbul）
 - 集成可持续构建工具[travis-ci](https://www.travis-ci.org/)
 - 支持自定义banner
 - 集成[jsmini](https://github.com/jsmini)
