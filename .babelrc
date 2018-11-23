@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["env",
+    ["@babel/preset-env",
     {
       "targets": {
         "browsers": "last 2 versions, > 1%, ie >= 6, Android >= 4, iOS >= 6, and_uc > 9",
@@ -11,11 +11,9 @@
     }]
   ],
   "plugins": [
-    ["transform-runtime", {
+    ["@babel/plugin-transform-runtime", {
       "helpers": false,
-      "polyfill": false,
-      "regenerator": false,
-      "moduleName": "babel-runtime"
+      "regenerator": false
     }]
   ]
 }
