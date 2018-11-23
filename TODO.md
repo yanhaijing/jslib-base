@@ -2,6 +2,6 @@
 这里列出会在未来添加的新功能，和已经完成的功能
 
 - [X] 已完成
-- [ ] 升级babel7
-- [ ] 增加typescript的支持
+- [X] 升级babel7
+- [X] 增加typescript的支持
 - [ ] 提供CLI支持
