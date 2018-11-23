@@ -6,7 +6,7 @@
 [![NPM downloads](http://img.shields.io/npm/dm/jslib-base.svg?style=flat-square)](http://www.npmtrends.com/jslib-base)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/yanhaijing/jslib-base.svg)](http://isitmaintained.com/project/yanhaijing/jslib-base "Percentage of issues still open")
 
-最好用的js第三方库脚手架，fork或clone本仓库，即可搭建完成一个新库的基础框架
+最好用的js|ts第三方库脚手架，fork或clone本仓库，即可搭建完成一个新库的基础框架
 
 ## :star: 特性
 
