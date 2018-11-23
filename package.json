@@ -18,6 +18,7 @@
     "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
     "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
     "test": "npm run eslint && npm run build && istanbul cover _mocha && istanbul check-coverage",
+    "coveralls": "istanbul cover _mocha --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "release": "npn test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "author": "yanhaijing",
@@ -34,6 +35,7 @@
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "cdkit": "1.1.0",
+    "coveralls": "3.0.2",
     "cross-env": "5.2.0",
     "es5-shim": "4.5.10",
     "eslint": "4.18.2",
