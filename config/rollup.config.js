@@ -33,6 +33,9 @@ export default {
         banner: common.banner,
     },
     plugins: [
-        typescript()
+        typescript({
+            tsconfigOverride: { compilerOptions : { declaration: true } },
+            useTsconfigDeclarationDir: true
+        })
     ]
 };

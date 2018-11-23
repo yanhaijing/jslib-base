@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "module": "ES2015",
-        "declaration": true
+        "declarationDir": "."
     },
     "include": [
         "src/**/*.ts"
