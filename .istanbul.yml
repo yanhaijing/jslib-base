@@ -1,8 +1,8 @@
 verbose: false
 check:
     global:
-        statements: 75
-        lines: 75
-        branches: 75
-        functions: 75
+        statements: 30
+        lines: 30
+        branches: 30
+        functions: 30
         excludes: []
