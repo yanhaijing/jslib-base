@@ -10,7 +10,7 @@
 
 ## :star: 特性
 
-- ES6编写源码，编译生成生产代码
+- 支持ES6+或TypeScript编写源码，编译生成生产代码
 - 集成 babel-runtime (默认关闭)
 - 第三方依赖自动注入（自动剔除第三方依赖无用代码tree shaking）
 - 多环境支持（支持浏览器原生，支持AMD，CMD，支持Webpack，Rollup，fis等，支持Node）
@@ -19,11 +19,10 @@
 - 集成测试覆盖率（istanbul）
 - 集成可持续构建工具[travis-ci](https://www.travis-ci.org/)
 - 支持自定义banner
-- 集成[jsmini](https://github.com/jsmini)
-- 集成ISSUE_TEMPLATE
-- 支持[sideEffects](https://juejin.im/post/5b4ff9ece51d45190c18bb65)
 - 支持一键重命名
-- 支持TypeScript
+- 支持[sideEffects](https://juejin.im/post/5b4ff9ece51d45190c18bb65)
+- 集成ISSUE_TEMPLATE
+- 集成[jsmini](https://github.com/jsmini)
 
 **注意: 如果不同时使用 export 与 export default 可打开legacy模式，legacy模式下的模块系统可以兼容ie6-8，见rollup配置文件**
 
