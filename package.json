@@ -10,13 +10,14 @@
   "scripts": {
     "rename": "node rename.js",
     "clean": "rimraf ./dist",
-    "lint": "eslint -c .eslintrc.js src/**.js && tslint -c tslint.json 'src/**.ts'",
+    "eslint": "eslint -c .eslintrc.js src/**.js",
+    "tslint": "tslint -c tslint.json src/**.ts",
     "build:self": "rollup -c config/rollup.config.js",
     "build:esm": "rollup -c config/rollup.config.esm.js",
     "build:aio": "rollup -c config/rollup.config.aio.js",
     "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
     "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
-    "test": "npm run lint && npm run build && istanbul cover _mocha && istanbul check-coverage",
+    "test": "npm run eslint && npm run build && istanbul cover _mocha && istanbul check-coverage",
     "release": "npn test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
   },
   "author": "yanhaijing",
