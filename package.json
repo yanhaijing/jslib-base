@@ -44,7 +44,10 @@
     "rollup-plugin-babel": "3.0.3",
     "rollup-plugin-commonjs": "8.3.0",
     "rollup-plugin-node-resolve": "3.0.3",
-    "rollup-plugin-uglify": "1.0.0"
+    "rollup-plugin-typescript2": "0.18.0",
+    "rollup-plugin-uglify": "1.0.0",
+    "tslib": "1.9.3",
+    "typescript": "3.1.6"
   },
   "dependencies": {
     "@jsmini/clone": "0.3.0",

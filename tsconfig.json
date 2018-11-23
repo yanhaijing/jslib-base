@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "ES2015",
+        "declaration": true
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "index.d.ts"
+    ]
+}
