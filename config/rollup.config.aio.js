@@ -10,51 +10,55 @@ var common = require('./rollup.js');
 
 var prod = process.env.NODE_ENV === 'production';
 
-// ecmascript
-export default {
-    input: 'src/index.js',
-    output: {
-        file: prod ? 'dist/index.aio.min.js' : 'dist/index.aio.js',
-        format: 'umd',
-        // 如果不同时使用 export 与 export default 可打开legacy
-        // legacy: true,
-        name: common.name,
-        banner: common.banner,
-    },
-    plugins: [
-        nodeResolve({
-            main: true
-        }),
-        commonjs({
-            include: 'node_modules/**',
-        }),
-        babel({
-            runtimeHelpers: true,
-            exclude: 'node_modules/**'
-        }),
-        (prod && uglify())
-    ]
-};
+if (common.isJS) {
+    // ecmascript
+    module.exports = {
+        input: 'src/index.js',
+        output: {
+            file: prod ? 'dist/index.aio.min.js' : 'dist/index.aio.js',
+            format: 'umd',
+            // 如果不同时使用 export 与 export default 可打开legacy
+            // legacy: true,
+            name: common.name,
+            banner: common.banner,
+        },
+        plugins: [
+            nodeResolve({
+                main: true
+            }),
+            commonjs({
+                include: 'node_modules/**',
+            }),
+            babel({
+                runtimeHelpers: true,
+                exclude: 'node_modules/**'
+            }),
+            (prod && uglify())
+        ]
+    };
+} else {
+    // typescript
+    module.exports = {
+        input: 'src/index.ts',
+        output: {
+            file: prod ? 'dist/index.aio.min.js' : 'dist/index.aio.js',
+            format: 'umd',
+            // 如果不同时使用 export 与 export default 可打开legacy
+            // legacy: true,
+            name: common.name,
+            banner: common.banner,
+        },
+        plugins: [
+            nodeResolve({
+                main: true,
+                extensions: [ '.ts', '.js' ]
+            }),
+            commonjs({
+                include: 'node_modules/**',
+            }),
+            typescript(),
+            (prod && uglify())
+        ]
+    };
+}
 
-// typescript
-// export default {
-//     input: 'src/index.ts',
-//     output: {
-//         file: prod ? 'dist/index.aio.min.js' : 'dist/index.aio.js',
-//         format: 'umd',
-//         // 如果不同时使用 export 与 export default 可打开legacy
-//         // legacy: true,
-//         name: common.name,
-//         banner: common.banner,
-//     },
-//     plugins: [
-//         nodeResolve({
-//             main: true
-//         }),
-//         commonjs({
-//             include: 'node_modules/**',
-//         }),
-//         typescript(),
-//         (prod && uglify())
-//     ]
-// };

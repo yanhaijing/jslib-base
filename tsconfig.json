@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "target": "ES5",
         "module": "ES2015",
         "declarationDir": "."
     },

@@ -6,6 +6,7 @@
   "jsnext:main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
   "sideEffects": false,
+  "srctype": "ts",
   "scripts": {
     "rename": "node rename.js",
     "clean": "rimraf ./dist",

@@ -13,5 +13,6 @@ var banner =
  */
 `;
 
+exports.isJS = pkg.srctype !== 'ts';
 exports.name = name;
 exports.banner = banner;
