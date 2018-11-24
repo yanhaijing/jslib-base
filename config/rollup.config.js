@@ -7,7 +7,7 @@ module.exports = {
     output: {
         file: 'dist/index.js',
         format: 'cjs',
-        // 如果不同时使用 export 与 export default 可打开legacy
+        // When export and export default are not used at the same time, set legacy to true.
         // legacy: true,
         banner: common.banner,
     },

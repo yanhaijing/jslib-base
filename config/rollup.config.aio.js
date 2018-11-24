@@ -13,7 +13,7 @@ module.exports = {
     output: {
         file: prod ? 'dist/index.aio.min.js' : 'dist/index.aio.js',
         format: 'umd',
-        // 如果不同时使用 export 与 export default 可打开legacy
+        // When export and export default are not used at the same time, set legacy to true.
         // legacy: true,
         name: common.name,
         banner: common.banner,

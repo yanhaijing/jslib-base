@@ -3,7 +3,7 @@ var babel = require('rollup-plugin-babel');
 
 var pkg = require('../package.json');
 
-// 兼容 jslib-base 和 @yanhaijing/jslib-base 
+// compatible with jslib-base and @yanhaijing/jslib-base 
 var name = pkg.name.split('/').pop();
 var version = pkg.version;
 
