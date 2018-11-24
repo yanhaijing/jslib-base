@@ -1,3 +1,6 @@
+var typescript = require('rollup-plugin-typescript2');
+var babel = require('rollup-plugin-babel');
+
 var pkg = require('../package.json');
 
 // 兼容 jslib-base 和 @yanhaijing/jslib-base 
@@ -13,6 +16,20 @@ var banner =
  */
 `;
 
-exports.isJS = pkg.srctype !== 'ts';
+var type = pkg.srctype === 'ts' ? 'ts' : 'js';
+
+function getCompiler(opt) {
+    if (type === 'js') {
+        return babel({
+            runtimeHelpers: true,
+            exclude: 'node_modules/**'
+        });
+    }
+
+    return typescript(opt);
+}
+
+exports.type = type;
 exports.name = name;
 exports.banner = banner;
+exports.getCompiler = getCompiler;
