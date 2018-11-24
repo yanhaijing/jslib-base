@@ -7,139 +7,142 @@
 [![NPM downloads](http://img.shields.io/npm/dm/jslib-base.svg?style=flat-square)](http://www.npmtrends.com/jslib-base)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/yanhaijing/jslib-base.svg)](http://isitmaintained.com/project/yanhaijing/jslib-base "Percentage of issues still open")
 
-最好用的js|ts第三方库脚手架，fork或clone本仓库，即可搭建完成一个新库的基础框架
+[简体中文](./README.zh-CN.md) | English
 
-## :star: 特性
+The best third party `JS|TS` library scaffold. By forking or cloning the repository, you can complete the basic framework for building a new library.
 
-- 支持ES6+或TypeScript编写源码，编译生成生产代码
-- 集成 babel-runtime (默认关闭)
-- 第三方依赖自动注入（自动剔除第三方依赖无用代码tree shaking）
-- 多环境支持（支持浏览器原生，支持AMD，CMD，支持Webpack，Rollup，fis等，支持Node）
-- 集成代码风格校验(eslint|tslint)
-- 集成单元测试环境（mocha）
-- 集成测试覆盖率（istanbul）
-- 集成可持续构建工具[travis-ci](https://www.travis-ci.org/)
-- 支持自定义banner
-- 支持一键重命名
-- 支持[sideEffects](https://juejin.im/post/5b4ff9ece51d45190c18bb65)
-- 集成ISSUE_TEMPLATE
-- 集成[jsmini](https://github.com/jsmini)
+## Characteristics
 
-**注意: 如果不同时使用 export 与 export default 可打开legacy模式，legacy模式下的模块系统可以兼容ie6-8，见rollup配置文件**
+- Coded in ES6+ or TypeScript, easily compile and generate production code
+- Integrated babel-runtime (Default set to closed)
+- Third parties rely on automatic injection(Tree shaking)
+- Supports multi environment, including default browsers, Node, AMD, CMD, Webpack, Rollup, Fis and so on.
+- Integrated code style lint(eslint|tslint).
+- Integrated unit test environment(mocha).
+- Integrated test coverage(istanbul).
+- Integrated continuous integration tool [travis-ci](https://www.travis-ci.org/)
+- Supports banner
+- Supports one-key renaming.
+- Supports [sideEffects](https://github.com/webpack/webpack/tree/master/examples/side-effects)
+- Integrated Issue template
+- Integrated [jsmini](https://github.com/jsmini)
 
-## :pill: 兼容性
-单元测试保证支持如下环境：
+**Note:** When `export` and `export default` are not used at the same time, there is the option to 
+turn on `legacy mode`. Under `legacy mode`, the module system can be compatible with `IE6-8`. For more information on legacy mode, 
+please see rollup supplemental file. 
 
-| IE   | CH   | FF   | SF   | OP   | IOS  | 安卓   | Node  |
+## Compatibility
+Unit tests guarantee support on the following environment:
+
+| IE   | CH   | FF   | SF   | OP   | IOS  | Android   | Node  |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
 | 6+   | 23+  | 4+   | 6+   | 10+  | 5+   | 2.3+ | 0.10+ |
 
-**注意：编译代码依赖ES5环境，对于ie6-8需要引入[es5-shim](http://github.com/es-shims/es5-shim/)才可以兼容，可以查看[demo/demo-global.html](../demo/demo-global.html)中的例子**
+> Note: Compiling code depend on ES5, so you need import [es5-shim](http://github.com/es-shims/es5-shim/) to compatible with `IE6-8`, here is a [demo](./demo/demo-global.html)
 
-## :open_file_folder: 目录介绍
-
+## Directory
 ```
-.
-├── demo 使用demo
-├── dist 编译产出代码
-├── doc 项目文档
-├── src 源代码目录
-├── test 单元测试
-├── CHANGELOG.md 变更日志
-└── TODO.md 计划功能
+├── demo - Using demo
+├── dist - Compiler output code
+├── doc - Project documents
+├── src - Source code directory
+├── test - Unit tests
+├── CHANGELOG.md - Change log
+└── TODO.md - Planned features
 ```
 
-## :rocket: 使用者指南
-通过npm下载安装代码
+## Usage Instructions
+
+Using npm, download and install the code. 
 
 ```bash
 $ npm install --save jslib-base
 ```
 
-如果你是node环境
+For node environment：
 
 ```js
 var base = require('jslib-base');
 ```
 
-如果你是webpack等环境
+For webpack or similar environment：
 
 ```js
 import base from 'jslib-base';
 ```
 
-如果你是requirejs环境
+For requirejs environment:
 
 ```js
 requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
-    // xxx
+    // do something...
 })
 ```
 
-如果你是浏览器环境
+For browser environment:
 
 ```html
 <script src="node_modules/jslib-base/dist/index.aio.js"></script>
 ```
 
-## :bookmark_tabs: 文档
-[API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
+## Documents
+[API](./doc/api.md)
 
-## :kissing_heart: 贡献者指南
-JS和TS切换，仅需更改`package.json`中的`srctype`字段即可
+## Contribution Guide
 
-首次运行需要先安装依赖
+You can set the `srctype` in `package.json` for switching between JS and TS.
+
+For the first time to run, you need to install dependencies firstly.
 
 ```bash
 $ npm install
 ```
 
-一键打包生成生产代码
+To build the project:
 
 ```bash
 $ npm run build
 ```
 
-运行单元测试，浏览器环境需要手动测试，位于`test/browser`
+To run unit tests:
 
 ```bash
 $ npm test
 ```
 
-修改package.json中的版本号，修改README.md中的版本号，修改CHANGELOG.md，然后发布新版
+> Note: The browser environment needs to be tested manually under ```test/browser```
+
+Modify the version number in package.json, modify the version number in README.md, modify the CHANGELOG.md, and then release the new version.
 
 ```bash
 $ npm run release
 ```
 
-将新版本发布到npm
+Publish the new version to NPM.
 
 ```bash
 $ npm publish
 ```
 
-重命名项目名称，首次初始化项目是需要修改名字，或者后面项目要改名时使用，需要修改`rename.js`中的`fromName`和`toName`，会自动重命名下面文件中的名字
+For renaming project, you need change `fromName` and `toName` in `rename.js`, then run `npm run rename`, this command will auto renaming names for below files:
 
-- README.md 中的信息
-- package.json 中的信息
-- config/rollup.js 中的信息
-- test/browser/index.html 中的仓库名称
-- demo/demo-global.html 中的仓库名称
+- The messages in README.md
+- The messages in package.json
+- The messages in config/rollup.js
+- The repository name in test/browser/index.html
+- Library name in demo/demo-global.html
 
-```bash
-$ npm run rename # 重命名命令
-```
+## Contributors
 
-## 贡献者列表
 [contributors](https://github.com/yanhaijing/jslib-base/graphs/contributors)
 
-## :gear: 更新日志
-[CHANGELOG.md](https://github.com/yanhaijing/jslib-base/blob/master/CHANGELOG.md)
+## Change Log
+[CHANGELOG.md](./CHANGELOG.md)
 
-## :airplane: 计划列表
-[TODO.md](https://github.com/yanhaijing/jslib-base/blob/master/TODO.md)
+## TODO
+[TODO.md](./TODO.md)
 
-## :bulb: 谁在使用
+## Current Users
 
 jsmini
 
@@ -164,8 +167,8 @@ other
 - [react-compare](https://github.com/fXy-during/react-compare)
 - [z](https://github.com/PinghuaZhuang/z)
 - [xidux](https://github.com/ximolang/xidux)
+- [qrcode-decoder](https://github.com/yugasun/qrcode-decoder)
 
-## 相关链接
+## Relative links
 
 - [typescript-library-template](https://github.com/jiumao-fe/typescript-library-template)
-

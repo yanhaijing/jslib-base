@@ -1,24 +1,26 @@
-# 文档
-这是一个xxx库，有xxx功能
+# Document
 
-## api模版
-函数简单介绍
+This is a `xxx` library with `xxx` features.
 
-函数详细介绍
+## Api template
 
-函数参数和返回值（要遵守下面的例子的规则）
+simple introduction of function
 
-- param {string} name1 name1描述
-- param {number} [name2] name2描述 ([]代表可选参数)
-- param {string|number} name3 name3描述 (| 代表多种类型)
-- param {*} name3 name3描述 (*代表任意类型)
-- param {boolean} obj.sex 复合参数定义
-- return {string} 返回值描述
+detail introduction of function
 
-举个例子（要包含代码用例）
+parameters and return of function need follow below rules:
+
+- param {string} name1 name1 description
+- param {number} [name2] name2 description ([] means optional)
+- param {string|number} name3 name3 description (| means multi types)
+- param { * } name3 name3 description (* means any type)
+- param {boolean} obj.sex definition of compound parameters
+- return {string} description for return
+
+For example (must have code example)
 
 ```js
-// 代码
+// do something
 ```
 
-特殊说明，比如特殊情况下会报错等
+special notice for errors and so on.
