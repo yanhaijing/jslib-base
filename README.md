@@ -86,6 +86,8 @@ requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
 [API](https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md)
 
 ## :kissing_heart: 贡献者指南
+JS和TS切换，仅需更改`package.json`中的`srctype`字段即可
+
 首次运行需要先安装依赖
 
 ```bash
@@ -127,6 +129,7 @@ $ npm publish
 ```bash
 $ npm run rename # 重命名命令
 ```
+
 ## 贡献者列表
 [contributors](https://github.com/yanhaijing/jslib-base/graphs/contributors)
 
