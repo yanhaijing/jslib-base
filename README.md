@@ -168,6 +168,7 @@ other
 - [z](https://github.com/PinghuaZhuang/z)
 - [xidux](https://github.com/ximolang/xidux)
 - [qrcode-decoder](https://github.com/yugasun/qrcode-decoder)
+- [search-util](https://github.com/The-End-Hero/search-util)
 
 ## Relative links
 
