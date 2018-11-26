@@ -7,9 +7,11 @@
 [![NPM downloads](http://img.shields.io/npm/dm/jslib-base.svg?style=flat-square)](http://www.npmtrends.com/jslib-base)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/yanhaijing/jslib-base.svg)](http://isitmaintained.com/project/yanhaijing/jslib-base "Percentage of issues still open")
 
-简体中文 | [English](./README.md)
+[English](./README.md) | 简体中文
 
-最好用的 `js|ts` 第三方库脚手架，fork 或 clone 本仓库，即可搭建完成一个新库的基础框架
+最好用的 `JS|TS` 第三方库脚手架，fork 或 clone 本仓库，即可搭建完成一个新库的基础框架
+
+**基于jslib-base的库，都可以分享到[jsmini](https://github.com/jsmini)平台**
 
 ## :star: 特性
 

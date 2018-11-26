@@ -7,9 +7,11 @@
 [![NPM downloads](http://img.shields.io/npm/dm/jslib-base.svg?style=flat-square)](http://www.npmtrends.com/jslib-base)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/yanhaijing/jslib-base.svg)](http://isitmaintained.com/project/yanhaijing/jslib-base "Percentage of issues still open")
 
-[简体中文](./README.zh-CN.md) | English
+English | [简体中文](./README.zh-CN.md)
 
 The best third party `JS|TS` library scaffold. By forking or cloning the repository, you can complete the basic framework for building a new library.
+
+**The library that based jslib-base can be shared to the [jsmini](https://github.com/jsmini) platform**
 
 ## Characteristics
 
