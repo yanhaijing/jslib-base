@@ -1,19 +1,11 @@
-var expect = require('expect.js');
+import path from 'path';
+import test from 'ava';
+import sao from 'sao';
 
-var base = require('../dist/index.js');
+const generator = path.join(__dirname, '..');
 
-describe('单元测试', function() {
-    this.timeout(1000);
+test('defaults', async t => {
+  const stream = await sao.mock({ generator })
 
-    describe('功能1', function() {
-        it('相等', function() {
-            expect(base.name).to.equal('base');
-        });
-    });
-
-    describe('功能2', function() {
-        it('不相等', function() {
-            expect(base.name).not.to.equal(1);
-        });
-    });
+  t.snapshot(stream.fileList, 'Generated files')
 });

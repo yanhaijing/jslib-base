@@ -2,70 +2,27 @@
   "name": "jslib-base",
   "version": "0.1.0",
   "description": "最好用的js第三方库脚手架",
-  "main": "dist/index.js",
-  "jsnext:main": "dist/index.esm.js",
-  "module": "dist/index.esm.js",
-  "sideEffects": false,
-  "srctype": "js",
-  "scripts": {
-    "rename": "node rename.js",
-    "clean": "rimraf ./dist",
-    "eslint": "eslint -c .eslintrc.js src/**.js",
-    "tslint": "tslint -c tslint.json src/**.ts",
-    "build:self": "rollup -c config/rollup.config.js",
-    "build:esm": "rollup -c config/rollup.config.esm.js",
-    "build:aio": "rollup -c config/rollup.config.aio.js",
-    "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
-    "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
-    "test": "npm run eslint && npm run build && istanbul cover _mocha && istanbul check-coverage",
-    "coveralls": "istanbul cover _mocha --report lcovonly && cat ./coverage/lcov.info | coveralls",
-    "release": "npn test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
+  "repository": {
+    "url": "yanhaijing/jslib-base",
+    "type": "git"
   },
   "author": "yanhaijing",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/yanhaijing/jslib-base.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yanhaijing/jslib-base/issues"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "cdkit": "1.1.0",
-    "coveralls": "3.0.2",
-    "cross-env": "5.2.0",
-    "es5-shim": "4.5.10",
-    "eslint": "4.18.2",
-    "expect.js": "0.3.1",
-    "istanbul": "0.4.5",
-    "mocha": "3.5.3",
-    "rimraf": "2.6.2",
-    "rollup": "0.57.1",
-    "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-commonjs": "8.3.0",
-    "rollup-plugin-node-resolve": "3.0.3",
-    "rollup-plugin-typescript2": "0.18.0",
-    "rollup-plugin-uglify": "1.0.0",
-    "tslib": "1.9.3",
-    "tslint": "5.11.0",
-    "typescript": "3.1.6"
+  "bin": "bin.js",
+  "files": [
+    "bin.js",
+    "saofile.js",
+    "template"
+  ],
+  "scripts": {
+    "test": "ava"
   },
   "dependencies": {
-    "@jsmini/clone": "0.3.0",
-    "@jsmini/console": "0.6.0",
-    "@jsmini/event": "0.5.1",
-    "@jsmini/extend": "0.2.0",
-    "@jsmini/guid": "0.6.0",
-    "@jsmini/inherits": "0.5.0",
-    "@jsmini/is": "0.4.0",
-    "@jsmini/load": "0.1.0",
-    "@jsmini/pubsub": "0.1.0",
-    "@jsmini/querystring": "0.1.0",
-    "@jsmini/type": "0.4.0",
-    "@jsmini/url": "0.1.0",
-    "@babel/runtime": "^7.1.2"
+    "superb": "^3.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "minimist": "^1.2.0",
+    "sao": "^1.4.1"
   }
 }

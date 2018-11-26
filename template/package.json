@@ -1,0 +1,80 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "main": "dist/index.js",
+  "jsnext:main": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf ./dist",
+    <%_ if (compiler.useBabel) { _%>
+    "eslint": "eslint -c .eslintrc.js src/**.js",
+    <%_ } _%>
+    <%_ if (compiler.useTypescript) { _%>
+    "tslint": "tslint -c tslint.json src/**.ts",
+    <%_ } _%>
+    "build:self": "rollup -c config/rollup.config.js",
+    "build:esm": "rollup -c config/rollup.config.esm.js",
+    "build:aio": "rollup -c config/rollup.config.aio.js",
+    "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
+    "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
+    "test": "npm run eslint && npm run build && istanbul cover _mocha && istanbul check-coverage",
+    "coveralls": "istanbul cover _mocha --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "release": "npn test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
+  },
+  "author": "<%= username %>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/<%= username %>/<%= name %>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<%= username %>/<%= name %>/issues"
+  },
+  "devDependencies": {
+    "coveralls": "3.0.2",
+    "cross-env": "5.2.0",
+    "es5-shim": "4.5.12",
+    "eslint": "5.9.0",
+    "expect.js": "0.3.1",
+    "istanbul": "0.4.5",
+    "mocha": "3.5.3",
+    "rimraf": "2.6.2",
+    "rollup": "0.67.3",
+    <%_ if (compiler.useBabel) { _%>
+    "rollup-plugin-babel": "^4.0.3",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    <%_ } _%>
+    "rollup-plugin-commonjs": "9.2.0",
+    "rollup-plugin-node-resolve": "3.4.0",
+    <%_ if (compiler.useTypescript) { _%>
+    "rollup-plugin-typescript2": "0.18.0",
+    "tslib": "1.9.3",
+    "tslint": "5.11.0",
+    "typescript": "3.1.6",
+    <%_ } _%>
+    "rollup-plugin-uglify": "1.0.0"
+  },
+  "dependencies": {
+    <%_ if (useJsmini) { _%>
+    "@jsmini/clone": "0.3.0",
+    "@jsmini/console": "0.6.0",
+    "@jsmini/event": "0.5.1",
+    "@jsmini/extend": "0.2.0",
+    "@jsmini/guid": "0.6.0",
+    "@jsmini/inherits": "0.5.0",
+    "@jsmini/is": "0.4.0",
+    "@jsmini/load": "0.1.0",
+    "@jsmini/pubsub": "0.1.0",
+    "@jsmini/querystring": "0.1.0",
+    "@jsmini/type": "0.4.0",
+    "@jsmini/url": "0.1.0",
+    <%_ } _%>
+    <%_ if (compiler.useBabel) { _%>
+    "@babel/runtime": "^7.1.5"
+    <%_ } _%>
+  }
+}

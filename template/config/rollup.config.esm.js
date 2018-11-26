@@ -3,7 +3,7 @@
 var common = require('./rollup.js');
 
 module.exports = {
-    input: 'src/index.' + common.type,
+    input: common.input,
     output: {
         file: 'dist/index.esm.js',
         format: 'es',
@@ -12,6 +12,6 @@ module.exports = {
         banner: common.banner,
     },
     plugins: [
-        common.getCompiler()
+        common.compiler()
     ]
 };

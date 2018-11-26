@@ -3,7 +3,7 @@
 var common = require('./rollup.js');
 
 module.exports = {
-    input: 'src/index.' + common.type,
+    input: common.input,
     output: {
         file: 'dist/index.js',
         format: 'cjs',
@@ -12,9 +12,14 @@ module.exports = {
         banner: common.banner,
     },
     plugins: [
-        common.getCompiler({
+        <%_ if (compiler.useTypescript) { _%>
+        common.compiler({
             tsconfigOverride: { compilerOptions : { declaration: true } },
             useTsconfigDeclarationDir: true
         })
+        <%_ } _%>
+        <%_ if (compiler.useBabel) { _%>
+        common.compiler()
+        <%_ } _%>
     ]
 };
