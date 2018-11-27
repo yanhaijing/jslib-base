@@ -7,7 +7,7 @@
   "module": "dist/index.esm.js",
   "sideEffects": false,
   "srctype": "js",
-  "script:ts": {
+  "scripts:ts": {
     "rename": "node rename.js",
     "clean": "rimraf ./dist",
     "lint": "tslint -c tslint.json src/**.ts",

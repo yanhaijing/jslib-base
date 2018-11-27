@@ -92,7 +92,11 @@ For browser environment:
 
 ## Contribution Guide
 
-You can set the `srctype` in `package.json` for switching between JS and TS.
+How to switch `JS` and `TS`
+
+- `srctype` in `package.json`
+- `scripts` in `package.json`
+- `require` file of `test/test.js`
 
 For the first time to run, you need to install dependencies firstly.
 
