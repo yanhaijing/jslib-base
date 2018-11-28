@@ -3,13 +3,16 @@ var babel = require('rollup-plugin-babel');
 
 var pkg = require('../package.json');
 
-// compatible with jslib-base and @yanhaijing/jslib-base 
+// compatible with jslib-base and @yanhaijing/jslib-base
+// @yanhaijing/jslib-base -> jslib-base
 var name = pkg.name.split('/').pop();
+// @yanhaijing/jslib-base -> yanhaijing_jslib-base
+// var name = pkg.name.replace('@', '').replace(/\//g, '_');
 var version = pkg.version;
 
 var banner = 
 `/*!
- * jslib-base ${version} (https://github.com/yanhaijing/jslib-base)
+ * ${pkg.name} ${version} (https://github.com/yanhaijing/jslib-base)
  * API https://github.com/yanhaijing/jslib-base/blob/master/doc/api.md
  * Copyright 2017-${(new Date).getFullYear()} yanhaijing. All Rights Reserved
  * Licensed under MIT (https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
