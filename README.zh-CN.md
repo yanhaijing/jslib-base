@@ -28,6 +28,7 @@
 - 支持[sideEffects](https://juejin.im/post/5b4ff9ece51d45190c18bb65)
 - 集成ISSUE_TEMPLATE
 - 集成[jsmini](https://github.com/jsmini)
+- 支持命令行操作（目前只支持 js/ts 转换）
 
 > 注意: 如果不同时使用 `export` 与 `export default` 可打开 `legacy模式`，`legacy模式` 下的模块系统可以兼容 `ie6-8`，见rollup配置文件
 
@@ -92,7 +93,13 @@ requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
 
 ## :kissing_heart: 贡献者指南
 
-支持JS 和 TS 切换，需要更改下面的地方
+支持JS 和 TS 切换，可以在启动项目时通过命令行进行选择：
+
+`yarn cli / npm run cli`
+
+（关于更多命令行使用，可以运行 `yarn cli -h / npm run cli -h` 获得帮助）
+
+同时也支持手动进行适配，需要更改下面的地方：
 
 -  `package.json`中的`srctype`
 -  `package.json`中的`scripts`

@@ -10,20 +10,6 @@
   "module": "dist/index.esm.js",
   "sideEffects": false,
   "srctype": "js",
-  "scripts:ts": {
-    "rename": "node rename.js",
-    "clean": "rimraf ./dist",
-    "lint": "tslint -c tslint.json src/**.ts",
-    "cli": "./bin/jslib-base-cli",
-    "build:self": "rollup -c config/rollup.config.js",
-    "build:esm": "rollup -c config/rollup.config.esm.js",
-    "build:aio": "rollup -c config/rollup.config.aio.js",
-    "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
-    "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
-    "test": "npm run lint && npm run build && istanbul cover _mocha && istanbul check-coverage",
-    "coveralls": "istanbul cover _mocha --report lcovonly && cat ./coverage/lcov.info | coveralls",
-    "release": "npn test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
-  },
   "scripts": {
     "rename": "node rename.js",
     "clean": "rimraf ./dist",

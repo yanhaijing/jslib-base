@@ -5,4 +5,4 @@
 - [X] 升级babel7
 - [X] 增加typescript的支持
 - [X] 测试覆盖率
-- [ ] 提供CLI支持
+- [X] 提供CLI支持

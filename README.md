@@ -28,6 +28,7 @@ The best third party `JS|TS` library scaffold. By forking or cloning the reposit
 - Supports [sideEffects](https://github.com/webpack/webpack/tree/master/examples/side-effects)
 - Integrated Issue template
 - Integrated [jsmini](https://github.com/jsmini)
+- Support cli(only support toggle js/ts for now)
 
 **Note:** When `export` and `export default` are not used at the same time, there is the option to 
 turn on `legacy mode`. Under `legacy mode`, the module system can be compatible with `IE6-8`. For more information on legacy mode, 
@@ -92,7 +93,13 @@ For browser environment:
 
 ## Contribution Guide
 
-How to switch `JS` and `TS`
+How to switch `JS` and `TS`, run 
+
+`yarn cli / npm run cli`
+
+(for more cli info, you can use `yarn cli -h / npm run cli -h`)
+
+otherwise, you can do so manually
 
 - `srctype` in `package.json`
 - `scripts` in `package.json`
