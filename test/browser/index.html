@@ -22,7 +22,10 @@
     <script>
         var libs = {
             'expect.js': expect,
-            '../dist/index.js': window['jslib-base']
+            // js 测试源文件
+            '../src/index.js': window['jslib-base']
+            // ts 测试编译后文件
+            // '../dist/index.js': window['jslib-base']
         };
         var require = function(path) {
             return libs[path];
