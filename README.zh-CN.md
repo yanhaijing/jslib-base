@@ -94,9 +94,9 @@ requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
 
 支持JS 和 TS 切换，需要更改下面的地方
 
--  `package.json`中的`srctype`
--  `package.json`中的`scripts`
+-  `package.json`中的`srctype`和`scripts`
 -  `test/test.js`中`require`文件的方式
+-  `test/browser/index.html`中`require`文件的方式
 
 首次运行需要先安装依赖
 

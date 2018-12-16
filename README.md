@@ -94,9 +94,9 @@ For browser environment:
 
 How to switch `JS` and `TS`
 
-- `srctype` in `package.json`
-- `scripts` in `package.json`
+- `srctype` and `scripts` in `package.json`
 - `require` file of `test/test.js`
+- `require` file of `test/browser/index.html`
 
 For the first time to run, you need to install dependencies firstly.
 
