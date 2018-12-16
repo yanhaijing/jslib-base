@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "ES5",
-        "module": "ES2015",
+        "module": "commonjs",
         "declarationDir": "."
     },
     "include": [
@@ -9,6 +9,6 @@
     ],
     "exclude": [
         "node_modules",
-        "index.d.ts"
+        "**.d.ts"
     ]
 }

@@ -13,7 +13,7 @@ module.exports = {
     },
     plugins: [
         common.getCompiler({
-            tsconfigOverride: { compilerOptions : { declaration: true } },
+            tsconfigOverride: { compilerOptions : { declaration: true, module: 'ES2015' } },
             useTsconfigDeclarationDir: true
         })
     ]
