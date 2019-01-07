@@ -176,6 +176,7 @@ other
 - [qrcode-decoder](https://github.com/yugasun/qrcode-decoder)
 - [search-util](https://github.com/The-End-Hero/search-util)
 - [vue-validate](https://github.com/yesixuan/vue-validate)
+- [validator](https://github.com/yesixuan/common-validate)
 
 ## Relative links
 
