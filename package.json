@@ -18,7 +18,7 @@
     "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
     "test": "npm run lint && nyc --nycrc-path .nycrc-ts mocha",
     "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
-    "release": "npn test && npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
+    "release": "npn test && npm run build && git commit -am $npm_package_version && git push && git tag $npm_package_version && git push --tags"
   },
   "scripts": {
     "rename": "node rename.js",
