@@ -178,6 +178,7 @@ other
 - [vue-validate](https://github.com/yesixuan/vue-validate)
 - [validator](https://github.com/yesixuan/common-validate)
 - [sn-js-utils](https://github.com/CozySnail/sn-js-utils)
+- [flexshare](https://github.com/lianhr12/flexshare)
 
 
 ## 相关链接
