@@ -177,6 +177,7 @@ other
 - [search-util](https://github.com/The-End-Hero/search-util)
 - [vue-validate](https://github.com/yesixuan/vue-validate)
 - [validator](https://github.com/yesixuan/common-validate)
+- [sn-js-utils](https://github.com/CozySnail/sn-js-utils)
 
 ## Relative links
 
