@@ -10,7 +10,8 @@
   "scripts:ts": {
     "rename": "node rename.js",
     "clean": "rimraf ./dist",
-    "lint": "tslint -c tslint.json src/**.ts",
+    "lint": "eslint -c .eslintrc.js 'src/**/*.ts'",
+    "lint:fix": "eslint -c .eslintrc.js 'src/**/*.ts' --fix",
     "build:self": "rollup -c config/rollup.config.js",
     "build:esm": "rollup -c config/rollup.config.esm.js",
     "build:aio": "rollup -c config/rollup.config.aio.js",
@@ -23,8 +24,8 @@
   "scripts": {
     "rename": "node rename.js",
     "clean": "rimraf ./dist",
-    "lint": "eslint -c .eslintrc.js src/**.js",
-    "lint:fix": "eslint --fix -c .eslintrc.js src/**.js",
+    "lint": "eslint -c .eslintrc.js 'src/**/*.js'",
+    "lint:fix": "eslint --fix -c .eslintrc.js 'src/**/*.js' --fix",
     "build:self": "rollup -c config/rollup.config.js",
     "build:esm": "rollup -c config/rollup.config.esm.js",
     "build:aio": "rollup -c config/rollup.config.aio.js",
@@ -49,6 +50,7 @@
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/register": "7.0.0",
+    "@typescript-eslint/parser": "^1.4.2",
     "babel-plugin-istanbul": "5.1.0",
     "cdkit": "1.1.0",
     "coveralls": "3.0.2",
@@ -68,7 +70,6 @@
     "source-map-support": "0.5.9",
     "ts-node": "7.0.1",
     "tslib": "1.9.3",
-    "tslint": "5.11.0",
     "typescript": "3.1.6"
   },
   "dependencies": {

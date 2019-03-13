@@ -1,6 +1,6 @@
-import { B, yan } from "./test2";
+import { B, yan } from './test2';
 
-import yan2 from "./test2";
+import yan2 from './test2';
 
 console.log(yan);
 console.log(yan2);
@@ -11,8 +11,8 @@ console.log(a);
 console.log(b);
 console.log(B);
 
-export function greeter(person: string) {
-    return "Hello, " + person;
+export function greeter(person: string): string {
+    return 'Hello, ' + person;
 }
 
-export const name = "base";
+export const name = 'base';
