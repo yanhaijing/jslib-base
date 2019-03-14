@@ -150,8 +150,6 @@ $ npm publish
 
 ## :bulb: 谁在使用
 
-jsmini
-
 - [type](https://github.com/jsmini/type)
 - [is](https://github.com/jsmini/is)
 - [inherits](https://github.com/jsmini/inherits)
@@ -165,21 +163,7 @@ jsmini
 - [load](https://github.com/jsmini/load)
 - [md5](https://github.com/jsmini/md5)
 - [console](https://github.com/jsmini/console)
-
-other
-
-- [littlejs](https://github.com/Zenquan/littlejs)
-- [axios-miniprogram-adapter](https://github.com/bigmeow/axios-miniprogram-adapter)
-- [react-compare](https://github.com/fXy-during/react-compare)
-- [z](https://github.com/PinghuaZhuang/z)
-- [xidux](https://github.com/ximolang/xidux)
-- [qrcode-decoder](https://github.com/yugasun/qrcode-decoder)
-- [search-util](https://github.com/The-End-Hero/search-util)
-- [vue-validate](https://github.com/yesixuan/vue-validate)
-- [validator](https://github.com/yesixuan/common-validate)
-- [sn-js-utils](https://github.com/CozySnail/sn-js-utils)
-- [flexshare](https://github.com/lianhr12/flexshare)
-
+- [...](https://github.com/yanhaijing/jslib-base/issues/10)
 
 ## 相关链接
 
