@@ -6,8 +6,8 @@
   "jsnext:main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
   "sideEffects": false,
-  "srctype": "js",
-  "scripts:ts": {
+  "srctype": "ts",
+  "scripts": {
     "rename": "node rename.js",
     "clean": "rimraf ./dist",
     "lint": "eslint -c .eslintrc.js 'src/**/*.ts'",
@@ -21,7 +21,7 @@
     "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
     "release": "npm test && npm run build && git commit -am $npm_package_version && git push && git tag $npm_package_version && git push --tags"
   },
-  "scripts": {
+  "scripts:js": {
     "rename": "node rename.js",
     "clean": "rimraf ./dist",
     "lint": "eslint -c .eslintrc.js 'src/**/*.js'",
@@ -45,10 +45,11 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "devDependencies": {
-    "@babel/cli": "7.1.5",
-    "@babel/core": "^7.1.2",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "7.0.0",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",

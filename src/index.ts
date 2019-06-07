@@ -16,3 +16,4 @@ export function greeter(person: string): string {
 }
 
 export const name = 'base';
+export const name2 = 'base';
