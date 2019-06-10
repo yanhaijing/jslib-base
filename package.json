@@ -17,8 +17,8 @@
     "build:aio": "rollup -c config/rollup.config.aio.js",
     "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
     "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
-    "test": "npm run lint && nyc --nycrc-path .nycrc-ts mocha",
-    "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
+    "test": "npm run lint && cross-env NODE_ENV=test nyc mocha",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "release": "npm test && npm run build && git commit -am $npm_package_version && git push && git tag $npm_package_version && git push --tags"
   },
   "scripts": {
