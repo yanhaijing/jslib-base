@@ -11,4 +11,3 @@ console.log(a);
 console.log(b);
 
 export const name = 'base';
-
