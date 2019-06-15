@@ -94,7 +94,7 @@ requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
 
 支持JS 和 TS 切换，需要更改下面的地方
 
--  `package.json`中的`srctype`
+-  `package.json`中的`srctype`和`scripts`
 -  `test/test.js`中`require`文件的方式
 -  `test/browser/index.html`中`require`文件的方式
 
@@ -150,7 +150,19 @@ $ npm publish
 
 ## :bulb: 谁在使用
 
-- [jsmini](https://github.com/jsmini)
+- [type](https://github.com/jsmini/type)
+- [is](https://github.com/jsmini/is)
+- [inherits](https://github.com/jsmini/inherits)
+- [guid](https://github.com/jsmini/guid)
+- [clone](https://github.com/jsmini/clone)
+- [extend](https://github.com/jsmini/extend)
+- [event](https://github.com/jsmini/event)
+- [url](https://github.com/jsmini/url)
+- [querystring](https://github.com/jsmini/querystring)
+- [pubsub](https://github.com/jsmini/pubsub)
+- [load](https://github.com/jsmini/load)
+- [md5](https://github.com/jsmini/md5)
+- [console](https://github.com/jsmini/console)
 - [...](https://github.com/yanhaijing/jslib-base/issues/10)
 
 ## 相关链接

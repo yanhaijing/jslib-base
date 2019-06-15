@@ -5,17 +5,11 @@
   "functions": 0,
   "branches": 75,
   "require": [
-    "@babel/register",
-    "ts-node/register",
-    "source-map-support/register"
+    "@babel/register"
   ],
   "reporter": [
     "lcov",
     "text"
-  ],
-  "extension": [
-    ".js",
-    ".ts"
   ],
   "sourceMap": false,
   "instrument": false
