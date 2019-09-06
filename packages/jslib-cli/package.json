@@ -1,0 +1,24 @@
+{
+  "name": "@js-lib/js-lib-cli",
+  "version": "0.1.9",
+  "description": "This is the cli for fast building jslib-base",
+  "main": "index.js",
+  "bin": {
+    "js-lib-cli": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "jslib-base",
+    "js-lib",
+    "js-lib-cli"
+  ],
+  "author": "houce",
+  "license": "ISC",
+  "gitHead": "83eb27571372fc05386e0fde5feb3c4502bddfff",
+  "dependencies": {
+    "copy-dir": "^1.2.0"
+  }
+}
