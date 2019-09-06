@@ -1,0 +1,18 @@
+{
+  "name": "jslib-cli",
+  "version": "0.0.1",
+  "description": "This is cli for fast building jslib-base",
+  "main": "index.js",
+  "bin": {
+    "jslib-cli": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "jslib-base"
+  ],
+  "author": "houce",
+  "license": "ISC"
+}
