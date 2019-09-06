@@ -1,13 +1,13 @@
 {
   "name": "t",
-  "version": "1.0.0",
+  "version": "0.1.1-alpha.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "jslib-cli": "^0.0.1"
+    "jslib-cli": "^0.1.1-alpha.0"
   },
   "author": "",
   "license": "ISC"
