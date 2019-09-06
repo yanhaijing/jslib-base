@@ -1,5 +1,5 @@
 {
-  "name": "@jslib/jslib-cli",
+  "name": "jslib-cli",
   "version": "0.1.4",
   "description": "This is cli for fast building jslib-base",
   "main": "index.js",
@@ -15,5 +15,5 @@
   ],
   "author": "houce",
   "license": "ISC",
-  "gitHead": "ca93daa70229300f6e23e4859584c6eab5e63d45"
+  "gitHead": "c1a51f106e4a9415bb5ec1a869f2ce8e8413e5a2"
 }
