@@ -1,5 +1,5 @@
 {
-  "name": "@jslib/t",
+  "name": "jslib-t",
   "version": "0.1.4",
   "description": "",
   "main": "index.js",
@@ -11,5 +11,5 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "ca93daa70229300f6e23e4859584c6eab5e63d45"
+  "gitHead": "c1a51f106e4a9415bb5ec1a869f2ce8e8413e5a2"
 }
