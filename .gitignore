@@ -1,7 +1,7 @@
-!index.d.ts
-*.d.ts
+!packages/jslib-base/index.d.ts
+*packages/jslib-base/.d.ts
 .rpt2_cache
 coverage
 node_modules
-dist
+packages/jslib-base/dist
 .nyc_output
