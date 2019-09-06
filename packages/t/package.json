@@ -1,13 +1,13 @@
 {
   "name": "jslib-t",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "jslib-cli": "^0.1.1-alpha.0"
+    "jslib-cli": "^0.1.5"
   },
   "author": "",
   "license": "ISC",
