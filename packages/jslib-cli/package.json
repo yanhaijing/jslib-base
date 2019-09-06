@@ -1,6 +1,6 @@
 {
   "name": "@jslib/jslib-cli",
-  "version": "0.1.1-alpha.0",
+  "version": "0.1.1",
   "description": "This is cli for fast building jslib-base",
   "main": "index.js",
   "bin": {
