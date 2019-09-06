@@ -10,5 +10,6 @@
     "jslib-cli": "^0.1.1-alpha.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "4adf9e6097bb510db6fbdfd74675a458b805a07e"
 }
