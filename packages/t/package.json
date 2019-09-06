@@ -1,13 +1,13 @@
 {
   "name": "jslib-base-t",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "jslib-base-cli": "^0.1.7"
+    "jslib-base-cli": "^0.1.8"
   },
   "author": "",
   "license": "ISC",
