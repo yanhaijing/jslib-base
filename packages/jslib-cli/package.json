@@ -4,7 +4,7 @@
   "description": "This is cli for fast building jslib-base",
   "main": "index.js",
   "bin": {
-    "jslib-cli": "index.js"
+    "jslib-base-cli": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
