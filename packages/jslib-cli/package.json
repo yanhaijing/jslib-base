@@ -15,5 +15,9 @@
   ],
   "author": "houce",
   "license": "ISC",
-  "gitHead": "83eb27571372fc05386e0fde5feb3c4502bddfff"
+  "gitHead": "83eb27571372fc05386e0fde5feb3c4502bddfff",
+  "dependencies": {
+    "copy-dir": "^1.2.0",
+    "copydir": "^1.0.1"
+  }
 }

@@ -3,5 +3,8 @@
   "private": true,
   "devDependencies": {
     "lerna": "^3.16.4"
+  },
+  "dependencies": {
+    "jslib-base-cli": "^0.1.6"
   }
 }

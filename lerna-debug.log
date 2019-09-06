@@ -1,0 +1,11 @@
+0 silly argv { _: [ 'add' ],
+0 silly argv   globs: [ 'packages/jslib-base-t' ],
+0 silly argv   lernaVersion: '3.16.4',
+0 silly argv   '$0': 'lerna',
+0 silly argv   pkg: 'packages/jslib-base-cli' }
+1 notice cli v3.16.4
+2 verbose rootPath /Users/cehou/Documents/jslib-base
+3 error Error: exited with error code: 128
+3 error     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/lerna/node_modules/@evocateur/pacote/lib/util/finished.js:12:19)
+3 error     at ChildProcess.emit (events.js:182:13)
+3 error     at maybeClose (internal/child_process.js:961:16)
