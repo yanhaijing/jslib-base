@@ -1,6 +1,6 @@
 {
   "name": "jslib-base",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.9",
   "description": "最好用的js第三方库脚手架",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
