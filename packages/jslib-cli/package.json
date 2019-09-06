@@ -1,6 +1,6 @@
 {
   "name": "jslib-base-cli",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "This is cli for fast building jslib-base",
   "main": "index.js",
   "bin": {
