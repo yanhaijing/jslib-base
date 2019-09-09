@@ -20,9 +20,6 @@
     "lerna": "^3.16.4"
   },
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "publishConfig": {
     "access": "public"
   }
