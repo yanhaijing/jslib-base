@@ -1,11 +1,8 @@
 {
-  "name": "@js-lib/cli",
+  "name": "jslib-base",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bin": {
-    "jslib": "./bin/index.js"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +16,14 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "homepage": "https://github.com/yanhaijing/jslib-base#readme",
-  "dependencies": {
-    "yargs": "^14.0.0"
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }

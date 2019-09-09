@@ -2,7 +2,7 @@
 var path = require('path');
 var yargs = require('yargs');
 
-var cdkit = require('../index.js');
+var cli = require('../index.js');
 
 yargs
     .usage('usage: jslib [options]')
@@ -23,7 +23,7 @@ yargs
             choices: ['zh', 'en'],
         })
     }, function (argv) {
-        run('new', argv)
+        run('init', argv)
     })
     .command(['update', 'u'], '更新一个项目', function (yargs) {
         run('update', yargs.argv)
@@ -34,5 +34,5 @@ yargs
 
 function run(cmd, argv) {
     // 运行命令
-    cdkit.run(cmd, argv);
+    cli[cmd](argv);
 }
