@@ -33,6 +33,23 @@ yargs
     .argv;
 
 function run(cmd, argv) {
+    const cmdPath = process.cwd();
+
     // 运行命令
-    cli[cmd](argv);
+    if (cmd === 'init') {
+        const name = argv._[1];
+        if (!name) {
+            console.error('error: jslib create need name');
+            return;
+        }
+        cli.init(cmdPath, String(name), {
+            type: argv.type,
+            lang: argv.lang,
+        });
+    } else {
+        cli.update(cmdPath, {
+            type: argv.type,
+            lang: argv.lang,
+        });
+    }
 }
