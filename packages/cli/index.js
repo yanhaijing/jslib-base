@@ -1,6 +1,6 @@
-var fs = require('fs');
-var path = require('path');
-var todo = require('@js-lib/todo');
+const fs = require('fs');
+const path = require('path');
+const todo = require('@js-lib/todo');
 
 function init() {
     todo.init()

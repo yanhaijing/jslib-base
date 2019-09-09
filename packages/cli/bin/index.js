@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-var path = require('path');
-var yargs = require('yargs');
+const path = require('path');
+const yargs = require('yargs');
 
-var cli = require('../index.js');
+const cli = require('../index.js');
 
 yargs
     .usage('usage: jslib [options]')
