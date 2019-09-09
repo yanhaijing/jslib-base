@@ -1,4 +1,5 @@
-# jslib-cli
+# jslib-base
+xxx
 
 ## lerna
 
@@ -33,3 +34,6 @@ lerna publish
 cd packages/cli
 sudo npm link
 ```
+
+## 参考文档
+- [Lerna 中文教程详解](https://juejin.im/post/5ced1609e51d455d850d3a6c)

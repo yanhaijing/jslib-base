@@ -1,14 +1,11 @@
 {
-  "name": "@js-lib/cli",
+  "name": "@js-lib/util",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "yanhaijing <yanhaijing@yeah.net>",
-  "homepage": "https://github.com/yanhaijing/jslib-base/tree/master/packages/cli#readme",
+  "homepage": "https://github.com/yanhaijing/jslib-base/tree/master/packages/util#readme",
   "license": "ISC",
   "main": "index.js",
-  "bin": {
-    "jslib": "./bin/index.js"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -23,7 +20,7 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "dependencies": {
-    "@js-lib/todo": "^0.0.0",
-    "yargs": "^14.0.0"
+    "copy-dir": "^1.2.0",
+    "template_js": "^0.7.1-1"
   }
 }
