@@ -1,5 +1,11 @@
 # 变更日志
 
+## 1.0.0 / 2019-9-20
+
+- 架构调整，由base改为cli工具
+- 支持`jslib new xxx`
+- 支持`jslib update`
+
 ## 0.6.0 / 2019-6-16
 
 - 统一改用eslint校验js和ts
