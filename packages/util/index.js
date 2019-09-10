@@ -24,7 +24,7 @@ function copyFile(from, to) {
     fs.writeFileSync(to, buffer);
 }
 
-function copyTmpl(from, to, data) {
+function copyTmpl(from, to, data = {}) {
     if (!isTemplate(from)) {
         return copyFile(from, to);
     }
