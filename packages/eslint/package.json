@@ -18,5 +18,8 @@
   },
   "bugs": {
     "url": "https://github.com/yanhaijing/jslib-base/issues"
+  },
+  "dependencies": {
+    "@js-lib/util": "^0.0.0"
   }
 }
