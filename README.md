@@ -25,6 +25,9 @@ lerna list
 # 安装全部依赖
 lerna bootstrap
 
+# 建立全部软连接
+lerna link
+
 # 列出下次发版lerna publish 要更新的包
 lerna changed
 
