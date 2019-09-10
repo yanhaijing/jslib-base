@@ -1,0 +1,25 @@
+{
+  "name": "@js-lib/demo",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "yanhaijing <yanhaijing@yeah.net>",
+  "homepage": "https://github.com/yanhaijing/jslib-base/tree/master/packages/demo#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanhaijing/jslib-base.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/yanhaijing/jslib-base/issues"
+  },
+  "dependencies": {
+    "@js-lib/util": "^0.0.0"
+  }
+}
