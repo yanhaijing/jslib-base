@@ -5,14 +5,7 @@
   "author": "yanhaijing <yanhaijing@yeah.net>",
   "homepage": "https://github.com/yanhaijing/jslib-base/tree/master/packages/test#readme",
   "license": "ISC",
-  "main": "lib/test.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
+  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
