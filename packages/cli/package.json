@@ -36,6 +36,7 @@
     "@js-lib/src": "^0.0.1",
     "@js-lib/test": "^0.0.1",
     "@js-lib/todo": "^0.0.0",
+    "inquirer": "^7.0.0",
     "yargs": "^14.0.0"
   }
 }
