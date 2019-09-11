@@ -11,6 +11,7 @@ const readme = require('@js-lib/readme');
 const todo = require('@js-lib/todo');
 const src = require('@js-lib/src');
 const demo = require('@js-lib/demo');
+const rollup = require('@js-lib/rollup');
 
 function init(cmdPath, name, option) {
     root.init(cmdPath, name, option)
@@ -23,6 +24,7 @@ function init(cmdPath, name, option) {
     todo.init(cmdPath, name, option)
     src.init(cmdPath, name, option)
     demo.init(cmdPath, name, option)
+    rollup.init(cmdPath, name, option)
 }
 function update(cmdPath, option) {
     todo.update(cmdPath, option)
