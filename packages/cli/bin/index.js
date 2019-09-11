@@ -8,7 +8,7 @@ const promptList = [
         type: 'input',
         message: '项目名称:',
         name: 'name',
-        default: "test_user" // 默认值
+        default: "project" // 默认值
     },
     {
         type: 'list',
