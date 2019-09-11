@@ -10,6 +10,7 @@ const package = require('@js-lib/package');
 const readme = require('@js-lib/readme');
 const todo = require('@js-lib/todo');
 const src = require('@js-lib/src');
+const demo = require('@js-lib/demo');
 
 function init(cmdPath, name, option) {
     root.init(cmdPath, name, option)
@@ -21,6 +22,7 @@ function init(cmdPath, name, option) {
     readme.init(cmdPath, name, option)
     todo.init(cmdPath, name, option)
     src.init(cmdPath, name, option)
+    demo.init(cmdPath, name, option)
 }
 function update(cmdPath, option) {
     todo.update(cmdPath, option)
