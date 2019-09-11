@@ -22,12 +22,11 @@ function copyFile(from, to) {
     const buffer = fs.readFileSync(from);
     const parentPath = path.dirname(to);
 
-    fs.exists(parentPath, function(exists) {
-        if (!exists) {
-            fs.mkdirSync(parentPath, { recursive: true });
-        }
-        fs.writeFileSync(to, buffer);
-    });   
+    if (!fs.existsSync(parentPath)) {
+        fs.mkdirSync(parentPath, { recursive: true });
+    }
+
+    fs.writeFileSync(to, buffer);  
 }
 
 function copyTmpl(from, to, data = {}) {
@@ -37,13 +36,12 @@ function copyTmpl(from, to, data = {}) {
 
     const parentPath = path.dirname(to);
 
-    fs.exists(parentPath, function(exists) {
-        if (!exists) {
-            fs.mkdirSync(parentPath, { recursive: true });
-        }
-        const text = fs.readFileSync(from, { encoding: 'utf8' });
-        fs.writeFileSync(to, template(text, data), { encoding: 'utf8' });
-    });
+    if (!fs.existsSync(parentPath)) {
+        fs.mkdirSync(parentPath, { recursive: true });
+    }
+
+    const text = fs.readFileSync(from, { encoding: 'utf8' });
+    fs.writeFileSync(to, template(text, data), { encoding: 'utf8' });
 }
 
 exports.copyDir = copyDir;
