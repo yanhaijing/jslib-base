@@ -1,63 +1,7 @@
 #!/usr/bin/env node
-const path = require('path');
 const yargs = require('yargs');
-const inquirer = require('inquirer');
-
-const promptList = [
-    {
-        type: 'input',
-        message: '项目名称:',
-        name: 'name',
-        default: "project" // 默认值
-    },
-    {
-        type: 'list',
-        message: '使用 TypeScript/JavaScript:',
-        name: 'type',
-        choices: [
-            'TypeScript',
-            'JavaScript',
-        ],
-        filter: function (value) {
-            return ({
-                TypeScript: 'ts',
-                JavaScript: 'js'
-            }[value])
-        }
-    },
-    {
-        type: 'list',
-        message: '项目语言:',
-        name: 'lang',
-        choices: [
-            'English',
-            'Chinese',
-        ],
-        filter: function (value) {
-            return ({
-                English: 'en',
-                Chinese: 'zh'
-            }[value])
-        }
-    }
-];
-
-function prompts() {
-    return new Promise(function(resolve) {
-        return inquirer
-          .prompt(promptList)
-          .then(answers => {
-            resolve(answers)
-          });
-    })
-};
-
-function runPrompts(cmd) {
-    prompts().then(function(answers) {
-        run(cmd, answers)
-    })
-};
-
+const {runPrompts} = require('./run-prompts');
+const {checkProjectExists} = require('./helpers')
 
 const cli = require('../index.js');
 
@@ -68,33 +12,47 @@ yargs
     .alias("h", "help")
     .alias("v", "version")
     .command(['new', 'n'], '新建一个项目', function (yargs) {
-        runPrompts('init')
+        runPrompts().then(function(answers) {
+            run('init', answers, yargs.argv)
+        });
     })
     .command(['update', 'u'], '更新一个项目', function (yargs) {
-        runPrompts('update')
+        runPrompts().then(function(answers) {
+            run('update', answers, yargs.argv)
+        });
     })
     .demandCommand()
     .epilog('copyright 2018-2019')
     .argv;
 
 
-function run(cmd, answers) {
+function run(cmd, answers, argv) {
     const cmdPath = process.cwd();
+    const {name, type, lang} = answers;
 
     // 运行命令
     if (cmd === 'init') {
-        if (!answers.name) {
+        if (!name) {
             console.error('error: jslib create need name');
             return;
         }
-        cli.init(cmdPath, String(answers.name), {
-            type: answers.type,
-            lang: answers.lang,
+
+        if (checkProjectExists(cmdPath, name) && !argv.force) {
+            throw new Error(`
+                The project is already existed! 
+                If you really want to override it, use --force argv to bootstrap!
+            `);
+        }
+
+        cli.init(cmdPath, String(name), {
+            type: type,
+            lang: lang,
         });
-    } else if (cmd === 'update') {
+    } 
+    else if (cmd === 'update') {
         cli.update(cmdPath, {
-            type: answers.type,
-            lang: answers.lang,
+            type: type,
+            lang: lang,
         });
     }
 }
