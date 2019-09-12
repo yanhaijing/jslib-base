@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const yargs = require('yargs');
 const {runPrompts} = require('./run-prompts');
-const {checkProjectExists} = require('./helpers')
+const {checkProjectExists} = require('./helpers');
 
 const cli = require('../index.js');
 
