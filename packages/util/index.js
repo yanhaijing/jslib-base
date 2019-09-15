@@ -53,7 +53,14 @@ function mergeObj2JSON(object, to) {
     fs.writeFileSync(to, JSON.stringify(json), { encoding: 'utf8' });
 }
 
+function mergeJSON2JSON(from, to) {
+    const json = JSON.parse(fs.readFileSync(from, { encoding: 'utf8' }));
+
+    mergeObj2JSON(json, to);
+}
+
 exports.copyDir = copyDir;
 exports.copyFile = copyFile;
 exports.copyTmpl = copyTmpl;
 exports.mergeObj2JSON = mergeObj2JSON;
+exports.mergeJSON2JSON = mergeJSON2JSON;
