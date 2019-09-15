@@ -29,6 +29,11 @@ function runInitPrompts(pathname) {
             default: pathname,
         },
         {
+            type: 'input',
+            message: 'github user name:',
+            name: 'username',
+        },
+        {
             type: 'list',
             message: 'use JavaScript|TypeScript:',
             name: 'type',

@@ -53,6 +53,7 @@ function run(cmd, argv, answers) {
             pathname, // 创建的名字
             name: String(name), // 项目名字 readme 
             npmname: String(npmname), // 发布到npm的名字，有可能和项目名字不一样，比如带scope
+            username: String(username),
             type,
             lang,
         });
