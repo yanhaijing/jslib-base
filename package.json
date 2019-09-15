@@ -20,7 +20,10 @@
   },
   "private": true,
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
+    "registry": "https://registry.npmjs.org",
     "access": "public"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
   }
 }

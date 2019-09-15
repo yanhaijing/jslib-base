@@ -20,6 +20,7 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "dependencies": {
+    "@jsmini/extend": "^0.3.1",
     "copy-dir": "^1.2.0",
     "template_js": "0.8.0"
   }

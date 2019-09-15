@@ -14,22 +14,22 @@ const demo = require('@js-lib/demo');
 const rollup = require('@js-lib/rollup');
 const compiler = require('@js-lib/compiler');
 
-function init(cmdPath, name, option) {
-    root.init(cmdPath, name, option)
-    changelog.init(cmdPath, name, option)
-    doc.init(cmdPath, name, option)
-    eslint.init(cmdPath, name, option)
-    license.init(cmdPath, name, option)
-    package.init(cmdPath, name, option)
-    readme.init(cmdPath, name, option)
-    todo.init(cmdPath, name, option)
-    src.init(cmdPath, name, option)
-    demo.init(cmdPath, name, option)
-    rollup.init(cmdPath, name, option)
-    compiler.init(cmdPath, name, option)
+function init(cmdPath, option) {
+    root.init(cmdPath, option.pathname, option);
+    changelog.init(cmdPath, option.pathname, option);
+    doc.init(cmdPath, option.pathname, option);
+    eslint.init(cmdPath, option.pathname, option);
+    license.init(cmdPath, option.pathname, option);
+    package.init(cmdPath, option.pathname, option);
+    readme.init(cmdPath, option.pathname, option);
+    todo.init(cmdPath, option.pathname, option);
+    src.init(cmdPath, option.pathname, option);
+    demo.init(cmdPath, option.pathname, option);
+    rollup.init(cmdPath, option.pathname, option);
+    compiler.init(cmdPath, option.pathname, option);
 }
 function update(cmdPath, option) {
-    todo.update(cmdPath, option)
+    todo.update(cmdPath, option.pathname, option);
 }
 
 exports.init = init;

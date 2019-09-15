@@ -3,16 +3,17 @@ const path = require('path');
 
 const copydir = require('copy-dir');
 const template = require('template_js');
+const { extendDeep } = require('@jsmini/extend');
 
 function isTemplate(pathname) {
     return path.extname(pathname) === '.tmpl';
 }
 
-function mkdir(pathname) {
-    const parentPath = path.dirname(pathname);
+// function mkdir(pathname) {
+//     const parentPath = path.dirname(pathname);
 
-    fs.mkdirSync(parentPath, { recursive: true });
-}
+//     fs.mkdirSync(parentPath, { recursive: true });
+// }
 
 function copyDir(from, to, options) {
     copydir.sync(from, to, options);
@@ -44,6 +45,15 @@ function copyTmpl(from, to, data = {}) {
     fs.writeFileSync(to, template(text, data), { encoding: 'utf8' });
 }
 
+function mergeObj2JSON(object, to) {
+    const json = JSON.parse(fs.readFileSync(to, { encoding: 'utf8' }));
+    
+    extendDeep(json, object);
+    
+    fs.writeFileSync(to, JSON.stringify(json), { encoding: 'utf8' });
+}
+
 exports.copyDir = copyDir;
 exports.copyFile = copyFile;
 exports.copyTmpl = copyTmpl;
+exports.mergeObj2JSON = mergeObj2JSON;
