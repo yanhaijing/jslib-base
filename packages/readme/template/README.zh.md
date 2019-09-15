@@ -1,4 +1,4 @@
-# [jslib-base](https://github.com/yanhaijing/jslib-base)
+# [<%=name%>](https://github.com/yanhaijing/jslib-base)
 [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/yanhaijing/jslib-base.svg?branch=master)](https://travis-ci.org/yanhaijing/jslib-base)
@@ -58,25 +58,25 @@
 通过npm下载安装代码
 
 ```bash
-$ npm install --save jslib-base
+$ npm install --save <%npmname%>
 ```
 
 如果你是node环境
 
 ```js
-var base = require('jslib-base');
+var base = require('<%npmname%>');
 ```
 
 如果你是webpack等环境
 
 ```js
-import base from 'jslib-base';
+import base from '<%npmname%>';
 ```
 
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
+requirejs(['node_modules/<%npmname%>/dist/index.aio.js'], function (base) {
     // xxx
 })
 ```
@@ -84,11 +84,11 @@ requirejs(['node_modules/jslib-base/dist/index.aio.js'], function (base) {
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/jslib-base/dist/index.aio.js"></script>
+<script src="node_modules/<%npmname%>/dist/index.aio.js"></script>
 ```
 
 ## :bookmark_tabs: 文档
-[API](./doc/api.zh-CN.md)
+[API](./doc/api.md)
 
 ## :kissing_heart: 贡献者指南
 

@@ -43,12 +43,10 @@ function run(cmd, argv, answers) {
             console.error('error: jslib create need name');
             return;
         }
-
+        
         if (checkProjectExists(cmdPath, pathname) && !argv.force) {
-            throw new Error(`
-                The project is already existed! 
-                If you really want to override it, use --force argv to bootstrap!
-            `);
+            console.error('error: The project is already existed! If you really want to override it, use --force argv to bootstrap!');
+            return;
         }
 
         cli.init(cmdPath, {

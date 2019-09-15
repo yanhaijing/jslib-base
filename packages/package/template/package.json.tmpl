@@ -1,12 +1,12 @@
 {
-    "name": "jslib-base",
+    "name": "<%=npmname%>",
     "version": "0.1.0",
-    "description": "最好用的js第三方库脚手架",
+    "description": "jslib最好用的js库脚手架",
     "main": "dist/index.js",
     "jsnext:main": "dist/index.esm.js",
     "module": "dist/index.esm.js",
     "sideEffects": false,
-    "srctype": "js",
+    "srctype": "<%=type%>",
     "scripts:ts": {
       "rename": "node rename.js",
       "clean": "rimraf ./dist",
@@ -44,6 +44,9 @@
     "bugs": {
       "url": "https://github.com/yanhaijing/jslib-base/issues"
     },
+    "files": [
+      "/dist"
+    ],
     "devDependencies": {
       "@babel/cli": "7.1.5",
       "@babel/core": "^7.1.2",
