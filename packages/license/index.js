@@ -7,6 +7,7 @@ function init(cmdPath, name, option) {
     util.copyTmpl(
         path.resolve(__dirname, `./template/license.tmpl`),
         path.resolve(cmdPath, name, 'LICENSE'),
+        option,
     );
 }
 
