@@ -1,0 +1,10 @@
+{
+    "scripts": {
+      "lint": "eslint -c .eslintrc.js 'src/**/*.js'",
+      "lint:fix": "eslint --fix -c .eslintrc.js 'src/**/*.js' --fix"
+    },
+    "devDependencies": {
+      "eslint": "^5.15.1"
+    }
+  }
+  

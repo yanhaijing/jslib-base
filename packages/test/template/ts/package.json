@@ -1,7 +1,7 @@
 {
     "scripts": {
       "test": "npm run lint && nyc --nycrc-path .nycrc-ts mocha",
-      "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls",
+      "coveralls": "nyc --nycrc-path .nycrc-ts report --reporter=text-lcov | coveralls"
     },
     "devDependencies": {
       "babel-plugin-istanbul": "5.1.0",
