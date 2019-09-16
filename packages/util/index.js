@@ -50,7 +50,7 @@ function mergeObj2JSON(object, to) {
     
     extendDeep(json, object);
     
-    fs.writeFileSync(to, JSON.stringify(json), { encoding: 'utf8' });
+    fs.writeFileSync(to, JSON.stringify(json, null, '  '), { encoding: 'utf8' });
 }
 
 function mergeJSON2JSON(from, to) {

@@ -22,8 +22,7 @@
     <script>
         var libs = {
             'expect.js': expect,
-            // js
-            '../src/index.js': window['jslib-base']
+            '../src/index.js': window['<%=npmname%>']
         };
         var require = function(path) {
             return libs[path];

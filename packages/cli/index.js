@@ -10,17 +10,19 @@ const src = require('@js-lib/src');
 const demo = require('@js-lib/demo');
 const rollup = require('@js-lib/rollup');
 const compiler = require('@js-lib/compiler');
+const test = require('@js-lib/test');
 
 function init(cmdPath, option) {
     root.init(cmdPath, option.pathname, option);
-    eslint.init(cmdPath, option.pathname, option);
-    license.init(cmdPath, option.pathname, option);
     package.init(cmdPath, option.pathname, option);
+    license.init(cmdPath, option.pathname, option);
     readme.init(cmdPath, option.pathname, option);
-    src.init(cmdPath, option.pathname, option);
     demo.init(cmdPath, option.pathname, option);
+    src.init(cmdPath, option.pathname, option);
+    eslint.init(cmdPath, option.pathname, option);
     rollup.init(cmdPath, option.pathname, option);
     compiler.init(cmdPath, option.pathname, option);
+    test.init(cmdPath, option.pathname, option);
 }
 function update(cmdPath, option) {
     todo.update(cmdPath, option.pathname, option);
