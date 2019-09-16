@@ -35,14 +35,14 @@
       "coveralls": "nyc report --reporter=text-lcov | coveralls",
       "release": "npm test && npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
     },
-    "author": "yanhaijing",
+    "author": "<%=username%>",
     "license": "MIT",
     "repository": {
       "type": "git",
-      "url": "git://github.com/yanhaijing/jslib-base.git"
+      "url": "git://github.com/<%=username%>/<%=name%>.git"
     },
     "bugs": {
-      "url": "https://github.com/yanhaijing/jslib-base/issues"
+      "url": "https://github.com/<%=username%>/<%=name%>/issues"
     },
     "files": [
       "/dist"
