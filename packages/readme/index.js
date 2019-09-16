@@ -4,7 +4,11 @@ const util = require('@js-lib/util');
 function init(cmdPath, name, option) {
     console.log('@js-lib/readme: init');
     const lang = option.lang;
-    util.copyFile(path.resolve(__dirname, `./template/README.${lang}.md`), path.resolve(cmdPath, name, 'README.md'));
+    util.copyTmpl(
+        path.resolve(__dirname, `./template/README.${lang}.md.tmpl`),
+        path.resolve(cmdPath, name, 'README.md'),
+        option,
+    );
 }
 
 function update() {

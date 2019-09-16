@@ -1,17 +1,13 @@
-# [<%=name%>](https://github.com/yanhaijing/jslib-base)
+# [<%=name%>](https://github.com/<%=username%>/<%=name%>)
 [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/yanhaijing/jslib-base.svg?branch=master)](https://travis-ci.org/yanhaijing/jslib-base)
-[![Coveralls](https://img.shields.io/coveralls/yanhaijing/jslib-base.svg)](https://coveralls.io/github/yanhaijing/jslib-base)
-[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/jslib-base)
-[![NPM downloads](http://img.shields.io/npm/dm/jslib-base.svg?style=flat-square)](http://www.npmtrends.com/jslib-base)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/yanhaijing/jslib-base.svg)](http://isitmaintained.com/project/yanhaijing/jslib-base "Percentage of issues still open")
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/<%=username%>/<%=name%>/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/<%=username%>/<%=name%>.svg?branch=master)](https://travis-ci.org/<%=username%>/<%=name%>)
+[![Coveralls](https://img.shields.io/coveralls/<%=username%>/<%=name%>.svg)](https://coveralls.io/github/<%=username%>/<%=name%>)
+[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/<%=npmname%>)
+[![NPM downloads](http://img.shields.io/npm/dm/<%=name%>.svg?style=flat-square)](http://www.npmtrends.com/<%=npmname%>)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/<%=username%>/<%=name%>.svg)](http://isitmaintained.com/project/<%=username%>/<%=name%> "Percentage of issues still open")
 
-[English](./README.md) | 简体中文
-
-最好用的 `JS|TS` 第三方库脚手架，fork 或 clone 本仓库，即可搭建完成一个新库的基础框架
-
-**基于jslib-base的库，都可以分享到[jsmini](https://github.com/jsmini)平台**
+最好用的 `JS|TS` 第三方库脚手架
 
 ## :star: 特性
 
@@ -58,25 +54,25 @@
 通过npm下载安装代码
 
 ```bash
-$ npm install --save <%npmname%>
+$ npm install --save <%=npmname%>
 ```
 
 如果你是node环境
 
 ```js
-var base = require('<%npmname%>');
+var base = require('<%=npmname%>');
 ```
 
 如果你是webpack等环境
 
 ```js
-import base from '<%npmname%>';
+import base from '<%=npmname%>';
 ```
 
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/<%npmname%>/dist/index.aio.js'], function (base) {
+requirejs(['node_modules/<%=npmname%>/dist/index.aio.js'], function (base) {
     // xxx
 })
 ```
@@ -84,20 +80,13 @@ requirejs(['node_modules/<%npmname%>/dist/index.aio.js'], function (base) {
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/<%npmname%>/dist/index.aio.js"></script>
+<script src="node_modules/<%=npmname%>/dist/index.aio.js"></script>
 ```
 
 ## :bookmark_tabs: 文档
 [API](./doc/api.md)
 
 ## :kissing_heart: 贡献者指南
-
-支持JS 和 TS 切换，需要更改下面的地方
-
--  `package.json`中的`srctype`和`scripts`
--  `test/test.js`中`require`文件的方式
--  `test/browser/index.html`中`require`文件的方式
-
 首次运行需要先安装依赖
 
 ```bash
@@ -130,30 +119,12 @@ $ npm run release
 $ npm publish
 ```
 
-重命名项目名称，首次初始化项目是需要修改名字，或者后面项目要改名时使用，需要修改`rename.js`中的`fromName`和`toName`，然后运行 `npm run rename`，这条命令会自动重命名下面文件中的名字
-
-- README.md 中的信息
-- package.json 中的信息
-- config/rollup.js 中的信息
-- test/browser/index.html 中的仓库名称
-- demo/demo-global.html 中的仓库名称
-
 ## 贡献者列表
 
-[contributors](https://github.com/yanhaijing/jslib-base/graphs/contributors)
+[contributors](https://github.com/<%=username%>/<%=name%>/graphs/contributors)
 
 ## :gear: 更新日志
 [CHANGELOG.md](./CHANGELOG.md)
 
 ## :airplane: 计划列表
 [TODO.md](./TODO.md)
-
-## :bulb: 谁在使用
-
-- [jsmini](https://github.com/jsmini)
-- [...](https://github.com/yanhaijing/jslib-base/issues/10)
-
-## 相关链接
-
-- [typescript-library-template](https://github.com/jiumao-fe/typescript-library-template)
-
