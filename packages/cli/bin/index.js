@@ -34,7 +34,7 @@ yargs
 
 function run(cmd, argv, answers) {
     const cmdPath = process.cwd();
-    const {name, npmname, type, lang} = answers;
+    const {name, npmname, username, type, lang} = answers;
     const pathname = String(typeof argv._[1] !== 'undefined' ? argv._[1] : name);
 
     // 运行命令
