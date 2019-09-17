@@ -9,7 +9,7 @@ var common = require('./rollup.js');
 var prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
-    input: 'src/index.' + common.type,
+    input: 'src/index.ts',
     output: {
         file: prod ? 'dist/index.aio.min.js' : 'dist/index.aio.js',
         format: 'umd',
@@ -21,7 +21,7 @@ module.exports = {
     plugins: [
         nodeResolve({
             main: true,
-            extensions: [common.type === 'ts' ? '.ts' : '', '.js']
+            extensions: ['.ts', '.js']
         }),
         commonjs({
             include: 'node_modules/**',

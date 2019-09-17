@@ -23,7 +23,6 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "dependencies": {
-    "@js-lib/compiler": "^0.0.1",
     "@js-lib/demo": "^0.0.1",
     "@js-lib/eslint": "^0.0.1",
     "@js-lib/license": "^0.0.1",

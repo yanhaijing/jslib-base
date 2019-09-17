@@ -1,12 +1,12 @@
 // rollup.config.js
-// ES output
+// commonjs
 var common = require('./rollup.js');
 
 module.exports = {
-    input: 'src/index.' + common.type,
+    input: 'src/index.js',
     output: {
-        file: 'dist/index.esm.js',
-        format: 'es',
+        file: 'dist/index.js',
+        format: 'cjs',
         // When export and export default are not used at the same time, set legacy to true.
         // legacy: true,
         banner: common.banner,
