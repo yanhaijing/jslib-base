@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const ora = require('ora');
+const spinner = ora('Loading unicorns');
 
 const root = require('@js-lib/root');
 const eslint = require('@js-lib/eslint');
@@ -12,6 +14,8 @@ const rollup = require('@js-lib/rollup');
 const test = require('@js-lib/test');
 
 function init(cmdPath, option) {
+    spinner.start('Starting project');
+    
     root.init(cmdPath, option.pathname, option);
     package.init(cmdPath, option.pathname, option);
     license.init(cmdPath, option.pathname, option);
@@ -21,6 +25,8 @@ function init(cmdPath, option) {
     eslint.init(cmdPath, option.pathname, option);
     rollup.init(cmdPath, option.pathname, option);
     test.init(cmdPath, option.pathname, option);
+
+    spinner.succeed('Create project successfully')
 }
 function update(cmdPath, option) {
     todo.update(cmdPath, option.pathname, option);
