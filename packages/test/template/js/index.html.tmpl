@@ -22,7 +22,7 @@
     <script>
         var libs = {
             'expect.js': expect,
-            '../src/index.js': window['<%=npmname%>']
+            '../src/index.js': window['<%=umdname%>']
         };
         var require = function(path) {
             return libs[path];

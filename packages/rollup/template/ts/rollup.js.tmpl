@@ -2,14 +2,6 @@ var typescript = require('rollup-plugin-typescript2');
 
 var pkg = require('../package.json');
 
-// compatible with jslib-base and @yanhaijing/jslib-base
-
-// @yanhaijing/jslib-base -> jslib-base
-var name = pkg.name.split('/').pop();
-
-// @yanhaijing/jslib-base -> yanhaijing_jslib-base
-// var name = pkg.name.replace('@', '').replace(/\//g, '_');
-
 var version = pkg.version;
 
 var banner = 
@@ -29,6 +21,6 @@ function getCompiler(opt) {
     return typescript(opt);
 }
 
-exports.name = name;
+exports.name = '<%=umdname%>';
 exports.banner = banner;
 exports.getCompiler = getCompiler;

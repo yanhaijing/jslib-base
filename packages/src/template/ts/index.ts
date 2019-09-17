@@ -1,6 +1,6 @@
-import { B, yan } from './test2';
+import { B, yan } from './test';
 
-import yan2 from './test2';
+import yan2 from './test';
 
 console.log(yan);
 console.log(yan2);
