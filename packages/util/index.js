@@ -9,14 +9,22 @@ function isTemplate(pathname) {
     return path.extname(pathname) === '.tmpl';
 }
 
-// function mkdir(pathname) {
-//     const parentPath = path.dirname(pathname);
-
-//     fs.mkdirSync(parentPath, { recursive: true });
-// }
-
 function copyDir(from, to, options) {
     copydir.sync(from, to, options);
+}
+
+function mkdirSyncGuard(target) {
+    try {
+        fs.mkdirSync(target, { recursive: true });
+    } catch(e) {
+        mkdirp(target)
+        function mkdirp(dir) {
+            if (fs.existsSync(dir)) { return true }
+            const dirname = path.dirname(dir)
+            mkdirp(dirname)
+            fs.mkdirSync(dir)
+        }
+    }
 }
 
 function copyFile(from, to) {
@@ -24,7 +32,7 @@ function copyFile(from, to) {
     const parentPath = path.dirname(to);
 
     if (!fs.existsSync(parentPath)) {
-        fs.mkdirSync(parentPath, { recursive: true });
+        mkdirSyncGuard(parentPath)
     }
 
     fs.writeFileSync(to, buffer);  
@@ -37,9 +45,7 @@ function copyTmpl(from, to, data = {}) {
 
     const parentPath = path.dirname(to);
 
-    if (!fs.existsSync(parentPath)) {
-        fs.mkdirSync(parentPath, { recursive: true });
-    }
+    mkdirSyncGuard(parentPath)
 
     const text = fs.readFileSync(from, { encoding: 'utf8' });
     fs.writeFileSync(to, template(text, data), { encoding: 'utf8' });
