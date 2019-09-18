@@ -11,10 +11,6 @@ function prompts(promptList) {
     })
 };
 
-function runPrompts(cmd, argv) {
-    // return prompts()
-};
-
 function runInitPrompts(pathname) {
     const promptList = [
         {
@@ -71,5 +67,65 @@ function runInitPrompts(pathname) {
     return prompts(promptList);
 }
 
-exports.runPrompts = runPrompts;
+function runUpdatePrompts() {
+    const promptList = [
+        {
+            type: 'confirm',
+            message: '是否更新<root>插件:',
+            name: 'root',
+            default: false,
+        },
+        {
+            type: 'confirm',
+            message: '是否更新<package>插件:',
+            name: 'package',
+            default: false,
+        },
+        {
+            type: 'confirm',
+            message: '是否更新<license>插件:',
+            name: 'license',
+            default: false,
+        },
+        {
+            type: 'confirm',
+            message: '是否更新<readme>插件:',
+            name: 'readme',
+            default: false,
+        },
+        {
+            type: 'confirm',
+            message: '是否更新<demo>插件:',
+            name: 'demo',
+            default: false,
+        },
+        {
+            type: 'confirm',
+            message: '是否更新<src>插件:',
+            name: 'src',
+            default: false,
+        },
+        {
+            type: 'confirm',
+            message: '是否更新<eslint>插件:',
+            name: 'eslint',
+            default: false,
+        },
+        {
+            type: 'confirm',
+            message: '是否更新<rollup>插件:',
+            name: 'rollup',
+            default: false,
+        },
+        {
+            type: 'confirm',
+            message: '是否更新<test>插件:',
+            name: 'test',
+            default: false,
+        },
+    ];
+    return prompts(promptList);
+}
+
 exports.runInitPrompts = runInitPrompts;
+exports.runUpdatePrompts = runUpdatePrompts;

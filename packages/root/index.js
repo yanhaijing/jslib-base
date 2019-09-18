@@ -1,6 +1,6 @@
 const path = require('path');
 const util = require('@js-lib/util');
-util.log()
+// util.log()
 
 function init(cmdPath, name, option) {
     console.log('@js-lib/root: init');
@@ -22,11 +22,6 @@ function init(cmdPath, name, option) {
     util.copyFile(
         path.resolve(__dirname, `./template/doc.${lang}.md`),
         path.resolve(cmdPath, name, './doc/api.md')
-    );
-    util.copyTmpl(
-        path.resolve(__dirname, `./template/jslib.json.tmpl`),
-        path.resolve(cmdPath, name, 'jslib.json'),
-        option,
     );
 }
 

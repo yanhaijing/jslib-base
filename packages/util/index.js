@@ -17,11 +17,11 @@ function logError (string) {
 }
 
 function log (string) {
-    const warning = chalk.keyword('orange');
-    const error = chalk.keyword('red');
+    // const warning = chalk.keyword('orange');
+    // const error = chalk.keyword('red');
 
-    console.error = error
-    console.warning = warning
+    // console.error = error
+    // console.warning = warning
 }
 
 function isTemplate(pathname) {

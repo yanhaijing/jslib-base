@@ -23,6 +23,7 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "dependencies": {
+    "@js-lib/config": "^0.0.1",
     "@js-lib/demo": "^0.0.1",
     "@js-lib/eslint": "^0.0.1",
     "@js-lib/license": "^0.0.1",
@@ -32,6 +33,7 @@
     "@js-lib/root": "^0.0.1",
     "@js-lib/src": "^0.0.1",
     "@js-lib/test": "^0.0.1",
+    "@js-lib/util": "^0.0.0",
     "inquirer": "^7.0.0",
     "ora": "^3.4.0",
     "validate-npm-package-name": "^3.0.0",
