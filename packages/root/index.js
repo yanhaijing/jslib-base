@@ -2,7 +2,7 @@ const path = require('path');
 const util = require('@js-lib/util');
 
 function init(cmdPath, name, option) {
-    console.log('@js-lib/root: init');
+    util.log('@js-lib/root: init');
     const lang = option.lang;
     
     util.copyDir(path.resolve(__dirname, `./template/base`), path.resolve(cmdPath, name));
@@ -30,7 +30,7 @@ function init(cmdPath, name, option) {
 }
 
 function update() {
-    console.log('@js-lib/root: update');
+    util.log('@js-lib/root: update');
 }
 
 module.exports = {
