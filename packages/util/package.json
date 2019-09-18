@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@jsmini/extend": "^0.3.1",
+    "chalk": "^2.4.2",
     "copy-dir": "^1.2.0",
     "template_js": "0.8.0"
   }
