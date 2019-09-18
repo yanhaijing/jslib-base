@@ -34,6 +34,7 @@
     "@js-lib/test": "^0.0.1",
     "inquirer": "^7.0.0",
     "ora": "^3.4.0",
+    "validate-npm-package-name": "^3.0.0",
     "yargs": "^14.0.0"
   }
 }

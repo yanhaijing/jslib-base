@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const validate = require('validate-npm-package-name');
 
 function prompts(promptList) {
     return new Promise(function (resolve) {
@@ -27,6 +28,12 @@ function runInitPrompts(pathname) {
             message: 'publish to npm name:',
             name: 'npmname',
             default: pathname,
+            validate: function(val) {
+                if (!validate(val).validForNewPackages) {
+                    return "npm 包名不合法";
+                }
+                return true
+            }
         },
         {
             type: 'input',
