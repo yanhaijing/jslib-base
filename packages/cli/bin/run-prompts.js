@@ -69,12 +69,12 @@ function runInitPrompts(pathname) {
 
 function runUpdatePrompts() {
     const promptList = [
-        {
-            type: 'confirm',
-            message: '是否更新<root>插件:',
-            name: 'root',
-            default: false,
-        },
+        // {
+        //     type: 'confirm',
+        //     message: '是否更新<root>插件:',
+        //     name: 'root',
+        //     default: false,
+        // },
         {
             type: 'confirm',
             message: '是否更新<package>插件:',

@@ -28,8 +28,34 @@ function init(cmdPath, option) {
 
     spinner.succeed('Create project successfully')
 }
-function update(cmdPath, option) {
-    todo.update(cmdPath, option.pathname, option);
+function update(cmdPath, option, answers) {
+    // if (answers.root) {
+    //     root.update(cmdPath, option);
+    // }
+    if (answers.package) {
+        package.update(cmdPath, option);
+    }
+    if (answers.license) {
+        license.update(cmdPath, option);
+    }
+    if (answers.readme) {
+        readme.update(cmdPath, option);
+    }
+    if (answers.demo) {
+        demo.update(cmdPath, option);
+    }
+    if (answers.src) {
+        src.update(cmdPath, option);
+    }
+    if (answers.eslint) {
+        eslint.update(cmdPath, option);
+    }
+    if (answers.rollup) {
+        rollup.update(cmdPath, option);
+    }
+    if (answers.test) {
+        test.update(cmdPath, option);
+    }
 }
 
 exports.init = init;

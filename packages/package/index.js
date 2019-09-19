@@ -10,8 +10,16 @@ function init(cmdPath, name, option) {
     );
 }
 
-function update() {
+function update(cmdPath, option) {
     console.log('@js-lib/package: update');
+    const {
+        scripts, sideEffects, devDependencies, dependencies, files
+    } = JSON.parse(util.readTmpl(path.resolve(__dirname, `./template/package.json.tmpl`), option));
+    
+    util.mergeObj2JSON(
+        { scripts, sideEffects, devDependencies, dependencies, files },
+        path.resolve(cmdPath, 'package.json')
+    );
 }
 
 module.exports = {

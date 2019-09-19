@@ -61,6 +61,11 @@ function copyFile(from, to) {
     fs.writeFileSync(to, buffer);  
 }
 
+function readTmpl(from, data = {}) {
+    const text = fs.readFileSync(from, { encoding: 'utf8' });
+    return template(text, data);
+}
+
 function copyTmpl(from, to, data = {}) {
     if (!isTemplate(from)) {
         return copyFile(from, to);
@@ -70,8 +75,7 @@ function copyTmpl(from, to, data = {}) {
 
     mkdirSyncGuard(parentPath)
 
-    const text = fs.readFileSync(from, { encoding: 'utf8' });
-    fs.writeFileSync(to, template(text, data), { encoding: 'utf8' });
+    fs.writeFileSync(to, readTmpl(from, data), { encoding: 'utf8' });
 }
 
 function mergeObj2JSON(object, to) {
@@ -90,6 +94,7 @@ function mergeJSON2JSON(from, to) {
 
 exports.copyDir = copyDir;
 exports.copyFile = copyFile;
+exports.readTmpl = readTmpl;
 exports.copyTmpl = copyTmpl;
 exports.mergeObj2JSON = mergeObj2JSON;
 exports.mergeJSON2JSON = mergeJSON2JSON;

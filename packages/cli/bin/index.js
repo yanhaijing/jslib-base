@@ -84,6 +84,5 @@ function init(argv, answers) {
 function update(option, answers) {
     const cmdPath = process.cwd();
 
-    console.log(answers);
-    // cli.update(cmdPath, option);
+    cli.update(cmdPath, option, answers);
 }

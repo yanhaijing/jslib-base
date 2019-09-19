@@ -26,7 +26,7 @@ function init(cmdPath, name, option) {
     );
 }
 
-function update() {
+function update(cmdPath, option) {
     console.log('@js-lib/root: update');
 }
 
