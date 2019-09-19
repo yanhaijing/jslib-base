@@ -6,22 +6,26 @@ const copydir = require('copy-dir');
 const template = require('template_js');
 const { extendDeep } = require('@jsmini/extend');
 
-function logWarning (string) {
-    const warning = chalk.keyword('orange');
-    console.log(warning(string))
-}
+function log() {
+    const red = chalk.bold.red;
+    const green = chalk.bold.green;
+    const blue = chalk.bold.blue;
 
-function logError (string) {
-    const error = chalk.bold.red;
-    console.log(error(string))
-}
+    const error = console.error;
+    const log = console.error;
+    const info = console.info;
 
-function log (string) {
-    // const warning = chalk.keyword('orange');
-    // const error = chalk.keyword('red');
+    console.error = function () {
+        error(red.apply(console, arguments));
+    };
 
-    // console.error = error
-    // console.warning = warning
+    console.log = function () {
+        log(green.apply(console, arguments));
+    };
+
+    console.info = function (){ 
+        info(blue.apply(console, arguments));
+    };
 }
 
 function isTemplate(pathname) {
@@ -89,6 +93,4 @@ exports.copyFile = copyFile;
 exports.copyTmpl = copyTmpl;
 exports.mergeObj2JSON = mergeObj2JSON;
 exports.mergeJSON2JSON = mergeJSON2JSON;
-exports.logWarning = logWarning;
-exports.logError = logError;
 exports.log = log;

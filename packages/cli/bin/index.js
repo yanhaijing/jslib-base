@@ -4,10 +4,13 @@ const path = require('path');
 const yargs = require('yargs');
 const { runUpdatePrompts, runInitPrompts } = require('./run-prompts');
 const { checkProjectExists } = require('./helpers');
-const { logError } = require('@js-lib/util');
+
+const { log } = require('@js-lib/util');
 const config = require('@js-lib/config');
 
 const cli = require('../index.js');
+
+log()
 
 yargs
     .usage('usage: jslib [options]')
@@ -30,7 +33,7 @@ yargs
     })
     .command(['update', 'u'], '更新一个项目', function (yargs) {
         if (!checkProjectExists(process.cwd(), 'jslib.json')) {
-            logError('error: 这不是一个jslib库，缺少jslib.json文件');
+            console.error('error: 这不是一个jslib库，缺少jslib.json文件');
             return;
         }
 
