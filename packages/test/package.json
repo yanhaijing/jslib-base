@@ -1,6 +1,6 @@
 {
   "name": "@js-lib/test",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "> TODO: description",
   "author": "yanhaijing <yanhaijing@yeah.net>",
   "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
@@ -25,6 +25,6 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "dependencies": {
-    "@js-lib/util": "^0.0.0"
+    "@js-lib/util": "^0.1.0"
   }
 }
