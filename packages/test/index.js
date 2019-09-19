@@ -24,8 +24,24 @@ function init(cmdPath, name, option) {
     );
 }
 
-function update() {
+function update(cmdPath, option) {
     console.log('@js-lib/test: update');
+
+    const type = option.type;
+
+    util.copyFile(
+        path.resolve(__dirname, `./template/${type}/.nycrc`),
+        path.resolve(cmdPath, './.nycrc')
+    );
+    util.copyTmpl(
+        path.resolve(__dirname, `./template/${type}/index.html.tmpl`),
+        path.resolve(cmdPath, './test/browser/index.html'),
+        option,
+    );
+    util.mergeJSON2JSON(
+        path.resolve(__dirname, `./template/${type}/package.json`),
+        path.resolve(cmdPath, './package.json')
+    );
 }
 
 module.exports = {

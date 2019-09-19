@@ -81,24 +81,24 @@ function runUpdatePrompts() {
             name: 'package',
             default: false,
         },
-        {
-            type: 'confirm',
-            message: '是否更新<license>插件:',
-            name: 'license',
-            default: false,
-        },
-        {
-            type: 'confirm',
-            message: '是否更新<readme>插件:',
-            name: 'readme',
-            default: false,
-        },
-        {
-            type: 'confirm',
-            message: '是否更新<demo>插件:',
-            name: 'demo',
-            default: false,
-        },
+        // {
+        //     type: 'confirm',
+        //     message: '是否更新<license>插件:',
+        //     name: 'license',
+        //     default: false,
+        // },
+        // {
+        //     type: 'confirm',
+        //     message: '是否更新<readme>插件:',
+        //     name: 'readme',
+        //     default: false,
+        // },
+        // {
+        //     type: 'confirm',
+        //     message: '是否更新<demo>插件:',
+        //     name: 'demo',
+        //     default: false,
+        // },
         {
             type: 'confirm',
             message: '是否更新<src>插件:',

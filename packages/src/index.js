@@ -7,8 +7,10 @@ function init(cmdPath, name, option) {
     util.copyDir(path.resolve(__dirname, `./template/${type}`), path.resolve(cmdPath, name, 'src'));
 }
 
-function update() {
+function update(cmdPath, option) {
     console.log('@js-lib/src: update');
+    const type = option.type;
+    util.copyDir(path.resolve(__dirname, `./template/${type}`), path.resolve(cmdPath, 'src'));
 }
 
 module.exports = {

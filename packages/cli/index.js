@@ -35,15 +35,15 @@ function update(cmdPath, option, answers) {
     if (answers.package) {
         package.update(cmdPath, option);
     }
-    if (answers.license) {
-        license.update(cmdPath, option);
-    }
-    if (answers.readme) {
-        readme.update(cmdPath, option);
-    }
-    if (answers.demo) {
-        demo.update(cmdPath, option);
-    }
+    // if (answers.license) {
+    //     license.update(cmdPath, option);
+    // }
+    // if (answers.readme) {
+    //     readme.update(cmdPath, option);
+    // }
+    // if (answers.demo) {
+    //     demo.update(cmdPath, option);
+    // }
     if (answers.src) {
         src.update(cmdPath, option);
     }

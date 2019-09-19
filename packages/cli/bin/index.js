@@ -38,7 +38,7 @@ yargs
         }
 
         const json = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'jslib.json'), { encoding: 'utf8' }));
-        
+
         runUpdatePrompts().then(function(answers) {
             update(json, answers);
         });
@@ -84,5 +84,6 @@ function init(argv, answers) {
 function update(option, answers) {
     const cmdPath = process.cwd();
 
+    option.umdname = option.npmname.split('/').pop();
     cli.update(cmdPath, option, answers);
 }
