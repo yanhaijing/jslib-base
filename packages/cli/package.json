@@ -3,13 +3,18 @@
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "yanhaijing <yanhaijing@yeah.net>",
-  "homepage": "https://github.com/yanhaijing/jslib-base/tree/master/packages/cli#readme",
+  "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
   "license": "ISC",
   "main": "index.js",
   "bin": {
     "jslib": "./bin/index.js"
   },
+  "files": [
+    "bin",
+    "index.js"
+  ],
   "publishConfig": {
+    "registry": "https://registry.npmjs.org",
     "access": "public"
   },
   "repository": {

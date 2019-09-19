@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "description": "> README: description",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "files": [
+    "template",
+    "index.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
-  "homepage": "https://github.com/yanhaijing/jslib-base/tree/master/packages/readme#readme",
+  "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
   "dependencies": {
     "@js-lib/util": "^0.0.0"
   }
