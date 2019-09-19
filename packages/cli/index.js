@@ -13,8 +13,6 @@ const demo = require('@js-lib/demo');
 const rollup = require('@js-lib/rollup');
 const test = require('@js-lib/test');
 
-const {log} = require('@js-lib/util');
-
 function init(cmdPath, option) {
     spinner.start('Starting project');
     
