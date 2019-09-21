@@ -1,7 +1,7 @@
 {
   "name": "@js-lib/license",
   "version": "0.1.0",
-  "description": "> TODO: description",
+  "description": "The best third party JS|TS library scaffold",
   "author": "yanhaijing <yanhaijing@yeah.net>",
   "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
   "license": "ISC",

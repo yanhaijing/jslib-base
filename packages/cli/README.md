@@ -1,11 +1,3 @@
-# `cli`
+# `@js-lib/cli`
 
-> TODO: description
-
-## Usage
-
-```
-const cli = require('cli');
-
-// TODO: DEMONSTRATE API
-```
+The best third party JS|TS library scaffold. [Click for more information](https://github.com/yanhaijing/jslib-base#readme).

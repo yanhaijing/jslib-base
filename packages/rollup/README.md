@@ -1,11 +1,3 @@
 # `@js-lib/rollup`
 
-> TODO: description
-
-## Usage
-
-```
-const rollup = require('@js-lib/rollup');
-
-// TODO: DEMONSTRATE API
-```
+The best third party JS|TS library scaffold. [Click for more information](https://github.com/yanhaijing/jslib-base#readme).

@@ -1,11 +1,3 @@
 # `@js-lib/eslint`
 
-> TODO: description
-
-## Usage
-
-```
-const eslint = require('@js-lib/eslint');
-
-// TODO: DEMONSTRATE API
-```
+The best third party JS|TS library scaffold. [Click for more information](https://github.com/yanhaijing/jslib-base#readme).

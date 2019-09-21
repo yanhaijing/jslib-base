@@ -1,11 +1,4 @@
 # `@js-lib/test`
 
-> TODO: description
+The best third party JS|TS library scaffold. [Click for more information](https://github.com/yanhaijing/jslib-base#readme).
 
-## Usage
-
-```
-const test = require('@js-lib/test');
-
-// TODO: DEMONSTRATE API
-```
