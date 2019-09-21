@@ -4,7 +4,7 @@ const path = require('path');
 const yargs = require('yargs');
 const { runUpdatePrompts, runInitPrompts } = require('./run-prompts');
 const { checkProjectExists } = require('./helpers');
-
+const pkg = require('../package.json');
 const { log } = require('@js-lib/util');
 const config = require('@js-lib/config');
 
@@ -60,6 +60,7 @@ function init(argv, answers) {
         username: String(username),
         type,
         lang,
+        version: pkg.version,
     };
 
     // 运行命令
