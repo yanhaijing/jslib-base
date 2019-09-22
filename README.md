@@ -82,9 +82,6 @@ $ npm run release
 $ npm publish
 ```
 
-## Documents
-[API](./doc/api.md)
-
 ## Contribution Guide
 
 This project use lerna to manage mutil plugins
