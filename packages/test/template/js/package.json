@@ -1,0 +1,16 @@
+{
+    "scripts": {
+      "test": "npm run lint && cross-env NODE_ENV=test nyc mocha",
+      "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    },
+    "devDependencies": {
+      "@babel/register": "7.0.0",
+      "babel-plugin-istanbul": "5.1.0",
+      "coveralls": "3.0.2",
+      "expect.js": "0.3.1",
+      "mocha": "3.5.3",
+      "nyc": "13.1.0",
+      "source-map-support": "0.5.9"
+    }
+  }
+  

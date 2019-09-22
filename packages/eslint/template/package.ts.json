@@ -1,0 +1,12 @@
+{
+    "scripts": {
+      "lint": "eslint -c .eslintrc.js 'src/**/*.ts'",
+      "lint:fix": "eslint -c .eslintrc.js 'src/**/*.ts' --fix"
+    },
+    "devDependencies": {
+      "eslint": "^5.15.1",
+      "@typescript-eslint/eslint-plugin": "^1.4.2",
+      "@typescript-eslint/parser": "^1.4.2"
+    }
+  }
+  

@@ -6,5 +6,5 @@
 - [X] 增加typescript的支持
 - [X] 测试覆盖率
 - [X] 统一eslint
+- [X] 提供CLI支持
 - [ ] 统一babel编译ts
-- [ ] 提供CLI支持

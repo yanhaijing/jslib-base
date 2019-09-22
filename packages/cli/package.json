@@ -1,0 +1,47 @@
+{
+  "name": "@js-lib/cli",
+  "version": "1.0.0",
+  "description": "The best third party JS|TS library scaffold",
+  "author": "yanhaijing <yanhaijing@yeah.net>",
+  "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "bin": {
+    "jslib": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "index.js"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanhaijing/jslib-base.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/yanhaijing/jslib-base/issues"
+  },
+  "dependencies": {
+    "@js-lib/config": "^1.0.0",
+    "@js-lib/demo": "^1.0.0",
+    "@js-lib/eslint": "^1.0.0",
+    "@js-lib/license": "^1.0.0",
+    "@js-lib/package": "^1.0.0",
+    "@js-lib/readme": "^1.0.0",
+    "@js-lib/rollup": "^1.0.0",
+    "@js-lib/root": "^1.0.0",
+    "@js-lib/src": "^1.0.0",
+    "@js-lib/test": "^1.0.0",
+    "@js-lib/util": "^1.0.0",
+    "inquirer": "^7.0.0",
+    "ora": "^3.4.0",
+    "validate-npm-package-name": "^3.0.0",
+    "yargs": "^14.0.0"
+  }
+}

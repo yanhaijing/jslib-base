@@ -1,0 +1,33 @@
+{
+  "name": "@js-lib/util",
+  "version": "1.0.0",
+  "description": "The best third party JS|TS library scaffold",
+  "author": "yanhaijing <yanhaijing@yeah.net>",
+  "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "files": [
+    "template",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanhaijing/jslib-base.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/yanhaijing/jslib-base/issues"
+  },
+  "dependencies": {
+    "@jsmini/extend": "^0.3.1",
+    "chalk": "^2.4.2",
+    "copy-dir": "^1.2.0",
+    "template_js": "0.8.0"
+  }
+}
