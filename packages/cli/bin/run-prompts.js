@@ -14,7 +14,7 @@ function prompts(promptList) {
 let promptList = [];
 
 function runInitPrompts(pathname, argv) {
-    const {npmname, username, type, lang} = argv
+    const {npmname, username, type, lang, manager} = argv
     if (!pathname) {
         promptList.push({
             type: 'input',
@@ -76,6 +76,21 @@ function runInitPrompts(pathname, argv) {
                 return ({
                     Chinese: 'zh',
                     English: 'en',
+                }[value])
+            }
+        })
+    }
+    if (!manager) {
+        promptList.push({
+            type: 'list',
+            message: 'package manager:',
+            name: 'manager',
+            choices: ['npm', 'yarn', '不自动安装依赖'],
+            filter: function (value) {
+                return ({
+                    npm: 'npm',
+                    yarn: 'yarn',
+                    'not install the packages automatically': 'none'
                 }[value])
             }
         })
