@@ -38,6 +38,9 @@ yargs
         }).option('lang', {
             alias: 'l',
             describe: '仅初始化中英文选择',
+        }).option('manager', {
+            alias: 'm',
+            describe: '选择仓库包管理方式',
         })
     }, function (argv) {
         runInitPrompts(argv._[1], yargs.argv).then(function(answers) {

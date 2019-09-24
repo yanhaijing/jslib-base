@@ -12,8 +12,9 @@ const src = require('@js-lib/src');
 const demo = require('@js-lib/demo');
 const rollup = require('@js-lib/rollup');
 const test = require('@js-lib/test');
+const manager = require('@js-lib/manager');
 
-function init(cmdPath, option) {
+async function init(cmdPath, option) {
     spinner.start('Starting project');
     
     root.init(cmdPath, option.pathname, option);
@@ -25,25 +26,14 @@ function init(cmdPath, option) {
     eslint.init(cmdPath, option.pathname, option);
     rollup.init(cmdPath, option.pathname, option);
     test.init(cmdPath, option.pathname, option);
+    await manager.init(cmdPath, option.pathname, option);
 
     spinner.succeed('Create project successfully')
 }
 function update(cmdPath, option, answers) {
-    // if (answers.root) {
-    //     root.update(cmdPath, option);
-    // }
     if (answers.package) {
         package.update(cmdPath, option);
     }
-    // if (answers.license) {
-    //     license.update(cmdPath, option);
-    // }
-    // if (answers.readme) {
-    //     readme.update(cmdPath, option);
-    // }
-    // if (answers.demo) {
-    //     demo.update(cmdPath, option);
-    // }
     if (answers.src) {
         src.update(cmdPath, option);
     }
