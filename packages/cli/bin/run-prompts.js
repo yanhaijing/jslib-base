@@ -11,15 +11,25 @@ function prompts(promptList) {
     })
 };
 
-function runInitPrompts(pathname) {
-    const promptList = [
-        {
+let promptList = [];
+
+function runInitPrompts(pathname, argv) {
+    const {npmname, username, type, lang} = argv
+    if (!pathname) {
+        promptList.push({
             type: 'input',
             message: 'project name:',
             name: 'name',
-            default: pathname,
-        },
-        {
+            validate: function(val) {
+                if (!val) {
+                    return "输入项目名称";
+                }
+                return true
+            }
+        })
+    }
+    if (!npmname) {
+        promptList.push({
             type: 'input',
             message: 'publish to npm name:',
             name: 'npmname',
@@ -30,13 +40,17 @@ function runInitPrompts(pathname) {
                 }
                 return true
             }
-        },
-        {
+        })
+    }
+    if (!username) {
+        promptList.push({
             type: 'input',
             message: 'github user name:',
             name: 'username',
-        },
-        {
+        })
+    }
+    if (!type) {
+        promptList.push({
             type: 'list',
             message: 'use JavaScript|TypeScript:',
             name: 'type',
@@ -50,8 +64,10 @@ function runInitPrompts(pathname) {
                     JavaScript: 'js'
                 }[value])
             }
-        },
-        {
+        })
+    }
+    if (!lang) {
+        promptList.push({
             type: 'list',
             message: 'project language:',
             name: 'lang',
@@ -62,43 +78,19 @@ function runInitPrompts(pathname) {
                     English: 'en',
                 }[value])
             }
-        }
-    ];
+        })
+    }
     return prompts(promptList);
 }
 
 function runUpdatePrompts() {
     const promptList = [
-        // {
-        //     type: 'confirm',
-        //     message: '是否更新<root>插件:',
-        //     name: 'root',
-        //     default: false,
-        // },
         {
             type: 'confirm',
             message: '是否更新<package>插件:',
             name: 'package',
             default: false,
         },
-        // {
-        //     type: 'confirm',
-        //     message: '是否更新<license>插件:',
-        //     name: 'license',
-        //     default: false,
-        // },
-        // {
-        //     type: 'confirm',
-        //     message: '是否更新<readme>插件:',
-        //     name: 'readme',
-        //     default: false,
-        // },
-        // {
-        //     type: 'confirm',
-        //     message: '是否更新<demo>插件:',
-        //     name: 'demo',
-        //     default: false,
-        // },
         {
             type: 'confirm',
             message: '是否更新<src>插件:',
