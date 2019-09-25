@@ -90,7 +90,7 @@ function runInitPrompts(pathname, argv) {
                 return ({
                     npm: 'npm',
                     yarn: 'yarn',
-                    'not install the packages automatically': 'none'
+                    'not install the packages automatically': null
                 }[value])
             }
         })

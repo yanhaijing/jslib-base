@@ -1,20 +1,23 @@
 const path = require('path');
-const { projectInstall } = require('pkg-install');
+const { execSync } = require('child_process');
+const ora = require('ora');
+const spinner = ora('Loading unicorns');
 
-async function init(cmdPath, name, option) {
+function init(cmdPath, name, option) {
     console.log('@js-lib/manager: init');
     const manager = option.manager;
 
-    if (manager === 'none') {
-		return Promise.resolve();
+    if (!manager) {
+		return
     }
 
-    return projectInstall(
-	    {
-	    	prefer: manager,
-	    	cwd: path.resolve(cmdPath, name),
-	    }
-	)
+    spinner.start('Installing packages from npm, wait for a second...');
+
+	execSync(`${manager} install`, {
+		cwd: path.resolve(cmdPath, name)
+	});
+
+	spinner.succeed('Install packages successfully!')
 }
 
 module.exports = {

@@ -24,6 +24,6 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "dependencies": {
-    "pkg-install": "^1.0.0"
+    "ora": "^3.4.0"
   }
 }

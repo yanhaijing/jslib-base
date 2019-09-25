@@ -14,7 +14,7 @@ const rollup = require('@js-lib/rollup');
 const test = require('@js-lib/test');
 const manager = require('@js-lib/manager');
 
-async function init(cmdPath, option) {
+function init(cmdPath, option) {
     spinner.start('Starting project');
     
     root.init(cmdPath, option.pathname, option);
@@ -26,7 +26,7 @@ async function init(cmdPath, option) {
     eslint.init(cmdPath, option.pathname, option);
     rollup.init(cmdPath, option.pathname, option);
     test.init(cmdPath, option.pathname, option);
-    await manager.init(cmdPath, option.pathname, option);
+    manager.init(cmdPath, option.pathname, option);
 
     spinner.succeed('Create project successfully')
 }
