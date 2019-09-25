@@ -1,23 +1,35 @@
 const path = require('path');
-const { execSync } = require('child_process');
+const { execSync, exec } = require('child_process');
+const chalk = require('chalk');
 const ora = require('ora');
-const spinner = ora('Loading unicorns');
 
 function init(cmdPath, name, option) {
     console.log('@js-lib/manager: init');
     const manager = option.manager;
 
     if (!manager) {
-		return
+		return Promise.resolve();
     }
 
-    spinner.start('Installing packages from npm, wait for a second...');
+    return new Promise(function(resolve, reject) {
+        const spinner = ora();
 
-	execSync(`${manager} install`, {
-		cwd: path.resolve(cmdPath, name)
-	});
+        spinner.start(`Installing packages from npm, wait for a second...
+        `);
 
-	spinner.succeed('Install packages successfully!')
+        exec(`${manager} install`, {
+            cwd: path.resolve(cmdPath, name)
+        }, function(error, stdout, stderr) {
+            if (error) {
+                reject(`安装依赖失败: ${error}`);
+                return;
+            }
+            spinner.succeed(`Install packages successfully!
+            `);
+            resolve();
+        });
+    })
+	
 }
 
 module.exports = {
