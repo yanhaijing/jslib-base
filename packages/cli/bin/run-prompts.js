@@ -15,19 +15,20 @@ let promptList = [];
 
 function runInitPrompts(pathname, argv) {
     const {npmname, username, type, lang, manager} = argv
-    if (!pathname) {
-        promptList.push({
-            type: 'input',
-            message: 'project name:',
-            name: 'name',
-            validate: function(val) {
-                if (!val) {
-                    return "输入项目名称";
-                }
-                return true
+
+    promptList.push({
+        type: 'input',
+        message: 'project name:',
+        name: 'name',
+        default: pathname,
+        validate: function(val) {
+            if (!val) {
+                return "输入项目名称";
             }
-        })
-    }
+            return true
+        }
+    })
+
     if (!npmname) {
         promptList.push({
             type: 'input',

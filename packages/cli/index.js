@@ -3,6 +3,7 @@ const path = require('path');
 const ora = require('ora');
 const spinner = ora();
 
+const config = require('@js-lib/config');
 const root = require('@js-lib/root');
 const eslint = require('@js-lib/eslint');
 const license = require('@js-lib/license');
@@ -15,6 +16,7 @@ const test = require('@js-lib/test');
 const manager = require('@js-lib/manager');
 
 function init(cmdPath, option) {
+    config.init(cmdPath, option.pathname, option);
     root.init(cmdPath, option.pathname, option);
     package.init(cmdPath, option.pathname, option);
     license.init(cmdPath, option.pathname, option);

@@ -4,7 +4,7 @@
   "description": "The best third party JS|TS library scaffold",
   "author": "yanhaijing <yanhaijing@yeah.net>",
   "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.js",
   "bin": {
     "jslib": "./bin/index.js"
@@ -13,6 +13,9 @@
     "bin",
     "index.js"
   ],
+  "engines": {
+    "node": ">= 8.0.0"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"

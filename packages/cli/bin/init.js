@@ -31,9 +31,9 @@ function init(argv, answers) {
         return;
     }
 
-    config.init(cmdPath, '', option);
     // 仅初始化配置文件
     if (argv.config) {
+        config.init(cmdPath, '', option);
         return;
     }
 

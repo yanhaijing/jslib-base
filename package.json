@@ -10,7 +10,7 @@
     "url": "git+https://github.com/yanhaijing/jslib-base.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
@@ -24,6 +24,6 @@
     "access": "public"
   },
   "engines": {
-    "node": ">= 6.0.0"
+    "node": ">= 8.0.0"
   }
 }
