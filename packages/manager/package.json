@@ -1,6 +1,6 @@
 {
   "name": "@js-lib/manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The best third party JS|TS library scaffold",
   "author": "yanhaijing <yanhaijing@yeah.net>",
   "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
@@ -24,7 +24,7 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "dependencies": {
-    "ora": "^3.4.0",
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "ora": "^3.4.0"
   }
 }
