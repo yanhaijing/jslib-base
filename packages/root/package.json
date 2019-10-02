@@ -25,6 +25,6 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "dependencies": {
-    "@js-lib/util": "^1.1.0"
+    "@js-lib/util": "^1.1.1"
   }
 }
