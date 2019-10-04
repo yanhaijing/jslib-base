@@ -29,6 +29,9 @@ yargs
         }).option('npmname', {
             alias: 'n',
             describe: '仅初始化 npm 项目名称',
+        }).option('umdname', {
+            alias: 'umd',
+            describe: '仅初始化打包时umd name',
         }).option('username', {
             alias: 'u',
             describe: '仅初始化用户名称',

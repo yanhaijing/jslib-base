@@ -14,8 +14,8 @@ function prompts(promptList) {
 let promptList = [];
 
 function runInitPrompts(pathname, argv) {
-    const {npmname, username, type, lang, manager} = argv
-
+    const {npmname, umdname, username, type, lang, manager} = argv
+    
     promptList.push({
         type: 'input',
         message: 'project name:',
@@ -38,6 +38,20 @@ function runInitPrompts(pathname, argv) {
             validate: function(val) {
                 if (!validate(val).validForNewPackages) {
                     return "npm 包名不合法";
+                }
+                return true
+            }
+        })
+    }
+    if (!umdname) {
+        promptList.push({
+            type: 'input',
+            message: 'publish to umd name:',
+            name: 'umdname',
+            default: pathname,
+            validate: function(val) {
+                if (!val) {
+                    return "请输入名称";
                 }
                 return true
             }

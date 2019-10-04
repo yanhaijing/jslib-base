@@ -5,14 +5,14 @@ const { checkProjectExists } = require('./helpers');
 
 function init(argv, answers) {
     const cmdPath = process.cwd();
-    const {name, npmname, username, type, lang, manager} = Object.assign({}, argv, answers);
+    const {name, npmname, umdname, username, type, lang, manager} = Object.assign({}, argv, answers);
     const pathname = String(typeof argv._[1] !== 'undefined' ? argv._[1] : name);
 
     const option = {
         pathname, // 创建的名字
         name: String(name), // 项目名字 readme 
         npmname: String(npmname), // 发布到npm的名字，有可能和项目名字不一样，比如带scope
-        umdname: String(npmname).split('/').pop(), // @yan/xxx -> xxx
+        umdname: String(umdname),
         username: String(username),
         type,
         lang,

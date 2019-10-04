@@ -13,11 +13,11 @@ function init(cmdPath, name, option) {
 function update(cmdPath, option) {
     console.log('@js-lib/package: update');
     const {
-        scripts, sideEffects, devDependencies, dependencies, files
+        scripts, sideEffects, devDependencies, dependencies, files, engines,
     } = JSON.parse(util.readTmpl(path.resolve(__dirname, `./template/package.json.tmpl`), option));
     
     util.mergeObj2JSON(
-        { scripts, sideEffects, devDependencies, dependencies, files },
+        { scripts, sideEffects, devDependencies, dependencies, files, engines },
         path.resolve(cmdPath, 'package.json')
     );
 }
