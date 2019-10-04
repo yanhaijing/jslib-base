@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const ora = require('ora');
 const spinner = ora();
+const pkg = require('./package.json');
 
 const config = require('@js-lib/config');
 const root = require('@js-lib/root');
@@ -16,6 +17,8 @@ const test = require('@js-lib/test');
 const manager = require('@js-lib/manager');
 
 function init(cmdPath, option) {
+    option.version = pkg.version;
+    
     config.init(cmdPath, option.pathname, option);
     root.init(cmdPath, option.pathname, option);
     package.init(cmdPath, option.pathname, option);
@@ -31,6 +34,8 @@ function init(cmdPath, option) {
     });
 }
 function update(cmdPath, option, answers) {
+    option.version = pkg.version;
+    
     if (answers.package) {
         package.update(cmdPath, option);
     }
