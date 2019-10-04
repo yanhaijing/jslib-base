@@ -1,6 +1,6 @@
 {
   "name": "@js-lib/cli",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "The best third party JS|TS library scaffold",
   "author": "yanhaijing <yanhaijing@yeah.net>",
   "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
@@ -31,12 +31,12 @@
     "url": "https://github.com/yanhaijing/jslib-base/issues"
   },
   "dependencies": {
-    "@js-lib/config": "^1.1.2",
+    "@js-lib/config": "^1.2.0",
     "@js-lib/demo": "^1.1.2",
     "@js-lib/eslint": "^1.1.2",
     "@js-lib/license": "^1.1.2",
     "@js-lib/manager": "^1.1.2",
-    "@js-lib/package": "^1.1.2",
+    "@js-lib/package": "^1.2.0",
     "@js-lib/readme": "^1.1.2",
     "@js-lib/rollup": "^1.1.2",
     "@js-lib/root": "^1.1.2",
