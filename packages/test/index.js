@@ -42,6 +42,14 @@ function update(cmdPath, option) {
         path.resolve(__dirname, `./template/${type}/package.json`),
         path.resolve(cmdPath, './package.json')
     );
+
+    util.replaceFileText(
+        path.resolve(cmdPath, './test/test.js'),
+        [{
+            from: '\/dist\/index\.js',
+            to: '/src/index.js',
+        }]
+    );
 }
 
 module.exports = {
