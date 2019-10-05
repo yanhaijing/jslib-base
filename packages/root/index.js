@@ -28,6 +28,21 @@ function init(cmdPath, name, option) {
 
 function update(cmdPath, option) {
     console.log('@js-lib/root: update');
+    
+    copyFile(
+        path.resolve(__dirname, `./template/base/.editorconfig`),
+        path.resolve(cmdPath, '.editorconfig')
+    );
+
+    copyFile(
+        path.resolve(__dirname, `./template/base/.gitignore`),
+        path.resolve(cmdPath, '.gitignore')
+    );
+
+    copyFile(
+        path.resolve(__dirname, `./template/base/.travis.yml`),
+        path.resolve(cmdPath, '.travis.yml')
+    );
 }
 
 module.exports = {

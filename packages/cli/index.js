@@ -36,6 +36,9 @@ function init(cmdPath, option) {
 function update(cmdPath, option, answers) {
     option.version = pkg.version;
     
+    if (answers.root) {
+        root.update(cmdPath, option);
+    }
     if (answers.package) {
         package.update(cmdPath, option);
     }
