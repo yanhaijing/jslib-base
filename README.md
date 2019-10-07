@@ -57,7 +57,7 @@ $ jslib update
 For older projects, the update command cannot be executed directly. Instead, a configuration file can be initialized first
 
 ```bash
-$ jslib new -c -f
+$ jslib new -c
 ```
 
 Directory

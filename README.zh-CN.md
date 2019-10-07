@@ -56,7 +56,7 @@ $ jslib update
 对于旧项目，不能直接执行update命令，可以先初始化一个配置文件
 
 ```bash
-$ jslib new -c -f
+$ jslib new -c
 ```
 
 目录简介
