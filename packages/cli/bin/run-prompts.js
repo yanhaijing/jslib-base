@@ -14,7 +14,7 @@ function prompts(promptList) {
 let promptList = [];
 
 function runInitPrompts(pathname, argv) {
-    const {npmname, umdname, username, type, lang, manager} = argv
+    const {npmname, umdname, username, type, module, test, lang, manager} = argv
     
     promptList.push({
         type: 'input',
@@ -23,7 +23,7 @@ function runInitPrompts(pathname, argv) {
         default: pathname,
         validate: function(val) {
             if (!val) {
-                return "输入项目名称";
+                return "Please enter name";
             }
             return true
         }
@@ -37,7 +37,7 @@ function runInitPrompts(pathname, argv) {
             default: pathname,
             validate: function(val) {
                 if (!validate(val).validForNewPackages) {
-                    return "npm 包名不合法";
+                    return "Forbidden npm name";
                 }
                 return true
             }
@@ -51,7 +51,7 @@ function runInitPrompts(pathname, argv) {
             default: pathname,
             validate: function(val) {
                 if (!val) {
-                    return "请输入名称";
+                    return "Please enter name";
                 }
                 return true
             }
@@ -62,6 +62,12 @@ function runInitPrompts(pathname, argv) {
             type: 'input',
             message: 'github user name:',
             name: 'username',
+            validate: function(val) {
+                if (!val) {
+                    return "Please enter name";
+                }
+                return true
+            }
         })
     }
     if (!type) {
@@ -77,6 +83,42 @@ function runInitPrompts(pathname, argv) {
                 return ({
                     TypeScript: 'ts',
                     JavaScript: 'js'
+                }[value])
+            }
+        })
+    }
+    if (!module) {
+        promptList.push({
+            type: 'checkbox',
+            message: 'use module:',
+            name: 'module',
+            choices: [
+                'umd',
+                'esm',
+                'commonjs',
+            ],
+            default: ['umd', 'esm', 'commonjs'],
+            validate: function(val) {
+                if (!val.length) {
+                    return "Choose at least one module";
+                }
+                return true
+            }
+        })
+    }
+    if (!test) {
+        promptList.push({
+            type: 'list',
+            message: 'use tester:',
+            name: 'test',
+            choices: [
+                'mocha',
+                'none',
+            ],
+            filter: function (value) {
+                return ({
+                    mocha: 'mocha',
+                    none: null
                 }[value])
             }
         })
@@ -100,12 +142,12 @@ function runInitPrompts(pathname, argv) {
             type: 'list',
             message: 'package manager:',
             name: 'manager',
-            choices: ['npm', 'yarn', '不自动安装依赖'],
+            choices: ['no install', 'npm', 'yarn'],
             filter: function (value) {
                 return ({
                     npm: 'npm',
                     yarn: 'yarn',
-                    'not install the packages automatically': null
+                    'no install': null
                 }[value])
             }
         })

@@ -5,7 +5,9 @@ const { checkProjectExists } = require('./helpers');
 
 function init(argv, answers) {
     const cmdPath = process.cwd();
-    const {name, npmname, umdname, username, type, lang, manager} = Object.assign({}, argv, answers);
+    const {
+        name, npmname, umdname, username, type, module, test, lang, manager
+    } = Object.assign({}, argv, answers);
     const pathname = String(typeof argv._[1] !== 'undefined' ? argv._[1] : name);
 
     const option = {
@@ -15,6 +17,8 @@ function init(argv, answers) {
         umdname: String(umdname),
         username: String(username),
         type,
+        module: Array.isArray(module) ? module : module.split(','), // 数组或字符串
+        test,
         lang,
         manager,
         version: pkg.version,

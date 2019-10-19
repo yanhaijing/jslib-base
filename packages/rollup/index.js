@@ -5,26 +5,37 @@ function init(cmdPath, name, option) {
     console.log('@js-lib/rollup: init');
     const type = option.type;
 
+    const module = option.module = option.module.reduce((prev, name) => (prev[name] = name, prev), ({}));
+
     util.copyTmpl(
         path.resolve(__dirname, `./template/${type}/rollup.js.tmpl`),
         path.resolve(cmdPath, name, 'config/rollup.js'),
         option,
     );
-    util.copyFile(
-        path.resolve(__dirname, `./template/${type}/rollup.config.js`),
-        path.resolve(cmdPath, name, 'config/rollup.config.js')
-    );
-    util.copyFile(
-        path.resolve(__dirname, `./template/${type}/rollup.config.esm.js`),
-        path.resolve(cmdPath, name, 'config/rollup.config.esm.js')
-    );
-    util.copyFile(
-        path.resolve(__dirname, `./template/${type}/rollup.config.aio.js`),
-        path.resolve(cmdPath, name, 'config/rollup.config.aio.js')
-    );
-    util.mergeJSON2JSON(
-        path.resolve(__dirname, `./template/${type}/package.json`),
-        path.resolve(cmdPath, name, 'package.json')
+
+    if (module.umd) {
+        util.copyFile(
+            path.resolve(__dirname, `./template/${type}/rollup.config.aio.js`),
+            path.resolve(cmdPath, name, 'config/rollup.config.aio.js')
+        );
+    }
+    if (module.esm) {
+        util.copyFile(
+            path.resolve(__dirname, `./template/${type}/rollup.config.esm.js`),
+            path.resolve(cmdPath, name, 'config/rollup.config.esm.js')
+        );
+    }
+    if (module.commonjs) {
+        util.copyFile(
+            path.resolve(__dirname, `./template/${type}/rollup.config.js`),
+            path.resolve(cmdPath, name, 'config/rollup.config.js')
+        );
+    }
+    
+    util.mergeTmpl2JSON(
+        path.resolve(__dirname, `./template/${type}/package.json.tmpl`),
+        path.resolve(cmdPath, name, 'package.json'),
+        option,
     );
 
     if (type === 'js') {

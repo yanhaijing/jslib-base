@@ -8,6 +8,7 @@
     "sideEffects": false,
     "scripts": {
       "clean": "rimraf ./dist",
+      "test": "echo Error: missing tests",
       "release": "npm test && npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
     },
     "author": "<%=username%>",

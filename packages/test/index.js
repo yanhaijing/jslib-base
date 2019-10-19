@@ -2,6 +2,9 @@ const path = require('path');
 const util = require('@js-lib/util');
 
 function init(cmdPath, name, option) {
+    if (!option.test) {
+        return;
+    }
     console.log('@js-lib/test: init');
     const type = option.type;
 
@@ -25,6 +28,9 @@ function init(cmdPath, name, option) {
 }
 
 function update(cmdPath, option) {
+    if (!option.test) {
+        return;
+    }
     console.log('@js-lib/test: update');
 
     const type = option.type;

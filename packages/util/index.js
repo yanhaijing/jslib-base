@@ -92,6 +92,11 @@ function mergeJSON2JSON(from, to) {
     mergeObj2JSON(json, to);
 }
 
+function mergeTmpl2JSON(from, to, data = {}) {
+    const json = JSON.parse(readTmpl(from, data));
+    mergeObj2JSON(json, to);
+}
+
 function replaceFileText(filepath, replacerList) {
     let file = fs.readFileSync(filepath, {encoding: 'utf8'});
     let count = 0;
@@ -125,5 +130,6 @@ exports.readTmpl = readTmpl;
 exports.copyTmpl = copyTmpl;
 exports.mergeObj2JSON = mergeObj2JSON;
 exports.mergeJSON2JSON = mergeJSON2JSON;
+exports.mergeTmpl2JSON = mergeTmpl2JSON;
 exports.replaceFileText = replaceFileText;
 exports.log = log;

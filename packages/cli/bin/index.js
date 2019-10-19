@@ -38,6 +38,10 @@ yargs
         }).option('type', {
             alias: 't',
             describe: '仅初始化 js/ts 选择',
+        }).option('module', {
+            describe: '模块化方案',
+        }).option('test', {
+            describe: '测试方案',
         }).option('lang', {
             alias: 'l',
             describe: '仅初始化中英文选择',
@@ -58,6 +62,9 @@ yargs
 
         const json = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'jslib.json'), { encoding: 'utf8' }));
 
+        json.module = typeof json.module === 'string' ? json.module.split(',') : ['umd','esm','commonjs'];
+        json.test = json.test ? json.test : 'mocha';
+        
         runUpdatePrompts().then(function(answers) {
             update(json, answers);
         });
