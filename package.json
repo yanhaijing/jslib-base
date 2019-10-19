@@ -19,6 +19,9 @@
     "lerna": "^3.16.4"
   },
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
