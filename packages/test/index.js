@@ -51,10 +51,16 @@ function update(cmdPath, option) {
 
     util.replaceFileText(
         path.resolve(cmdPath, './test/test.js'),
-        [{
-            from: '\/dist\/index\.js',
-            to: '/src/index.js',
-        }]
+        [
+            {
+                from: '\/dist\/index\.js',
+                to: type === 'js' ? '/src/index.js' : '/src/index.ts',
+            },
+            {
+                from: type === 'js' ? '\/src\/index\.ts' : '\/src\/index\.js',
+                to: type === 'js' ? '/src/index.js' : '/src/index.ts',
+            },
+        ]
     );
 }
 
