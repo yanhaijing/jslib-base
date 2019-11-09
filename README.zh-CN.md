@@ -117,6 +117,7 @@ $ lerna publish # 会打tag，上传git,上传npm
 ## :bulb: 谁在使用
 
 - [jsmini](https://github.com/jsmini)
+- [template.js](https://github.com/yanhaijing/template.js)
 - [...](https://github.com/yanhaijing/jslib-base/issues/10)
 
 ## 参考文档

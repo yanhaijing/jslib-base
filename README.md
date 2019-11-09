@@ -118,6 +118,7 @@ $ lerna publish
 ## Current Users
 
 - [jsmini](https://github.com/jsmini)
+- [template.js](https://github.com/yanhaijing/template.js)
 - [...](https://github.com/yanhaijing/jslib-base/issues/10)
 
 ## Relative links
