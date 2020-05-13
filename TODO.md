@@ -8,3 +8,7 @@
 - [X] 统一eslint
 - [X] 提供CLI支持
 - [ ] 统一babel编译ts
+- [ ] 添加jsdom
+- [ ] 添加一个本地server
+- [ ] 添加watch功能
+- [ ] 添加chrome headless等
