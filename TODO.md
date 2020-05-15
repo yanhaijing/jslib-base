@@ -7,6 +7,7 @@
 - [X] 测试覆盖率
 - [X] 统一eslint
 - [X] 提供CLI支持
+- [ ] 升级依赖工具版本
 - [ ] 统一babel编译ts
 - [ ] 添加jsdom
 - [ ] 添加prettier
