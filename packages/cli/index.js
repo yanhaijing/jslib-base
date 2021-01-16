@@ -15,6 +15,7 @@ const demo = require('@js-lib/demo');
 const rollup = require('@js-lib/rollup');
 const test = require('@js-lib/test');
 const manager = require('@js-lib/manager');
+const doc = require('@js-lib/doc');
 
 function init(cmdPath, option) {
     option.version = pkg.version;
@@ -29,6 +30,7 @@ function init(cmdPath, option) {
     eslint.init(cmdPath, option.pathname, option);
     rollup.init(cmdPath, option.pathname, option);
     test.init(cmdPath, option.pathname, option);
+    doc.init(cmdPath, option.pathname, option);
     manager.init(cmdPath, option.pathname, option).then(function() {
         spinner.succeed('Create project successfully');
     });
