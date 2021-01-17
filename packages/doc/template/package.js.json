@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "docs:jsdoc2md": "rimraf doc/README.md && npx jsdoc2md src/* >> doc/README.md",
+    "docs:build": "npm run docs:jsdoc2md && npx vuepress build doc",
+    "docs:dev": "npm run docs:jsdoc2md && npx vuepress dev doc"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^6.0.1",
+    "vuepress": "^1.8.0"
+  }
+}
