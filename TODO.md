@@ -12,5 +12,6 @@
 - [ ] 添加jsdom
 - [ ] 添加prettier
 - [ ] 添加一个本地server
+- [ ] 添加puppeteer
 - [ ] 添加watch功能
 - [ ] 添加chrome headless等
