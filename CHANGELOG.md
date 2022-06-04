@@ -1,12 +1,19 @@
 # 变更日志
 
+## 1.7.0 / 2023-9-19
+
+- 架构调整, mono => sud module
+- 重新验证了项目各种功能
+  - 在 node14 中，js 和 ts 项目，功能完好
+  - 如果大于 node14 安装依赖可能报错，可以使用`npm i --legacy-peer-deps`
+
 ## 1.6.0 / 2019-12-18
 
-- 升级template.js版本
+- 升级 template.js 版本
 
 ## 1.5.1 / 2019-10-20
 
-- 修复`rollup`插件，update时报错的问题
+- 修复`rollup`插件，update 时报错的问题
 
 ## 1.5.0 / 2019-10-20
 
@@ -15,7 +22,7 @@
 
 ## 1.4.2 / 2019-10-10
 
-- 修复npm发布时丢失d.ts的问题
+- 修复 npm 发布时丢失 d.ts 的问题
 
 ## 1.4.1 / 2019-10-7
 
@@ -23,17 +30,17 @@
 
 ## 1.4.0 / 2019-10-7
 
-- 增加对root插件的update
+- 增加对 root 插件的 update
 - 删除对`@jsmini/type`的依赖
 
 ## 1.3.0 / 2019-10-7
 
-- 增加version写入配置文件
+- 增加 version 写入配置文件
 - `update`增加对文件内容的升级
 
 ## 1.2.0 / 2019-10-7
 
-- 增加umdname参数
+- 增加 umdname 参数
 
 ## 1.1.0 / 2019-10-7
 
@@ -42,42 +49,42 @@
 
 ## 1.0.0 / 2019-10-1
 
-- 架构调整，由base改为cli工具
+- 架构调整，由 base 改为 cli 工具
 - 支持`jslib new`命令
 - 支持`jslib update`命令
 
 ## 0.6.0 / 2019-6-16
 
-- 统一改用eslint校验js和ts
+- 统一改用 eslint 校验 js 和 ts
 
 ## 0.5.0 / 2018-12-17
 
-- TS支持测试源文件，改用nyc
+- TS 支持测试源文件，改用 nyc
 
 ## 0.4.0 / 2018-11-27
 
-- JS支持测试源文件，改用nyc
+- JS 支持测试源文件，改用 nyc
 
 ## 0.3.0 / 2018-11-23
 
-- 添加对typescript的支持
-- 升级babel7
+- 添加对 typescript 的支持
+- 升级 babel7
 - 添加对测试覆盖率的支持
-- 文档添加emoji
+- 文档添加 emoji
 
 ## 0.2.0 / 2018-3-10
 
-- 支持banner
-- 添加es5-shim
+- 支持 banner
+- 添加 es5-shim
 
 ## 0.1.0 / 2018-3-1
 
-- ES6编写源码，编译生成生产代码
+- ES6 编写源码，编译生成生产代码
 - 第三方依赖自动注入
 - 支持浏览器原生
-- 支持AMD，CMD
-- 支持Webpack，Rollup，fis等
-- 支持Node
+- 支持 AMD，CMD
+- 支持 Webpack，Rollup，fis 等
+- 支持 Node
 - 集成单元测试环境
-- 集成eslint
+- 集成 eslint
 - 集成[travis-ci](https://www.travis-ci.org/)

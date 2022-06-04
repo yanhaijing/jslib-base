@@ -11,6 +11,8 @@
   },
   "files": [
     "bin",
+    "module",
+    "util",
     "index.js"
   ],
   "engines": {
@@ -27,25 +29,14 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "bugs": {
-    "url": "https://github.com/yanhaijing/jslib-base/issues"
-  },
   "dependencies": {
-    "@js-lib/config": "^1.6.0",
-    "@js-lib/demo": "^1.6.0",
-    "@js-lib/eslint": "^1.6.0",
-    "@js-lib/license": "^1.6.0",
-    "@js-lib/manager": "^1.1.2",
-    "@js-lib/package": "^1.6.0",
-    "@js-lib/readme": "^1.6.0",
-    "@js-lib/rollup": "^1.6.0",
-    "@js-lib/root": "^1.6.0",
-    "@js-lib/src": "^1.6.0",
-    "@js-lib/test": "^1.6.0",
-    "@js-lib/util": "^1.6.0",
     "inquirer": "^7.0.0",
     "ora": "^3.4.0",
     "validate-npm-package-name": "^3.0.0",
-    "yargs": "^14.0.0"
+    "yargs": "^14.0.0",
+    "@jsmini/extend": "^0.3.1",
+    "chalk": "^2.4.2",
+    "copy-dir": "^1.2.0",
+    "template_js": "^2.4.0"
   }
 }

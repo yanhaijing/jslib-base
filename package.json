@@ -3,6 +3,8 @@
   "version": "1.1.0",
   "description": "The best third party JS|TS library scaffold",
   "scripts": {
+    "prepare": "husky install",
+    "preinstall": "npx only-allow yarn",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,7 +18,13 @@
   },
   "homepage": "https://github.com/yanhaijing/jslib-base#readme",
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "lerna": "^3.22.1",
+    "prettier": "^2.6.2",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.5.0"
   },
   "private": true,
   "workspaces": [
