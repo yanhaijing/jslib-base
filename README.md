@@ -30,7 +30,7 @@ The best third party `JS|TS` library scaffold. fast to create the framework for 
 create a new lib
 
 ```bash
-$ npx jslib new mylib
+$ npx @js-lib/cli new mylib
 # input something
 $ npm i # < node 16
 $ npm i --legacy-peer-deps # > node 16
@@ -39,13 +39,13 @@ $ npm i --legacy-peer-deps # > node 16
 To update the old lib
 
 ```bash
-$ npx jslib update
+$ npx @js-lib/cli update
 ```
 
 For older projects, the update command cannot be executed directly. Instead, a configuration file can be initialized first
 
 ```bash
-$ npx jslib new -c
+$ npx @js-lib/cli new -c
 ```
 
 Directory

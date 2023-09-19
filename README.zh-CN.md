@@ -29,7 +29,7 @@
 新建一个项目
 
 ```bash
-$ npx jslib new mylib
+$ npx @js-lib/cli new mylib
 # 交互式询问，输入项目信息
 $ cd mylib
 $ npm i # < node 16
@@ -39,13 +39,13 @@ $ npm i --legacy-peer-deps # > node 16
 更新项目，只需在项目根目录执行如下命令
 
 ```bash
-$ npx jslib update
+$ npx @js-lib/cli update
 ```
 
 对于旧项目，不能直接执行 update 命令，可以先初始化一个配置文件
 
 ```bash
-$ npx jslib new -c
+$ npx @js-lib/cli new -c
 ```
 
 目录简介
