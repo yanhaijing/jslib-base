@@ -27,38 +27,25 @@ The best third party `JS|TS` library scaffold. fast to create the framework for 
 -   Integrated [jsmini](https://github.com/jsmini)
 
 ## Usage Instructions
-
-Using npm, install global `jslib`(node >= 6.0)
-
-```bash
-$ npm i -g @js-lib/cli
-```
-
-Or use the npx command to skip the install
-
-```bash
-$ npx @js-lib/cli new
-```
-
 create a new lib
 
 ```bash
-$ jslib new mylib
+$ npx jslib new mylib
 # input something
-$ cd mylib
-$ npm i
+$ npm i # < node 16
+$ npm i --legacy-peer-deps # > node 16
 ```
 
 To update the old lib
 
 ```bash
-$ jslib update
+$ npx jslib update
 ```
 
 For older projects, the update command cannot be executed directly. Instead, a configuration file can be initialized first
 
 ```bash
-$ jslib new -c
+$ npx jslib new -c
 ```
 
 Directory

@@ -26,38 +26,26 @@
 -   集成[jsmini](https://github.com/jsmini)
 
 ## :rocket: 使用者指南
-
-通过 npm 下载安装 jslib（node >= 6.0）
-
-```bash
-$ npm i -g @js-lib/cli
-```
-
-也可不安装全局命令，通过 npx 直接使用
-
-```bash
-$ npx @js-lib/cli new
-```
-
 新建一个项目
 
 ```bash
-$ jslib new mylib
+$ npx jslib new mylib
 # 交互式询问，输入项目信息
 $ cd mylib
-$ npm i
+$ npm i # < node 16
+$ npm i --legacy-peer-deps # > node 16
 ```
 
 更新项目，只需在项目根目录执行如下命令
 
 ```bash
-$ jslib update
+$ npx jslib update
 ```
 
 对于旧项目，不能直接执行 update 命令，可以先初始化一个配置文件
 
 ```bash
-$ jslib new -c
+$ npx jslib new -c
 ```
 
 目录简介
