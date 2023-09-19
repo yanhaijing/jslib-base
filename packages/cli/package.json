@@ -1,6 +1,6 @@
 {
   "name": "@js-lib/cli",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "The best third party JS|TS library scaffold",
   "author": "yanhaijing <yanhaijing@yeah.net>",
   "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
@@ -30,13 +30,13 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "inquirer": "^7.0.0",
-    "ora": "^3.4.0",
-    "validate-npm-package-name": "^3.0.0",
-    "yargs": "^14.0.0",
     "@jsmini/extend": "^0.3.1",
     "chalk": "^2.4.2",
     "copy-dir": "^1.2.0",
-    "template_js": "^2.4.0"
+    "inquirer": "^7.0.0",
+    "ora": "^3.4.0",
+    "template_js": "^2.4.0",
+    "validate-npm-package-name": "^3.0.0",
+    "yargs": "^14.0.0"
   }
 }
