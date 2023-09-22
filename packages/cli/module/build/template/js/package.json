@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "build:self": "rollup -c config/rollup.config.cjs",
+    "build:esm": "rollup -c config/rollup.config.esm.cjs",
+    "build:aio": "rollup -c config/rollup.config.aio.cjs",
+    "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio"
+  },
+  "devDependencies": {
+    "rollup": "^3.29.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@babel/plugin-transform-runtime": "^7.22.15",
+    "@babel/preset-env": "^7.22.20"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.22.15"
+  }
+}
+  

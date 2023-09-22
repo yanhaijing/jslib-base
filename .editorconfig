@@ -28,3 +28,6 @@ indent_size = 2
 
 [*.{md,markdown}]
 indent_size = 2
+
+[*rc]
+indent_size = 2

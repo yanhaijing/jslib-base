@@ -4,13 +4,8 @@
   "statements": 75,
   "functions": 0,
   "branches": 75,
-  "require": [
-    "@babel/register"
-  ],
-  "reporter": [
-    "lcov",
-    "text"
-  ],
+  "reporter": ["lcov", "text"],
+  "require": ["@babel/register"],
   "sourceMap": false,
   "instrument": false
 }

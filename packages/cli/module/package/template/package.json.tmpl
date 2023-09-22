@@ -2,12 +2,23 @@
     "name": "<%=npmname%>",
     "version": "0.1.0",
     "description": "jslib最好用的js库脚手架",
-    "main": "dist/index.js",
-    "jsnext:main": "dist/index.esm.js",
-    "module": "dist/index.esm.js",
     "sideEffects": false,
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "exports": {
+      "node": {
+        "import": "./dist/index.mjs",
+        "default": "./dist/index.js"
+      },
+      "default": {
+        "import": "./dist/index.mjs",
+        "default": "./dist/index.js"
+      }
+    },
     "scripts": {
+      "preinstall": "npx only-allow npm",
       "clean": "rimraf ./dist",
+      "start": "http-server -p 3000 -c-1",
       "test": "echo Error: missing tests",
       "release": "npm test && npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
     },
@@ -22,16 +33,23 @@
     },
     "files": [
       "/dist",
+      "/types",
       "*.d.ts"
     ],
     "engines": {
-      "node": ">= 0.12.0"
+      "node": ">=18.18.0 <19.0.0",
+      "npm": ">=9.8.1 <10.0.0"
+    },
+    "publishConfig": {
+      "registry": "https://registry.npmjs.org",
+      "access": "public"
     },
     "devDependencies": {
       "@js-lib/cli": "^<%=version%>",
-      "cross-env": "5.2.0",
-      "rimraf": "2.6.2",
-      "es5-shim": "4.5.10"
+      "cross-env": "^7.0.3",
+      "rimraf": "^5.0.1",
+      "http-server": "^14.1.1",
+      "es5-shim": "^4.6.7"
     },
     "dependencies": {
     }

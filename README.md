@@ -8,59 +8,59 @@
 
 English | [简体中文](./README.zh-CN.md)
 
-The best third party `JS|TS` library scaffold. fast to create the framework for building a new library.
+The best `JS|TS` third-party library scaffold, quickly setup the basic framework of a new library in 10 seconds.
 
-**The library that based jslib-base can be shared to the [jsmini](https://github.com/jsmini) platform**
+**Libraries based on jslib-base can be shared on the [jsmini](https://github.com/jsmini) platform.**
 
-## Characteristics
+## :star: Features
 
--   `jslib` commander all in one
--   Coded in ES6+ or TypeScript, easily compile and generate production code
--   Third parties rely on automatic injection(Tree shaking)
--   Supports multi environment, including default browsers, Node, AMD, CMD, Webpack, Rollup, Fis and so on.
--   Integrated code style lint(eslint).
--   Integrated unit test environment(mocha).
--   Integrated test coverage(istanbul+nyc).
--   Integrated continuous integration tool [travis-ci](https://www.travis-ci.org/)
--   Supports [sideEffects](https://github.com/webpack/webpack/tree/master/examples/side-effects)
--   Integrated Issue template
--   Integrated [jsmini](https://github.com/jsmini)
+- Command-line tool for quick creation and seamless upgrades
+- Supports writing source code in ES6+ or TypeScript, and compiles to generate production code
+- Auto-injection of third-party dependencies (automatically removes unnecessary code in third-party dependencies through tree shaking)
+- Supports multiple environments (native browser, AMD, CMD, Webpack, Rollup, vite, fis, Node.js, etc.)
+- Integrated code style checker (eslint + prettier + husky)
+- Integrated unit test environment (mocha)
+- Integrated test coverage report (istanbul+nyc)
+- Integrated continuous integration tool github action
+- Integrated with [jsmini](https://github.com/jsmini)
 
-## Usage Instructions
-create a new lib
+## :rocket: User Guide
+
+To create a new project, Node 14+ is recommended.
 
 ```bash
 $ npx @js-lib/cli new mylib
-# input something
-$ npm i # < node 16
-$ npm i --legacy-peer-deps # > node 16
+# Interactive queries, input project info
+$ cd mylib
+$ npm i
 ```
 
-To update the old lib
+To update the project, just execute the following command in the project root directory.
 
 ```bash
 $ npx @js-lib/cli update
 ```
 
-For older projects, the update command cannot be executed directly. Instead, a configuration file can be initialized first
+For old projects, you can't directly execute the update command, you can first initialize a config file.
 
 ```bash
 $ npx @js-lib/cli new -c
 ```
 
-Directory
+Directory Overview
 
 ```
-├── demo - Using demo
-├── dist - Compiler output code
-├── doc - Project documents
-├── src - Source code directory
-├── test - Unit tests
-├── CHANGELOG.md - Change log
-└── TODO.md - Planned features
+.
+├── demo Usage demo
+├── dist Compiled out code
+├── doc Project documents
+├── src Source code directory
+├── test Unit tests
+├── CHANGELOG.md Change log
+└── TODO.md To-do features
 ```
 
-The npm scripts
+Common command scripts
 
 ```bash
 $ npm run lint
@@ -72,25 +72,17 @@ $ npm publish
 
 ## Contribution Guide
 
-This project use lerna to manage mutil plugins
-
-First, to install lerna
+This project uses lerna to manage multiple plugins, common lerna commands are:
 
 ```bash
-$ npm install -g lerna@3.16.4
-```
-
-Some commands of lerna
-
-```bash
-$ lerna init
-$ lerna create @js-lib/todo
-$ lerna add yargs --scope=@js-lib/cli
-$ lerna list
-$ lerna bootstrap
-$ lerna link
-$ lerna changed
-$ lerna publish
+$ npx lerna init # Initialization
+$ npx lerna create @js-lib/todo # Create a package
+$ npx lerna add yargs --scope=@js-lib/cli # Install dependencies for a package
+$ npx lerna list # List all the packages
+$ npx lerna bootstrap # Install all dependencies
+$ npx lerna link # Create all links
+$ npx lerna changed # List the packages to be updated in the next release
+$ npx lerna publish # Release with tag, upload to git, upload to npm
 ```
 
 ## Contributors
@@ -107,10 +99,10 @@ $ lerna publish
 
 ## Current Users
 
--   [jsmini](https://github.com/jsmini)
--   [template.js](https://github.com/yanhaijing/template.js)
--   [...](https://github.com/yanhaijing/jslib-base/issues/10)
+- [jsmini](https://github.com/jsmini)
+- [template.js](https://github.com/yanhaijing/template.js)
+- [...](https://github.com/yanhaijing/jslib-base/issues/10)
 
 ## Relative links
 
--   [Lerna 中文教程详解](https://juejin.im/post/5ced1609e51d455d850d3a6c)
+- [Lerna 中文教程详解](https://juejin.im/post/5ced1609e51d455d850d3a6c)

@@ -739,7 +739,7 @@ var requirejs, require, define;
           'timeout',
           'Load timeout for modules: ' + noLoads,
           null,
-          noLoads
+          noLoads,
         );
         err.contextName = context.contextName;
         return onError(err);
@@ -865,7 +865,7 @@ var requirejs, require, define;
             this.shim.deps || [],
             bind(this, function () {
               return map.prefix ? this.callPlugin() : this.load();
-            })
+            }),
           );
         } else {
           //Regular dependency.
@@ -1031,7 +1031,7 @@ var requirejs, require, define;
               normalizedMap = makeModuleMap(
                 map.prefix + '!' + name,
                 this.map.parentMap,
-                true
+                true,
               );
               on(
                 normalizedMap,
@@ -1047,9 +1047,9 @@ var requirejs, require, define;
                     {
                       enabled: true,
                       ignore: true,
-                    }
+                    },
                   );
-                })
+                }),
               );
 
               normalizedMod = getOwn(registry, normalizedMap.id);
@@ -1063,7 +1063,7 @@ var requirejs, require, define;
                     'error',
                     bind(this, function (err) {
                       this.emit('error', err);
-                    })
+                    }),
                   );
                 }
                 normalizedMod.enable();
@@ -1089,7 +1089,7 @@ var requirejs, require, define;
                 null,
                 {
                   enabled: true,
-                }
+                },
               );
             });
 
@@ -1148,8 +1148,8 @@ var requirejs, require, define;
                     'fromtexteval',
                     'fromText eval for ' + id + ' failed: ' + e,
                     e,
-                    [id]
-                  )
+                    [id],
+                  ),
                 );
               }
 
@@ -1173,7 +1173,7 @@ var requirejs, require, define;
             //could be some weird string with no path that actually wants to
             //reference the parentName's path.
             plugin.load(map.name, localRequire, load, config);
-          })
+          }),
         );
 
         context.enable(pluginMap, this);
@@ -1203,7 +1203,7 @@ var requirejs, require, define;
                 depMap,
                 this.map.isDefine ? this.map : this.map.parentMap,
                 false,
-                !this.skipMap
+                !this.skipMap,
               );
               this.depMaps[i] = depMap;
 
@@ -1225,7 +1225,7 @@ var requirejs, require, define;
                   }
                   this.defineDep(i, depExports);
                   this.check();
-                })
+                }),
               );
 
               if (this.errback) {
@@ -1239,7 +1239,7 @@ var requirejs, require, define;
                   'error',
                   bind(this, function (err) {
                     this.emit('error', err);
-                  })
+                  }),
                 );
               }
             }
@@ -1253,7 +1253,7 @@ var requirejs, require, define;
             if (!hasProp(handlers, id) && mod && !mod.enabled) {
               context.enable(depMap, this);
             }
-          })
+          }),
         );
 
         //Enable each plugin that is used in
@@ -1265,7 +1265,7 @@ var requirejs, require, define;
             if (mod && !mod.enabled) {
               context.enable(pluginMap, this);
             }
-          })
+          }),
         );
 
         this.enabling = false;
@@ -1351,8 +1351,8 @@ var requirejs, require, define;
           return onError(
             makeError(
               'mismatch',
-              'Mismatched anonymous define() module: ' + args[args.length - 1]
-            )
+              'Mismatched anonymous define() module: ' + args[args.length - 1],
+            ),
           );
         } else {
           //args are id, deps, factory. Should be normalized by the
@@ -1518,7 +1518,7 @@ var requirejs, require, define;
               //Invalid call
               return onError(
                 makeError('requireargs', 'Invalid require call'),
-                errback
+                errback,
               );
             }
 
@@ -1547,8 +1547,8 @@ var requirejs, require, define;
                     id +
                     '" has not been loaded yet for context: ' +
                     contextName +
-                    (relMap ? '' : '. Use require([])')
-                )
+                    (relMap ? '' : '. Use require([])'),
+                ),
               );
             }
             return defined[id];
@@ -1598,7 +1598,7 @@ var requirejs, require, define;
             if (index !== -1 && (!isRelative || index > 1)) {
               ext = moduleNamePlusExt.substring(
                 index,
-                moduleNamePlusExt.length
+                moduleNamePlusExt.length,
               );
               moduleNamePlusExt = moduleNamePlusExt.substring(0, index);
             }
@@ -1606,7 +1606,7 @@ var requirejs, require, define;
             return context.nameToUrl(
               normalize(moduleNamePlusExt, relMap && relMap.id, true),
               ext,
-              true
+              true,
             );
           },
 
@@ -1725,8 +1725,8 @@ var requirejs, require, define;
                   'nodefine',
                   'No define call for ' + moduleName,
                   null,
-                  [moduleName]
-                )
+                  [moduleName],
+                ),
               );
             }
           } else {
@@ -1878,8 +1878,8 @@ var requirejs, require, define;
                 data.id +
                 (parents.length ? '", needed by: ' + parents.join(', ') : '"'),
               evt,
-              [data.id]
-            )
+              [data.id],
+            ),
           );
         }
       },
@@ -2133,8 +2133,8 @@ var requirejs, require, define;
             'importscripts',
             'importScripts failed for ' + moduleName + ' at ' + url,
             e,
-            [moduleName]
-          )
+            [moduleName],
+          ),
         );
       }
     }

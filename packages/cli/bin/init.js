@@ -5,17 +5,8 @@ const { checkProjectExists } = require('../util/file');
 
 function init(argv, answers) {
   const cmdPath = process.cwd();
-  const {
-    name,
-    npmname,
-    umdname,
-    username,
-    type,
-    module,
-    test,
-    lang,
-    manager,
-  } = Object.assign({}, argv, answers);
+  const { name, npmname, umdname, username, type, lang, manager } =
+    Object.assign({}, argv, answers);
   const pathname = String(typeof argv._[1] !== 'undefined' ? argv._[1] : name);
 
   const option = {
@@ -25,8 +16,6 @@ function init(argv, answers) {
     umdname: String(umdname),
     username: String(username),
     type,
-    module: Array.isArray(module) ? module : module.split(','), // 数组或字符串
-    test,
     lang,
     manager,
     version: pkg.version,
@@ -46,7 +35,7 @@ function init(argv, answers) {
 
   if (checkProjectExists(cmdPath, pathname) && !argv.force) {
     console.error(
-      'error: The project is already existed! If you really want to override it, use --force argv to bootstrap!'
+      'error: The project is already existed! If you really want to override it, use --force argv to bootstrap!',
     );
     return;
   }

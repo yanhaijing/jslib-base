@@ -6,7 +6,7 @@ function init(cmdPath, name, option) {
   const type = option.type;
   util.copyDir(
     path.resolve(__dirname, `./template/${type}`),
-    path.resolve(cmdPath, name, 'src')
+    path.resolve(cmdPath, name),
   );
 }
 
@@ -15,7 +15,7 @@ function update(cmdPath, option) {
   const type = option.type;
   util.copyDir(
     path.resolve(__dirname, `./template/${type}`),
-    path.resolve(cmdPath, 'src')
+    path.resolve(cmdPath),
   );
 }
 

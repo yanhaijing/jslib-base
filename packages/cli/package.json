@@ -30,13 +30,14 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@jsmini/extend": "^0.3.1",
-    "chalk": "^2.4.2",
+    "@jsmini/extend": "^0.3.3",
+    "chalk": "^4.1.2",
     "copy-dir": "^1.2.0",
-    "inquirer": "^7.0.0",
-    "ora": "^3.4.0",
+    "inquirer": "^8.2.4",
+    "ora": "^5.4.1",
+    "shelljs": "^0.8.5",
     "template_js": "^2.4.0",
-    "validate-npm-package-name": "^3.0.0",
-    "yargs": "^14.0.0"
+    "validate-npm-package-name": "^5.0.0",
+    "yargs": "^17.7.2"
   }
 }

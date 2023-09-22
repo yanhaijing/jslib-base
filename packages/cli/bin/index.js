@@ -47,12 +47,6 @@ yargs
           alias: 't',
           describe: '仅初始化 js/ts 选择',
         })
-        .option('module', {
-          describe: '模块化方案',
-        })
-        .option('test', {
-          describe: '测试方案',
-        })
         .option('lang', {
           alias: 'l',
           describe: '仅初始化中英文选择',
@@ -66,7 +60,7 @@ yargs
       runInitPrompts(argv._[1], yargs.argv).then(function (answers) {
         init(argv, answers);
       });
-    }
+    },
   )
   .command(['update', 'u'], '更新一个项目', function (_yargs) {
     if (!checkProjectExists(process.cwd(), 'jslib.json')) {
@@ -77,18 +71,12 @@ yargs
     const json = JSON.parse(
       fs.readFileSync(path.resolve(process.cwd(), 'jslib.json'), {
         encoding: 'utf8',
-      })
+      }),
     );
-
-    json.module =
-      typeof json.module === 'string'
-        ? json.module.split(',')
-        : ['umd', 'esm', 'commonjs'];
-    json.test = json.test ? json.test : 'mocha';
 
     runUpdatePrompts().then(function (answers) {
       update(json, answers);
     });
   })
   .demandCommand()
-  .epilog('copyright 2018-2022').argv;
+  .epilog('copyright 2018-2023').argv;

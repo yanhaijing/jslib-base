@@ -14,26 +14,25 @@
 
 ## :star: 特性
 
--   统一新建和更新命令行工具
--   支持 ES6+或 TypeScript 编写源码，编译生成生产代码
--   第三方依赖自动注入（自动剔除第三方依赖无用代码 tree shaking）
--   多环境支持（支持浏览器原生，支持 AMD，CMD，支持 Webpack，Rollup，fis 等，支持 Node）
--   集成代码风格校验(eslint)
--   集成单元测试环境（mocha）
--   集成测试覆盖率（istanbul+nyc）
--   集成可持续构建工具[travis-ci](https://www.travis-ci.org/)
--   集成 ISSUE_TEMPLATE
--   集成[jsmini](https://github.com/jsmini)
+- 支持快速新建和无缝升级的命令行工具
+- 支持 ES6+或 TypeScript 编写源码，编译生成生产代码
+- 第三方依赖自动注入（自动剔除第三方依赖无用代码 tree shaking）
+- 多环境支持（支持浏览器原生，支持 AMD，CMD，支持 Webpack，Rollup，vite, fis 等，支持 Node.js）
+- 集成代码风格校验(eslint + prettier + husky)
+- 集成单元测试环境（mocha）
+- 集成测试覆盖率（istanbul+nyc）
+- 集成可持续构建工具 github action
+- 集成[jsmini](https://github.com/jsmini)
 
 ## :rocket: 使用者指南
-新建一个项目
+
+新建一个项目，推荐使用 node 14+。
 
 ```bash
 $ npx @js-lib/cli new mylib
 # 交互式询问，输入项目信息
 $ cd mylib
-$ npm i # < node 16
-$ npm i --legacy-peer-deps # > node 16
+$ npm i
 ```
 
 更新项目，只需在项目根目录执行如下命令
@@ -73,25 +72,17 @@ $ npm publish # 发布到npm
 
 ## :kissing_heart: 贡献者指南
 
-本项目使用 lerna 来管理多个插件
-
-安装 lerna
+本项目使用 lerna 来管理多个插件，lerna 常用命令如下：
 
 ```bash
-$ npm install -g lerna@3.16.4
-```
-
-lerna 常用命令
-
-```bash
-$ lerna init # 初始化
-$ lerna create @js-lib/todo # 创建一个package
-$ lerna add yargs --scope=@js-lib/cli # 给package安装依赖
-$ lerna list # 列出所有的包
-$ lerna bootstrap # 安装全部依赖
-$ lerna link # 建立全部软连接
-$ lerna changed # 列出下次发版lerna publish 要更新的包
-$ lerna publish # 会打tag，上传git,上传npm
+$ npx lerna init # 初始化
+$ npx lerna create @js-lib/todo # 创建一个package
+$ npx lerna add yargs --scope=@js-lib/cli # 给package安装依赖
+$ npx lerna list # 列出所有的包
+$ npx lerna bootstrap # 安装全部依赖
+$ npx lerna link # 建立全部软连接
+$ npx lerna changed # 列出下次发版npx lerna publish 要更新的包
+$ npx lerna publish # 会打tag，上传git,上传npm
 ```
 
 ## 贡献者列表
@@ -108,10 +99,10 @@ $ lerna publish # 会打tag，上传git,上传npm
 
 ## :bulb: 谁在使用
 
--   [jsmini](https://github.com/jsmini)
--   [template.js](https://github.com/yanhaijing/template.js)
--   [...](https://github.com/yanhaijing/jslib-base/issues/10)
+- [jsmini](https://github.com/jsmini)
+- [template.js](https://github.com/yanhaijing/template.js)
+- [...](https://github.com/yanhaijing/jslib-base/issues/10)
 
 ## 参考文档
 
--   [Lerna 中文教程详解](https://juejin.im/post/5ced1609e51d455d850d3a6c)
+- [Lerna 中文教程详解](https://juejin.im/post/5ced1609e51d455d850d3a6c)

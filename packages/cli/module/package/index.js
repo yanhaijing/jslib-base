@@ -3,10 +3,17 @@ const util = require('../../util/copy');
 
 function init(cmdPath, name, option) {
   console.log('package: init');
+  const { type } = option;
   util.copyTmpl(
     path.resolve(__dirname, `./template/package.json.tmpl`),
     path.resolve(cmdPath, name, 'package.json'),
-    option
+    option,
+  );
+
+  util.copyTmpl(
+    path.resolve(__dirname, `./template/package-lock.${type}.json`),
+    path.resolve(cmdPath, name, 'package-lock.json'),
+    option,
   );
 }
 
@@ -19,16 +26,27 @@ function update(cmdPath, option) {
     dependencies,
     files,
     engines,
+    publishConfig,
+    exports,
   } = JSON.parse(
     util.readTmpl(
       path.resolve(__dirname, `./template/package.json.tmpl`),
-      option
-    )
+      option,
+    ),
   );
 
   util.mergeObj2JSON(
-    { scripts, sideEffects, devDependencies, dependencies, files, engines },
-    path.resolve(cmdPath, 'package.json')
+    {
+      scripts,
+      sideEffects,
+      devDependencies,
+      dependencies,
+      files,
+      engines,
+      publishConfig,
+      exports,
+    },
+    path.resolve(cmdPath, 'package.json'),
   );
 }
 

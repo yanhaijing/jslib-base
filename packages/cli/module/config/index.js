@@ -7,7 +7,7 @@ function init(cmdPath, name, option) {
   util.copyTmpl(
     path.resolve(__dirname, `./template/jslib.json.tmpl`),
     path.resolve(cmdPath, name, 'jslib.json'),
-    option
+    option,
   );
 }
 

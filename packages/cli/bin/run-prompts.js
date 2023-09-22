@@ -12,8 +12,7 @@ function prompts(promptList) {
 let promptList = [];
 
 function runInitPrompts(pathname, argv) {
-  const { npmname, umdname, username, type, module, test, lang, manager } =
-    argv;
+  const { npmname, umdname, username, type, lang, manager } = argv;
 
   promptList.push({
     type: 'input',
@@ -83,35 +82,6 @@ function runInitPrompts(pathname, argv) {
       },
     });
   }
-  if (!module) {
-    promptList.push({
-      type: 'checkbox',
-      message: 'use module:',
-      name: 'module',
-      choices: ['umd', 'esm', 'commonjs'],
-      default: ['umd', 'esm', 'commonjs'],
-      validate: function (val) {
-        if (!val.length) {
-          return 'Choose at least one module';
-        }
-        return true;
-      },
-    });
-  }
-  if (!test) {
-    promptList.push({
-      type: 'list',
-      message: 'use tester:',
-      name: 'test',
-      choices: ['mocha', 'none'],
-      filter: function (value) {
-        return {
-          mocha: 'mocha',
-          none: null,
-        }[value];
-      },
-    });
-  }
   if (!lang) {
     promptList.push({
       type: 'list',
@@ -131,11 +101,10 @@ function runInitPrompts(pathname, argv) {
       type: 'list',
       message: 'package manager:',
       name: 'manager',
-      choices: ['no install', 'npm', 'yarn'],
+      choices: ['npm', 'no install'],
       filter: function (value) {
         return {
           npm: 'npm',
-          yarn: 'yarn',
           'no install': null,
         }[value];
       },
@@ -166,14 +135,14 @@ function runUpdatePrompts() {
     },
     {
       type: 'confirm',
-      message: '是否更新<eslint>插件:',
-      name: 'eslint',
+      message: '是否更新<lint>插件:',
+      name: 'lint',
       default: false,
     },
     {
       type: 'confirm',
-      message: '是否更新<rollup>插件:',
-      name: 'rollup',
+      message: '是否更新<build>插件:',
+      name: 'build',
       default: false,
     },
     {

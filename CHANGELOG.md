@@ -1,5 +1,18 @@
 # 变更日志
 
+## 2.0.0 / 2023-9-23
+
+- 升级全部工具到最新版
+- typescript 库接入 babel 工具
+- 添加 prettier
+- 添加 commitlint
+- 添加 husky
+- 添加一个本地 server
+- 支持 node exports condition
+- 迁移 travis 到 github action
+- 去掉 coveralls 的支持
+- 减少新建的参数数量，9个 -> 7个
+
 ## 1.7.0 / 2023-9-19
 
 - 架构调整, mono => sud module

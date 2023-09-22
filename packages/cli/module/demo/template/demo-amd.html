@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script src="../node_modules/es5-shim/es5-shim.js"></script>
     <script src="../node_modules/es5-shim/es5-sham.js"></script>
-    
-    <script src='./js/require.js'></script>
+
+    <script src="./js/require.js"></script>
     <script>
-        requirejs(['../dist/index.aio.js'], function (base) {
-            console.log(base.name)
-        })
+      requirejs(['../dist/index.aio.js'], function (base) {
+        console.log(base.name);
+      });
     </script>
-</body>
+  </body>
 </html>
