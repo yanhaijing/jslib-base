@@ -19,3 +19,4 @@
 - [ ] 添加 puppeteer
 - [ ] 添加 watch 功能
 - [ ] 添加 chrome headless 等
+- [ ] 支持 github action 自动发包
