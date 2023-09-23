@@ -10,13 +10,8 @@ function init(cmdPath, name, option) {
   );
 }
 
-function update(cmdPath, option) {
+function update() {
   console.log('src: update');
-  const type = option.type;
-  util.copyDir(
-    path.resolve(__dirname, `./template/${type}`),
-    path.resolve(cmdPath),
-  );
 }
 
 module.exports = {

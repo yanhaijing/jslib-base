@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 const fs = require('fs');
 const path = require('path');
 
@@ -7,6 +8,23 @@ const { extendDeep } = require('@jsmini/extend');
 
 function isTemplate(pathname) {
   return path.extname(pathname) === '.tmpl';
+}
+
+function deleteFile(filePath) {
+  fs.unlinkSync(filePath);
+}
+
+function deleteDir(dirPath) {
+  if (fs.existsSync(dirPath)) {
+    try {
+      fs.rmSync(dirPath, { recursive: true, force: true });
+    } catch (e) {
+      // rmSync is not supported in node 12
+      fs.rmdirSync(dirPath, { recursive: true });
+    }
+  } else {
+    console.log('deleteDir: Directory path ' + dirPath + ' not found!');
+  }
 }
 
 function copyDir(from, to, options) {
@@ -74,6 +92,25 @@ function mergeObj2JSON(object, to) {
   extendDeep(json, object);
 
   fs.writeFileSync(to, JSON.stringify(json, null, '  '), { encoding: 'utf8' });
+}
+
+function deleteKeys(obj, keysObj) {
+  for (let key in keysObj) {
+    if (typeof keysObj[key] === 'object' && keysObj[key] !== null) {
+      if (obj.hasOwnProperty(key) && typeof obj[key] === 'object') {
+        deleteKeys(obj[key], keysObj[key]);
+      }
+    } else if (obj.hasOwnProperty(key)) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+
+function deleteJSONKeys(keysObj, to) {
+  const obj = JSON.parse(fs.readFileSync(to, { encoding: 'utf8' }));
+  deleteKeys(obj, keysObj);
+  fs.writeFileSync(to, JSON.stringify(obj, null, '  '), { encoding: 'utf8' });
 }
 
 function mergeJSON2JSON(from, to) {
@@ -145,7 +182,10 @@ exports.copyFile = copyFile;
 exports.readTmpl = readTmpl;
 exports.copyTmpl = copyTmpl;
 exports.mergeObj2JSON = mergeObj2JSON;
+exports.deleteJSONKeys = deleteJSONKeys;
 exports.mergeJSON2JSON = mergeJSON2JSON;
 exports.mergeTmpl2JSON = mergeTmpl2JSON;
 exports.replaceFileText = replaceFileText;
 exports.insertText2File = insertText2File;
+exports.deleteFile = deleteFile;
+exports.deleteDir = deleteDir;

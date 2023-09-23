@@ -1,5 +1,5 @@
 const path = require('path');
-const { copyDir, copyFile, copyTmpl } = require('../../util/copy');
+const { copyDir, copyFile, copyTmpl, deleteFile } = require('../../util/copy');
 const log = require('../../util/log');
 
 log.init();
@@ -76,6 +76,9 @@ function update(cmdPath, option) {
     path.resolve(__dirname, `./template/.gitignore-${type}`),
     path.resolve(cmdPath, '.gitignore'),
   );
+
+  // 删除 1.x 版本的无用数据
+  deleteFile(path.resolve(cmdPath, '.travis.yml'));
 }
 
 module.exports = {

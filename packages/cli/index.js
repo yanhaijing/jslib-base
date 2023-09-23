@@ -36,9 +36,6 @@ function update(cmdPath, option, answers) {
   if (answers.package) {
     packagejson.update(cmdPath, option);
   }
-  if (answers.src) {
-    src.update(cmdPath, option);
-  }
   if (answers.lint) {
     lint.update(cmdPath, option);
   }

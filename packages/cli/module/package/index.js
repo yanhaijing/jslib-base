@@ -35,6 +35,14 @@ function update(cmdPath, option) {
     ),
   );
 
+  // 删除 1.x 版本的无用数据
+  util.deleteJSONKeys(
+    {
+      'jsnext:main': undefined,
+    },
+    path.resolve(cmdPath, 'package.json'),
+  );
+
   util.mergeObj2JSON(
     {
       scripts,

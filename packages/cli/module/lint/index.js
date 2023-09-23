@@ -44,10 +44,14 @@ function update(cmdPath, option) {
     path.resolve(__dirname, `./template/.eslintignore-${type}`),
     path.resolve(cmdPath, '.eslintignore'),
   );
+
   util.mergeJSON2JSON(
     path.resolve(__dirname, `./template/package.${type}.json`),
     path.resolve(cmdPath, './package.json'),
   );
+
+  // 删除 1.x 版本的无用数据
+  util.deleteFile(path.resolve(cmdPath, '.eslintrc.js'));
 }
 
 module.exports = {

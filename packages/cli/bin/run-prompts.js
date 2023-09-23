@@ -129,12 +129,6 @@ function runUpdatePrompts() {
     },
     {
       type: 'confirm',
-      message: '是否更新<src>插件:',
-      name: 'src',
-      default: false,
-    },
-    {
-      type: 'confirm',
       message: '是否更新<lint>插件:',
       name: 'lint',
       default: false,
