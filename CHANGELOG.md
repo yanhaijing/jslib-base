@@ -1,5 +1,11 @@
 # 变更日志
 
+## 2.2.0 / 2023-9-24
+
+- 修复ts项目缺少types的问题
+- 支持 README.md 文件中 [Build Status] 的替换
+- 支持 README.md 文件中 [Coveralls] 的删除
+
 ## 2.1.0 / 2023-9-24
 
 - update 命令支持删除 1.x 无用文件和配置
