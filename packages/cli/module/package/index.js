@@ -19,6 +19,14 @@ function init(cmdPath, name, option) {
 
 function update(cmdPath, option) {
   console.log('package: update');
+  // 删除 1.x 版本的无用数据
+  util.deleteJSONKeys(
+    {
+      'jsnext:main': undefined,
+    },
+    path.resolve(cmdPath, 'package.json'),
+  );
+
   const {
     scripts,
     sideEffects,
@@ -28,19 +36,12 @@ function update(cmdPath, option) {
     engines,
     publishConfig,
     exports,
+    types,
   } = JSON.parse(
     util.readTmpl(
       path.resolve(__dirname, `./template/package.json.tmpl`),
       option,
     ),
-  );
-
-  // 删除 1.x 版本的无用数据
-  util.deleteJSONKeys(
-    {
-      'jsnext:main': undefined,
-    },
-    path.resolve(cmdPath, 'package.json'),
   );
 
   util.mergeObj2JSON(
@@ -53,6 +54,7 @@ function update(cmdPath, option) {
       engines,
       publishConfig,
       exports,
+      types,
     },
     path.resolve(cmdPath, 'package.json'),
   );

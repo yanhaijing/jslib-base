@@ -1,5 +1,12 @@
 const path = require('path');
-const { copyDir, copyFile, copyTmpl, deleteFile } = require('../../util/copy');
+const {
+  copyDir,
+  copyFile,
+  copyTmpl,
+  deleteFile,
+  replaceFileLine,
+  deleteFileLine,
+} = require('../../util/copy');
 const log = require('../../util/log');
 
 log.init();
@@ -79,6 +86,12 @@ function update(cmdPath, option) {
 
   // 删除 1.x 版本的无用数据
   deleteFile(path.resolve(cmdPath, '.travis.yml'));
+  replaceFileLine(
+    path.resolve(cmdPath, 'README.md'),
+    /\[Build Status\]/,
+    `[![CI](https://github.com/${option.username}/${option.name}/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/${option.username}/${option.name}/actions/workflows/ci.yml)`,
+  );
+  deleteFileLine(path.resolve(cmdPath, 'README.md'), /\[Coveralls\]/);
 }
 
 module.exports = {

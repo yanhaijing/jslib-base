@@ -15,6 +15,7 @@
         "default": "./dist/index.js"
       }
     },
+    <% if (type === 'ts') { %>"types": "./types/index.d.ts",<% } %>
     "scripts": {
       "preinstall": "npx only-allow npm",
       "clean": "rimraf ./dist",

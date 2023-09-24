@@ -124,6 +124,49 @@ function mergeTmpl2JSON(from, to, data = {}) {
   mergeObj2JSON(json, to);
 }
 
+function replaceFileLine(filepath, match, to) {
+  let file = fs.readFileSync(filepath, { encoding: 'utf8' });
+  let count = 0;
+
+  // file 按行分隔，如果匹配match，则替换为to
+  file = file
+    .split('\n')
+    .map(function (line) {
+      if (match.test(line)) {
+        count += 1;
+        return to;
+      }
+      return line;
+    })
+    .join('\n');
+
+  if (count) {
+    fs.writeFileSync(filepath, file);
+  }
+}
+
+// 参考replaceFileLine 写一个删除行的方法
+function deleteFileLine(filepath, match) {
+  let file = fs.readFileSync(filepath, { encoding: 'utf8' });
+  let count = 0;
+
+  // file 按行分隔，如果匹配match，则删除
+  file = file
+    .split('\n')
+    .filter(function (line) {
+      if (match.test(line)) {
+        count += 1;
+        return false;
+      }
+      return true;
+    })
+    .join('\n');
+
+  if (count) {
+    fs.writeFileSync(filepath, file);
+  }
+}
+
 function replaceFileText(filepath, replacerList) {
   let file = fs.readFileSync(filepath, { encoding: 'utf8' });
   let count = 0;
@@ -187,5 +230,7 @@ exports.mergeJSON2JSON = mergeJSON2JSON;
 exports.mergeTmpl2JSON = mergeTmpl2JSON;
 exports.replaceFileText = replaceFileText;
 exports.insertText2File = insertText2File;
+exports.replaceFileLine = replaceFileLine;
+exports.deleteFileLine = deleteFileLine;
 exports.deleteFile = deleteFile;
 exports.deleteDir = deleteDir;
