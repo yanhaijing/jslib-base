@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
-[![npm](https://img.shields.io/badge/npm-2.2.2-orange.svg)](https://www.npmjs.com/package/@js-lib/cli)
+[![npm](https://img.shields.io/badge/npm-2.2.3-orange.svg)](https://www.npmjs.com/package/@js-lib/cli)
 [![NPM downloads](http://img.shields.io/npm/dm/@js-lib/cli.svg?style=flat-square)](http://www.npmtrends.com/@js-lib/cli)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/yanhaijing/jslib-base.svg)](http://isitmaintained.com/project/yanhaijing/jslib-base 'Percentage of issues still open')
 
@@ -26,7 +26,7 @@ The best `JS|TS` third-party library scaffold, quickly setup the basic framework
 
 ## :rocket: User Guide
 
-To create a new project, Node 14+ is recommended.
+To create a new project, it is recommended to use Node.js version 16 or higher.
 
 ```bash
 $ npx @js-lib/cli new mylib
