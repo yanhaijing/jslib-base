@@ -5,6 +5,9 @@
     "build:aio": "rollup -c config/rollup.config.aio.cjs",
     "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio"
   },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.22.15"
+  },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.22.15",
     "@babel/preset-env": "^7.22.20",
