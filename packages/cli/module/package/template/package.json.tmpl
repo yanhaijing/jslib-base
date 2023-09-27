@@ -18,7 +18,7 @@
     <% if (type === 'ts') { %>"types": "./types/index.d.ts",<% } %>
     "scripts": {
       "preinstall": "npx only-allow npm",
-      "clean": "rimraf ./dist",
+      "clean": "rimraf ./dist ./types",
       "start": "http-server -p 3000 -c-1",
       "test": "echo Error: missing tests",
       "release": "npm test && npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
