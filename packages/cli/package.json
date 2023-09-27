@@ -1,6 +1,6 @@
 {
   "name": "@js-lib/cli",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "The best third party JS|TS library scaffold",
   "author": "yanhaijing <yanhaijing@yeah.net>",
   "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
