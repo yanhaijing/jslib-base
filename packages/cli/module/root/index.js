@@ -38,6 +38,7 @@ function init(cmdPath, name, option) {
   copyTmpl(
     path.resolve(__dirname, `./template/license.tmpl`),
     path.resolve(cmdPath, name, './LICENSE'),
+    option,
   );
   copyTmpl(
     path.resolve(__dirname, `./template/README.${lang}.md.tmpl`),
