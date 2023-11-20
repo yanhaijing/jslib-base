@@ -1,5 +1,9 @@
 # 变更日志
 
+## 2.3.2 / 2023-11-19
+
+- fix: 修复升级 rollup-plugin-typescript2@0.36.0 导致的 tslib 有依赖时 build 报错的问题
+
 ## 2.3.1 / 2023-11-19
 
 - 升级 commitlint 依赖
