@@ -1,5 +1,9 @@
 # 变更日志
 
+## 2.3.3 / 2023-11-19
+
+- fix: 升级 @jsmini/extend@0.5.0，修复 ts 项目在node16下安装警告的问题
+
 ## 2.3.2 / 2023-11-19
 
 - fix: 修复升级 rollup-plugin-typescript2@0.36.0 导致的 tslib 有依赖时 build 报错的问题
