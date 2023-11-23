@@ -7,13 +7,6 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@babel/runtime@^7.1.2":
-  version "7.6.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
-  integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz#a23514e8fb9af1269d5f7788aa556798d61c6b59"
@@ -139,28 +132,24 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.1.tgz#e5211452df060fa8522b55c7b3c0c4d1981cb044"
   integrity sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==
 
-"@jsmini/extend@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@jsmini/extend/-/extend-0.3.3.tgz#464e97993dfb5621b10c084d7feca75a6b613102"
-  integrity sha512-kR8IOP+cwS1f+RF/GFO4pzODqGtubE0XsqAoYDYsK6JGQ8YLsrGuY2ZolpjvwrzjR/vOpuaYpeS9RUfvowSJjA==
+"@jsmini/extend@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@jsmini/extend/-/extend-0.5.0.tgz#44d6c3b15738c47f7294962ff0cc96e6d41308d9"
+  integrity sha512-GkIy7BQ5iGJM6QcyFGZiCwHrK4vHiqHREZLYFaVt21+0LhnnyFA96kOYyvR4iajd71ZzFuBvvbLTrMRz8mOhbw==
   dependencies:
-    "@babel/runtime" "^7.1.2"
-    "@jsmini/is" "^0.8.4"
+    "@jsmini/is" "^0.10.0"
 
-"@jsmini/is@^0.8.4":
-  version "0.8.5"
-  resolved "https://registry.yarnpkg.com/@jsmini/is/-/is-0.8.5.tgz#aeb84587d639e7de5e9e2c5b91fe8a93998d8d46"
-  integrity sha512-YVyM6emY6JT/b9D53Nsk32dyccwk2JC7brrh+g+HcWLqa/YLcct7/jbSubIM5jb4ziZfRiygep1hCfL4Wd7XQg==
+"@jsmini/is@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@jsmini/is/-/is-0.10.0.tgz#308b34793c6a640d40c5ed6019d881d940859554"
+  integrity sha512-23VqbkX+ynIzzTO2mJt7uvY9U4xeJZjwIcJ2/PAKe4QP/zOsecwaMFTa70nyac2QM71gZSdz7y4qPPbu8EvCUg==
   dependencies:
-    "@babel/runtime" "^7.1.2"
-    "@jsmini/type" "^0.9.1"
+    "@jsmini/type" "^0.11.0"
 
-"@jsmini/type@^0.9.1", "@jsmini/type@^0.9.2":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@jsmini/type/-/type-0.9.2.tgz#d3533957befdd4a24bf5ea7613fff453b58e2ff9"
-  integrity sha512-fTsXi1wQQOfSy3KjowGIZE4rrr1U8RpsHG0m/4lxB0s7OD5ghX51PaRL/2heAGD4uDaJzeHYcW9aAwF/v5kUkg==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
+"@jsmini/type@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@jsmini/type/-/type-0.11.0.tgz#8e52c6d799065ecc116020d4d48bc436f39b0c99"
+  integrity sha512-4SEqNWXbYx/4slvp6/HfdBQiNKVnrMFHVjoYtj6JI21fibXmjnZ0imYETN4yp+VFcPDZn+5e3eUvgzPd6Xop0Q==
 
 "@lerna/add@3.21.0":
   version "3.21.0"
@@ -945,23 +934,21 @@
     picocolors "^1.0.0"
     tslib "^2.6.0"
 
-"@templatejs/parser@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@templatejs/parser/-/parser-2.4.0.tgz#7545e1079b38be6fb45817fcb3bfaec0c353c9f8"
-  integrity sha512-tcv2c7GcDudIF3NemwtO0LhIsFjWyv/NMUn9t2iWzGskbA12QWwck6ucHjsU4APHu2Cx92rqKVU0hMkzToqfsw==
+"@templatejs/parser@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@templatejs/parser/-/parser-3.1.4.tgz#9cb329ca2d5a9950fc8af7c97a82fbf1fee1b610"
+  integrity sha512-jf6beVkhV0J074nws91T7rc6qsW9XvO15qB8V2uKg4J3ZohHT0055EVkL7/zKFyCNL0nzGp3azue68efaNvgrg==
   dependencies:
-    "@babel/runtime" "^7.1.2"
-    "@jsmini/extend" "^0.3.3"
+    "@jsmini/extend" "^0.5.0"
 
-"@templatejs/runtime@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@templatejs/runtime/-/runtime-2.4.0.tgz#30b42a44aa5627f404bbd9ddb1213d07404abf2c"
-  integrity sha512-fhnxE4BqOhmkYvNs5PRireRenZnxsfYQlWzNZX5Fb7muJM9+fehgoNOsgGmwYbCdB65lTlnypQKohDuQz365Lw==
+"@templatejs/runtime@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@templatejs/runtime/-/runtime-3.1.4.tgz#eaecaf5a5af13d6c42bb503b406061fa555a1e3b"
+  integrity sha512-hHaPzMEf5583t49+l2+We8EDuHzSq4pD0Ta48jn8fnbX//EWOvctLvUaiK9ro4qEFrixaFbBIt9HI/6jIqbH/g==
   dependencies:
-    "@babel/runtime" "^7.1.2"
-    "@jsmini/extend" "^0.3.3"
-    "@jsmini/type" "^0.9.2"
-    "@templatejs/parser" "^2.4.0"
+    "@jsmini/extend" "^0.5.0"
+    "@jsmini/type" "^0.11.0"
+    "@templatejs/parser" "^3.1.4"
 
 "@types/events@*":
   version "3.0.0"
@@ -1849,10 +1836,10 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-copy-dir@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/copy-dir/-/copy-dir-1.2.0.tgz#d2634378186d8762769285b36efb307a7945964e"
-  integrity sha512-UeaUFUIHqGV4brjQ9bY2mHll/hoxyCak2emgmYG72LkGKABHBdBDKFw0H5nTKt5OzVBkBhkxCwnniJBAE7EGEw==
+copy-dir@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/copy-dir/-/copy-dir-1.3.0.tgz#8c65130e11d8313a6ac2c0578e4c6c6f70b456ba"
+  integrity sha512-Q4+qBFnN4bwGwvtXXzbp4P/4iNk0MaiGAzvQ8OiMtlLjkIKjmNN689uVzShSM0908q7GoFHXIPx4zi75ocoaHw==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -3155,7 +3142,7 @@ inquirer@^6.2.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-inquirer@^8.2.4:
+inquirer@^8.2.6:
   version "8.2.6"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.6.tgz#733b74888195d8d400a67ac332011b5fae5ea562"
   integrity sha512-M1WuAmb7pn9zdFRtQYk26ZBoY043Sse0wVDdk4Bppr+JOXyQYybdtvK+l9wUibhtjdjvtoiNy8tk+EgsYIUqKg==
@@ -4990,11 +4977,6 @@ redent@^2.0.0:
     indent-string "^3.0.0"
     strip-indent "^2.0.0"
 
-regenerator-runtime@^0.13.2:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
-  integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
-
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/regex-not/-/regex-not-1.0.2.tgz#1f4ece27e00b0b65e0247a6810e6a85d83a5752c"
@@ -5743,16 +5725,15 @@ temp-write@^3.4.0:
     temp-dir "^1.0.0"
     uuid "^3.0.1"
 
-template_js@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/template_js/-/template_js-2.4.0.tgz#891cd721fab1ce7fd94454e00ffedcf06b075652"
-  integrity sha512-v/+rdh0HSkFGG+BpFMGnYIQd6F5+m+kB3EQrcmvAzVIP43nbAlpuY5Dgrb9jA0csvzfczEqFkLEOrtzw23mo8Q==
+template_js@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/template_js/-/template_js-3.1.4.tgz#9b3544860bebdbb8a60b9f6fe09a68536e018765"
+  integrity sha512-oO0yqcGP6lyCltZwsbLAjiC5igRFUTm1sNR+Rpwr4DrxKYceedLe9KSro5Jb3XWL7yfSpnfOtqNl7W3GyaKY7Q==
   dependencies:
-    "@babel/runtime" "^7.1.2"
-    "@jsmini/extend" "^0.3.3"
-    "@jsmini/type" "^0.9.2"
-    "@templatejs/parser" "^2.4.0"
-    "@templatejs/runtime" "^2.4.0"
+    "@jsmini/extend" "^0.5.0"
+    "@jsmini/type" "^0.11.0"
+    "@templatejs/parser" "^3.1.4"
+    "@templatejs/runtime" "^3.1.4"
 
 text-extensions@^2.0.0:
   version "2.0.0"
