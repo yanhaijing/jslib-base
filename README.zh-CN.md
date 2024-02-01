@@ -17,7 +17,7 @@
 - 支持快速新建和无缝升级的命令行工具
 - 支持 ES6+或 TypeScript 编写源码，编译生成生产代码
 - 第三方依赖自动注入（自动剔除第三方依赖无用代码 tree shaking）
-- 多环境支持（支持浏览器原生，支持 AMD，CMD，支持 Webpack，Rollup，vite, fis 等，支持 Node.js）
+- 多环境支持（支持浏览器原生，支持 AMD，commonjs，支持 Webpack，Rollup，vite, fis 等，支持 Node.js）
 - 集成代码风格校验(eslint + prettier + husky)
 - 集成单元测试环境（mocha）
 - 集成测试覆盖率（istanbul+nyc）

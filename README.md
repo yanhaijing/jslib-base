@@ -17,7 +17,7 @@ The best `JS|TS` third-party library scaffold, quickly setup the basic framework
 - Command-line tool for quick creation and seamless upgrades
 - Supports writing source code in ES6+ or TypeScript, and compiles to generate production code
 - Auto-injection of third-party dependencies (automatically removes unnecessary code in third-party dependencies through tree shaking)
-- Supports multiple environments (native browser, AMD, CMD, Webpack, Rollup, vite, fis, Node.js, etc.)
+- Supports multiple environments (native browser, AMD, commonjs, Webpack, Rollup, vite, fis, Node.js, etc.)
 - Integrated code style checker (eslint + prettier + husky)
 - Integrated unit test environment (mocha)
 - Integrated test coverage report (istanbul+nyc)
