@@ -1,5 +1,14 @@
 # 变更日志
 
+## 3.0.2 / 2024-5-1
+
+- template:jslib: 修复缺少 .gitignore
+- template:tslib: 修复缺少 .gitignore
+
+## 3.0.1 / 2024-5-1
+
+- cli: fix init 时报错
+
 ## 3.0.0 / 2024-5-1
 
 - cli

@@ -22,6 +22,11 @@ function init(cmdPath, name, option) {
     },
   );
   copyTmpl(
+    path.resolve(__dirname, `./template/.gitignore.tmpl`),
+    path.resolve(cmdPath, name, './.gitignore'),
+    option,
+  );
+  copyTmpl(
     path.resolve(__dirname, `./template/license.tmpl`),
     path.resolve(cmdPath, name, './LICENSE'),
     option,

@@ -1,4 +1,5 @@
-const config = require('../module/config');
+const configjs = require('../module-js/config');
+const configts = require('../module-ts/config');
 const modulejs = require('../module-js');
 const modulets = require('../module-ts');
 const pkg = require('../package.json');
@@ -32,7 +33,11 @@ function init(argv, answers) {
 
   // 仅初始化配置文件
   if (argv.config) {
-    config.init(cmdPath, '', option);
+    if (option.type === 'js') {
+      configjs.init(cmdPath, '', option);
+    } else if (option.type === 'ts') {
+      configts.init(cmdPath, '', option);
+    }
     return;
   }
 

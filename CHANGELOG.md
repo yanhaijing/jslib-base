@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.0.2 / 2024-5-1
+
+- template:jslib: fix miss .gitignore
+- template:tslib: fix miss .gitignore
+
+## 3.0.1 / 2024-5-1
+
+- cli: fix init error
+
 ## 3.0.0 / 2024-5-1
 
 - CLI
