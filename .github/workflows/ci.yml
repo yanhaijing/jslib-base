@@ -52,7 +52,7 @@ jobs:
 
       - name: Create new JS project
         working-directory: ../
-        run: echo js-project | jslib new --npmname js-project --umdname js-project --username yanhaijing --type js --lang en --manager npm
+        run: echo js-project | jslib new --npmname js-project --umdname js-project --username yanhaijing --type js --manager npm
 
       - name: Run lint in JS project
         working-directory: ../js-project
@@ -95,7 +95,7 @@ jobs:
 
       - name: Create new TS project
         working-directory: ../
-        run: echo ts-project | jslib new --npmname ts-project --umdname ts-project --username yanhaijing --type ts --lang en --manager npm
+        run: echo ts-project | jslib new --npmname ts-project --umdname ts-project --username yanhaijing --type ts --manager npm
 
       - name: Run lint in TS project
         working-directory: ../ts-project

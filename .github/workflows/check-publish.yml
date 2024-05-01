@@ -19,7 +19,7 @@ jobs:
           node-version: ${{ matrix.node-version }} # 使用不同的 Node.js 版本
 
       - name: Create new JS project
-        run: echo js-project | npx @js-lib/cli new --npmname js-project --umdname js-project --username yanhaijing --type js --lang en --manager npm
+        run: echo js-project | npx @js-lib/cli new --npmname js-project --umdname js-project --username yanhaijing --type js --manager npm
 
       - name: Run lint in JS project
         working-directory: ./js-project
@@ -35,7 +35,7 @@ jobs:
 
       - name: Update JS project
         working-directory: ./js-project
-        run: jslib update
+        run: npx @js-lib/cli update
 
   test-jslib-ts:
     name: Test jslib with TS projects
@@ -52,7 +52,7 @@ jobs:
           node-version: ${{ matrix.node-version }} # 使用不同的 Node.js 版本
 
       - name: Create new TS project
-        run: echo ts-project | npx @js-lib/cli new --npmname ts-project --umdname ts-project --username yanhaijing --type ts --lang en --manager npm
+        run: echo ts-project | npx @js-lib/cli new --npmname ts-project --umdname ts-project --username yanhaijing --type ts --manager npm
 
       - name: Run lint in JS project
         working-directory: ./ts-project
@@ -68,4 +68,4 @@ jobs:
 
       - name: Update JS project
         working-directory: ./ts-project
-        run: jslib update
+        run: npx @js-lib/cli update

@@ -1,0 +1,39 @@
+name: Publish npm Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: 'Type of release'
+        required: true
+        default: 'stable'
+        options:
+          - stable
+          - alpha
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install jslib globally
+        run: yarn install
+
+      - name: Publish to npm
+        working-directory: packages/cli
+        run: |
+          if [[ "${{ github.event.inputs.release_type }}" == "stable" ]]; then
+            npm publish
+          else
+            npm publish --tag next
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
