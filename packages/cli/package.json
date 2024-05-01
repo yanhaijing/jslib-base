@@ -12,11 +12,13 @@
   "files": [
     "bin",
     "module",
+    "module-js",
+    "module-ts",
     "util",
     "index.js"
   ],
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">= 18.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
