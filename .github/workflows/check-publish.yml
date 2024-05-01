@@ -1,0 +1,71 @@
+name: Manual Check Publish
+
+on:
+  workflow_dispatch: # 使得该工作流可以通过 GitHub UI 手动触发
+
+jobs:
+  test-jslib-js:
+    name: Test jslib with JS projects
+    runs-on: ubuntu-latest # 在 Ubuntu 上运行
+
+    strategy:
+      matrix:
+        node-version: [18, 20, 22] # 测试不同的 Node.js 版本
+
+    steps:
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }} # 使用不同的 Node.js 版本
+
+      - name: Create new JS project
+        run: echo js-project | npx @js-lib/cli new --npmname js-project --umdname js-project --username yanhaijing --type js --lang en --manager npm
+
+      - name: Run lint in JS project
+        working-directory: ./js-project
+        run: npm run lint
+
+      - name: Run tests in JS project
+        working-directory: ./js-project
+        run: npm run test
+
+      - name: Build JS project
+        working-directory: ./js-project
+        run: npm run build
+
+      - name: Update JS project
+        working-directory: ./js-project
+        run: jslib update
+
+  test-jslib-ts:
+    name: Test jslib with TS projects
+    runs-on: ubuntu-latest # 在 Ubuntu 上运行
+
+    strategy:
+      matrix:
+        node-version: [18, 20, 22] # 测试不同的 Node.js 版本
+
+    steps:
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }} # 使用不同的 Node.js 版本
+
+      - name: Create new TS project
+        run: echo ts-project | npx @js-lib/cli new --npmname ts-project --umdname ts-project --username yanhaijing --type ts --lang en --manager npm
+
+      - name: Run lint in JS project
+        working-directory: ./ts-project
+        run: npm run lint
+
+      - name: Run tests in JS project
+        working-directory: ./ts-project
+        run: npm run test
+
+      - name: Build JS project
+        working-directory: ./ts-project
+        run: npm run build
+
+      - name: Update JS project
+        working-directory: ./ts-project
+        run: jslib update
