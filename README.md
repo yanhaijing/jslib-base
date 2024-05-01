@@ -9,21 +9,32 @@
 
 English | [简体中文](https://github.com/yanhaijing/jslib-base/blob/master/README.zh-CN.md)
 
-The best `JS|TS` third-party library scaffold, quickly setup the basic framework of a new library in 10 seconds.
+The best `JS|TS` third-party library scaffold, quickly setup the basic framework of a `JS|TS` library in 10 seconds.
 
 **Libraries based on jslib-base can be shared on the [jsmini](https://github.com/jsmini) platform.**
 
 ## :star: Features
 
-- Command-line tool for quick creation and seamless upgrades
-- Supports writing source code in ES6+ or TypeScript, and compiles to generate production code
-- Auto-injection of third-party dependencies (automatically removes unnecessary code in third-party dependencies through tree shaking)
-- Supports multiple environments (native browser, AMD, commonjs, Webpack, Rollup, vite, fis, Node.js, etc.)
-- Integrated code style checker (eslint + prettier + husky)
-- Integrated unit test environment (mocha)
-- Integrated test coverage report (istanbul+nyc)
-- Integrated continuous integration tool github action
-- Integrated with [jsmini](https://github.com/jsmini)
+- **Interactive CLI for project initialization**
+- **Upgrade functionality** – Easily upgrade old libraries with one command
+- **Supports both JavaScript and TypeScript**
+- **Build & Packaging Solutions**
+  - TypeScript + Babel + Rollup
+  - Automatic third-party dependency injection (supports tree shaking)
+- **Multi-Environment Compatibility**
+  - Supports native browser script usage
+  - Provides UMD and ESM modules, compatible with Webpack, Vite, and other ecosystems
+  - Adapts to both old and new Node.js module systems (CommonJS + ESM)
+- **Code Style & Linting**
+  - ESLint + Prettier + Husky + Lint-Staged
+- **Unit Testing Suite**
+  - Mocha + Expect.js + Istanbul + NYC + Coveralls
+- **Commit Linting**
+  - Commitlint + Commitizen
+- **GitHub Actions**
+  - CI + Release
+- **Local Development Server**
+  - http-server
 
 ## :rocket: User Guide
 
@@ -109,4 +120,8 @@ $ npx lerna publish # Release with tag, upload to git, upload to npm
 
 - [jsmini](https://github.com/jsmini)
 - [template.js](https://github.com/yanhaijing/template.js)
+- [shin-monitor](https://github.com/pwstrick/shin-monitor)
+- [baselib](https://github.com/LesixCoder/utils)
+- [streaming-json-js](https://github.com/karminski/streaming-json-js)
+- [better-js-lib](https://github.com/SFTC/better-js-lib)
 - [...](https://github.com/yanhaijing/jslib-base/issues/10)
