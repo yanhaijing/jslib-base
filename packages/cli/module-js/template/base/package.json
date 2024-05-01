@@ -64,7 +64,7 @@
     "@commitlint/cz-commitlint": "^18.6.1",
     "@commitlint/format": "^18.6.1",
     "@commitlint/prompt-cli": "^18.6.1",
-    "@js-lib/cli": "^3.0.0-alpha.0",
+    "@js-lib/cli": "^3.0.5",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",

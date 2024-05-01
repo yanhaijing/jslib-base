@@ -56,7 +56,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@js-lib/cli": "^3.0.0-alpha.0",
+    "@js-lib/cli": "^3.0.5",
     "cross-env": "^7.0.3",
     "rimraf": "^5.0.10",
     "http-server": "^14.1.1",
