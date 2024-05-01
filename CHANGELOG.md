@@ -1,5 +1,9 @@
 # Change Log
 
+## 3.0.3 / 2024-5-1
+
+- cli: fix update error
+
 ## 3.0.2 / 2024-5-1
 
 - template:jslib: fix miss .gitignore

@@ -1,5 +1,9 @@
 # 变更日志
 
+## 3.0.3 / 2024-5-1
+
+- cli: fix update 时报错
+
 ## 3.0.2 / 2024-5-1
 
 - template:jslib: 修复缺少 .gitignore

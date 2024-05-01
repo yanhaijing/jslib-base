@@ -24,7 +24,6 @@ function init(cmdPath, name, option) {
   copyTmpl(
     path.resolve(__dirname, `./template/.gitignore.tmpl`),
     path.resolve(cmdPath, name, './.gitignore'),
-    option,
   );
   copyTmpl(
     path.resolve(__dirname, `./template/license.tmpl`),
@@ -75,9 +74,9 @@ function update(cmdPath, option) {
     path.resolve(cmdPath, '.github/workflows/release.yml'),
   );
 
-  copyFile(
-    path.resolve(__dirname, `./template/base/.gitignore`),
-    path.resolve(cmdPath, '.gitignore'),
+  copyTmpl(
+    path.resolve(__dirname, `./template/.gitignore.tmpl`),
+    path.resolve(cmdPath, './.gitignore'),
   );
 
   // 删除 1.x 版本的无用数据
