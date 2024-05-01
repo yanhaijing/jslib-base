@@ -87,7 +87,21 @@ $ npx lerna list # 列出所有的包
 $ npx lerna bootstrap # 安装全部依赖
 $ npx lerna link # 建立全部软连接
 $ npx lerna changed # 列出下次发版npx lerna publish 要更新的包
-$ npx lerna publish # 会打tag，上传git,上传npm
+```
+
+不打 tag 发布
+
+```bash
+$ npx lerna version --no-git-tag-version # 仅修改version
+$ npx lerna publish from-package --dist-tag next # 发布测试包，需要选择对应的 alpha 版本号
+$ npx lerna publish from-package # 发布正式包
+```
+
+打 tag 发布
+
+```bash
+$ npx lerna publish --dist-tag next # 发布测试包，需要选择对应的 alpha 版本号
+$ npx lerna publish # 发布正式包
 ```
 
 ## 贡献者列表
