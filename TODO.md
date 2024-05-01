@@ -15,11 +15,11 @@ This document lists new features to be added in the future and features that hav
 - [x] Add a local server
 - [x] Support Node.js exports condition
 - [x] Migrate from Travis to GitHub Actions
+- [x] Upgrade to Rollup v4
+- [x] Support GitHub Actions for automated package publishing
 - [ ] Support environment-specific builds
 - [ ] Add jsdom
 - [ ] Add Puppeteer
 - [ ] Add watch functionality
 - [ ] Add Chrome Headless and related features
-- [ ] Support GitHub Actions for automated package publishing
 - [ ] Upgrade to ESLint v9
-- [ ] Upgrade to Rollup v4

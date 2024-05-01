@@ -15,11 +15,11 @@
 - [x] 添加一个本地 server
 - [x] 支持 node exports condition
 - [x] 迁移 travis 到 github action
+- [x] 支持 github action 自动发包
+- [x] 升级 rollup v4
 - [ ] 支持区分环境打包
 - [ ] 添加 jsdom
 - [ ] 添加 puppeteer
 - [ ] 添加 watch 功能
 - [ ] 添加 chrome headless 等
-- [ ] 支持 github action 自动发包
 - [ ] 升级 eslint v9
-- [ ] 升级 rollup v4
