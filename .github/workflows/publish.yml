@@ -5,12 +5,12 @@ on:
     inputs:
       release_type:
         type: choice
-        description: 'Type of release'
+        description: 'Release Tag'
         required: true
-        default: 'stable'
+        default: 'latest'
         options:
-          - stable
-          - alpha
+          - latest
+          - next
 
 jobs:
   publish:
@@ -29,15 +29,11 @@ jobs:
         run: yarn install
 
       - name: Publish to npm
-        working-directory: packages/cli
-        run: |
-          if [[ "${{ github.event.inputs.release_type }}" == "stable" ]]; then
-            npm publish
-          else
-            npm publish --tag next
-          fi
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          package: packages/cli
+          token: ${{ secrets.NPM_TOKEN }}
+          tag: ${{ github.event.inputs.release_type }}
 
       - name: Create Git tag
         run: |
