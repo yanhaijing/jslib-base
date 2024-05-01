@@ -25,9 +25,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install jslib globally
-        run: yarn install
-
       - name: Publish to npm
         uses: JS-DevTools/npm-publish@v3
         with:
@@ -38,7 +35,7 @@ jobs:
       - name: Create Git tag
         run: |
           # Create a new tag based on the current version in package.json
-          VERSION=$(node -p "require('./packages/cli/package.json.json').version")
+          VERSION=$(node -p "require('./packages/cli/package.json').version")
           TAG="v$VERSION"
           git tag $TAG
           git push origin $TAG
