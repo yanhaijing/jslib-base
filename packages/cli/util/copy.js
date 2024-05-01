@@ -71,6 +71,12 @@ function readTmpl(from, data = {}) {
   return template(text, data);
 }
 
+function readJSON(from) {
+  const txt = fs.readFileSync(from, { encoding: 'utf8' });
+  const json = JSON.parse(txt);
+  return json;
+}
+
 function copyTmpl(from, to, data = {}, opt = { cover: true }) {
   // 不覆盖时，检测文件是否存在
   if (!opt.cover && fs.existsSync(to)) {
@@ -225,6 +231,7 @@ function insertText2File(text, filepath, line = -1) {
 exports.copyDir = copyDir;
 exports.copyFile = copyFile;
 exports.readTmpl = readTmpl;
+exports.readJSON = readJSON;
 exports.copyTmpl = copyTmpl;
 exports.mergeObj2JSON = mergeObj2JSON;
 exports.deleteJSONKeys = deleteJSONKeys;

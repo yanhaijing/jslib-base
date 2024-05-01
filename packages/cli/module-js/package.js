@@ -10,7 +10,7 @@ function init(cmdPath, name, option) {
   );
 }
 
-function update(cmdPath, option) {
+function update(cmdPath, _option) {
   console.log('package: update');
   // 删除 1.x 版本的无用数据
   util.deleteJSONKeys(
@@ -31,12 +31,7 @@ function update(cmdPath, option) {
     exports,
     types,
     config,
-  } = JSON.parse(
-    util.readTmpl(
-      path.resolve(__dirname, `./template/package.json.tmpl`),
-      option,
-    ),
-  );
+  } = util.readJSON(path.resolve(__dirname, `./template/base/package.json`));
 
   util.mergeObj2JSON(
     {
