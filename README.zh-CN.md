@@ -75,7 +75,7 @@ $ npm publish # 发布到npm
 如果你想修cli生成的库代码，可以直接修改模版代码，这比较简单，合并后我会将模版搬运到cli，模版仓库如下：
 
 - [jslib](https://github.com/yanhaijing/jslib)
-- [tslit](https://github.com/yanhaijing/tslib)
+- [tslib](https://github.com/yanhaijing/tslib)
 
 本项目使用 lerna 来管理多个插件，lerna 常用命令如下：
 
