@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       release_type:
+        type: choice
         description: 'Type of release'
         required: true
         default: 'stable'
@@ -37,3 +38,13 @@ jobs:
           fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create Git tag
+        run: |
+          # Create a new tag based on the current version in package.json
+          VERSION=$(node -p "require('./packages/cli/package.json.json').version")
+          TAG="v$VERSION"
+          git tag $TAG
+          git push origin $TAG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub Token to authenticate the push
