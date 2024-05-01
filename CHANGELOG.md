@@ -1,6 +1,6 @@
 # Change Log
 
-## 3.0.3 / 2024-5-1
+## 3.0.4 / 2024-5-1
 
 - cli: fix update error
 
