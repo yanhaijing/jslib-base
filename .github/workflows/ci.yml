@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16, 18, 20, 22]
+        node-version: [18, 20, 22]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -66,13 +66,17 @@ jobs:
         working-directory: ../js-project
         run: npm run build
 
+      - name: Update JS project
+        working-directory: ../js-project
+        run: jslib update
+
   test-jslib-ts:
     needs: lint
     name: Test jslib with TS projects
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16, 18, 20, 22]
+        node-version: [18, 20, 22]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -93,14 +97,18 @@ jobs:
         working-directory: ../
         run: echo ts-project | jslib new --npmname ts-project --umdname ts-project --username yanhaijing --type ts --lang en --manager npm
 
-      - name: Run lint in JS project
+      - name: Run lint in TS project
         working-directory: ../ts-project
         run: npm run lint
 
-      - name: Run tests in JS project
+      - name: Run tests in TS project
         working-directory: ../ts-project
         run: npm run test
 
-      - name: Build JS project
+      - name: Build TS project
         working-directory: ../ts-project
         run: npm run build
+
+      - name: Update TS project
+        working-directory: ../ts-project
+        run: jslib update

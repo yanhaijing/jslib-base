@@ -1,6 +1,6 @@
 {
   "name": "@js-lib/cli",
-  "version": "2.3.4",
+  "version": "3.0.0-alpha.0",
   "description": "The best third party JS|TS library scaffold",
   "author": "yanhaijing <yanhaijing@yeah.net>",
   "homepage": "https://github.com/yanhaijing/jslib-base/tree/master#readme",
@@ -16,7 +16,7 @@
     "index.js"
   ],
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 16.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",

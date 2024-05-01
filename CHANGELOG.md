@@ -1,165 +1,192 @@
-# 变更日志
+# Change Log
+
+## 3.0.0 / 2024-5-1
+
+- CLI
+  - Architecture upgrade: from `module` to `template`
+  - Removed the `lang` parameter
+  - Interaction text migrated to English
+  - Removed parameters from the `update` command
+  - Added CI with GitHub Actions
+  - Increased minimum supported Node.js version to 18
+- Template: jslib
+  - Added publish to npm GitHub Actions
+  - Increased minimum supported Node.js version to 18
+  - Upgraded Rollup from v3 to v4
+  - Upgraded @commitlint from v16 to v18
+  - Upgraded nyc from v15 to v17
+  - Upgraded babel-plugin-istanbul from v6 to v7
+  - Upgraded other dependencies to their latest versions
+- Template: tslib
+  - Added publish to npm GitHub Actions
+  - Increased minimum supported Node.js version to 18
+  - Upgraded Rollup from v3 to v4
+  - Upgraded @commitlint from v16 to v18
+  - Upgraded nyc from v15 to v17
+  - Upgraded @typescript-eslint from v6 to v8
+  - Upgraded TypeScript from v5.2 to v5.7
+  - Upgraded other dependencies to their latest versions
 
 ## 2.3.4 / 2023-11-19
 
-- fix: 升级 template_js@3.1.4
+- fix: Upgraded `template_js@3.1.4`.
 
 ## 2.3.3 / 2023-11-19
 
-- fix: 升级 @jsmini/extend@0.5.0，修复 ts 项目在node16下安装警告的问题
+- fix: Upgraded `@jsmini/extend@0.5.0` to fix warnings when installing in Node.js 16 for TypeScript projects.
 
 ## 2.3.2 / 2023-11-19
 
-- fix: 修复升级 rollup-plugin-typescript2@0.36.0 导致的 tslib 有依赖时 build 报错的问题
+- fix: Resolved build errors caused by upgrading `rollup-plugin-typescript2@0.36.0` with `tslib` dependencies.
 
 ## 2.3.1 / 2023-11-19
 
-- 升级 commitlint 依赖
+- Upgraded `commitlint` dependencies.
 
 ## 2.3.0 / 2023-11-19
 
-- 添加生成 sourceMap 功能
-- 新增支持 Node.js v20
-- 升级全部依赖到最新版
+- Added `sourceMap` generation functionality.
+- Added support for Node.js v20.
+- Upgraded all dependencies to the latest versions.
 
 ## 2.2.7 / 2023-10-2
 
-- 优化 README 文档
-- 修复 LICENSE 文件中缺失名字的问题
+- Optimized the `README` documentation.
+- Fixed missing names in the `LICENSE` file.
 
 ## 2.2.6 / 2023-9-24
 
-- 修复ts项目缺失 @babel/runtime-corejs3 依赖
+- Fixed missing `@babel/runtime-corejs3` dependencies in TypeScript projects.
 
 ## 2.2.5 / 2023-9-24
 
-- 更新 README.md 文件
-- clean 命令添加删除 types 目录
+- Updated the `README.md` file.
+- Added the deletion of the `types` directory to the `clean` command.
 
 ## 2.2.4 / 2023-9-24
 
-- 更新 CHANGELOG.md 文件
+- Updated the `CHANGELOG.md` file.
 
 ## 2.2.3 / 2023-9-24
 
-- 修复 engines 兼容性信息，保持和构建工具一致
+- Fixed compatibility information in `engines` to align with the build tool.
 
 ## 2.2.2 / 2023-9-24
 
-- 修复update时删除不存在文件时报错的问题
+- Fixed errors when deleting non-existent files during `update`.
 
 ## 2.2.1 / 2023-9-24
 
-- 更新 README.md 兼容性信息，保持和构建工具一致
+- Updated compatibility information in `README.md` to align with the build tool.
 
 ## 2.2.0 / 2023-9-24
 
-- 修复ts项目缺少types的问题
-- 支持 README.md 文件中 [Build Status] 的替换
-- 支持 README.md 文件中 [Coveralls] 的删除
+- Fixed missing `types` in TypeScript projects.
+- Supported replacement of `[Build Status]` in `README.md`.
+- Supported removal of `[Coveralls]` from `README.md`.
 
 ## 2.1.0 / 2023-9-24
 
-- update 命令支持删除 1.x 无用文件和配置
+- `update` command now supports deleting unused files and configurations from version 1.x.
 
 ## 2.0.0 / 2023-9-23
 
-- 升级全部工具到最新版
-- typescript 库接入 babel 工具
-- 添加 prettier
-- 添加 commitlint
-- 添加 husky
-- 添加一个本地 server
-- 支持 node exports condition
-- 迁移 travis 到 github action
-- 去掉 coveralls 的支持
-- 减少新建的参数数量，9个 -> 7个
+- Upgraded all tools to the latest versions.
+- Integrated Babel for TypeScript libraries.
+- Added `prettier`.
+- Added `commitlint`.
+- Added `husky`.
+- Added a local server.
+- Supported `node exports` condition.
+- Migrated from Travis CI to GitHub Actions.
+- Removed support for Coveralls.
+- Reduced the number of parameters for new commands from 9 to 7.
 
 ## 1.7.0 / 2023-9-19
 
-- 架构调整, mono => sud module
-- 重新验证了项目各种功能
-  - 在 node14 中，js 和 ts 项目，功能完好
-  - 如果大于 node14 安装依赖可能报错，可以使用`npm i --legacy-peer-deps`
+- Architectural adjustment from `mono` to `sub-module`.
+- Re-verified all project functionalities:
+  - Fully functional in Node.js 14 for both JavaScript and TypeScript projects.
+  - Dependency installation may fail for versions above Node.js 14. Use `npm i --legacy-peer-deps`.
 
 ## 1.6.0 / 2019-12-18
 
-- 升级 template.js 版本
+- Upgraded the `template.js` version.
 
 ## 1.5.1 / 2019-10-20
 
-- 修复`rollup`插件，update 时报错的问题
+- Fixed errors in `rollup` plugins during `update`.
 
 ## 1.5.0 / 2019-10-20
 
-- 新增`test`参数，选择测试方案
-- 新增`module`参数，选择模块方案
+- Added `test` parameter to select test strategies.
+- Added `module` parameter to select module strategies.
 
 ## 1.4.2 / 2019-10-10
 
-- 修复 npm 发布时丢失 d.ts 的问题
+- Fixed missing `d.ts` during npm publishing.
 
 ## 1.4.1 / 2019-10-7
 
-- `-c`时不再需要`-f`参数
+- Removed the need for the `-f` parameter when using `-c`.
 
 ## 1.4.0 / 2019-10-7
 
-- 增加对 root 插件的 update
-- 删除对`@jsmini/type`的依赖
+- Added support for updating root plugins.
+- Removed dependency on `@jsmini/type`.
 
 ## 1.3.0 / 2019-10-7
 
-- 增加 version 写入配置文件
-- `update`增加对文件内容的升级
+- Added version writing to configuration files.
+- Enhanced `update` to support file content upgrades.
 
 ## 1.2.0 / 2019-10-7
 
-- 增加 umdname 参数
+- Added `umdname` parameter.
 
 ## 1.1.0 / 2019-10-7
 
-- 命令行参数和提示参数一致化处理
-- 增加自动安装依赖功能
+- Unified CLI and prompt parameter handling.
+- Added automatic dependency installation.
 
 ## 1.0.0 / 2019-10-1
 
-- 架构调整，由 base 改为 cli 工具
-- 支持`jslib new`命令
-- 支持`jslib update`命令
+- Adjusted architecture from `base` to CLI tools.
+- Supported `jslib new` command.
+- Supported `jslib update` command.
 
 ## 0.6.0 / 2019-6-16
 
-- 统一改用 eslint 校验 js 和 ts
+- Standardized using `eslint` for both JavaScript and TypeScript.
 
 ## 0.5.0 / 2018-12-17
 
-- TS 支持测试源文件，改用 nyc
+- Added support for testing source files in TypeScript using `nyc`.
 
 ## 0.4.0 / 2018-11-27
 
-- JS 支持测试源文件，改用 nyc
+- Added support for testing source files in JavaScript using `nyc`.
 
 ## 0.3.0 / 2018-11-23
 
-- 添加对 typescript 的支持
-- 升级 babel7
-- 添加对测试覆盖率的支持
-- 文档添加 emoji
+- Added support for TypeScript.
+- Upgraded to Babel 7.
+- Added support for test coverage.
+- Added emojis to documentation.
 
 ## 0.2.0 / 2018-3-10
 
-- 支持 banner
-- 添加 es5-shim
+- Added `banner` support.
+- Added `es5-shim`.
 
 ## 0.1.0 / 2018-3-1
 
-- ES6 编写源码，编译生成生产代码
-- 第三方依赖自动注入
-- 支持浏览器原生
-- 支持 AMD，CMD
-- 支持 Webpack，Rollup，fis 等
-- 支持 Node
-- 集成单元测试环境
-- 集成 eslint
-- 集成[travis-ci](https://www.travis-ci.org/)
+- Source code written in ES6 and compiled for production.
+- Automatic injection of third-party dependencies.
+- Supported native browser usage.
+- Supported AMD, CMD.
+- Compatible with Webpack, Rollup, and Fis.
+- Node.js support.
+- Integrated unit testing environment.
+- Integrated `eslint`.
+- Integrated [Travis CI](https://www.travis-ci.org/).

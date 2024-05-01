@@ -2,13 +2,13 @@
 
 [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/jslib-base/blob/master/LICENSE)
-[![npm](https://img.shields.io/badge/npm-2.3.4-orange.svg)](https://www.npmjs.com/package/@js-lib/cli)
+[![npm](https://img.shields.io/badge/npm-3.0.0-orange.svg)](https://www.npmjs.com/package/@js-lib/cli)
 [![NPM downloads](http://img.shields.io/npm/dm/@js-lib/cli.svg?style=flat-square)](http://www.npmtrends.com/@js-lib/cli)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/yanhaijing/jslib-base.svg)](http://isitmaintained.com/project/yanhaijing/jslib-base 'Percentage of issues still open')
 
 [English](./README.md) | 简体中文
 
-最好用的 `JS|TS` 第三方库脚手架，10 秒快速搭建一个新库的基础框架
+最好用的 `JS|TS` 第三方库脚手架，10 秒快速搭建一个新库的基础框架。
 
 **基于 jslib-base 的库，都可以分享到[jsmini](https://github.com/jsmini)平台**
 
@@ -26,7 +26,7 @@
 
 ## :rocket: 使用者指南
 
-新建一个项目，推荐使用 Node.js 16 及以上版本。
+新建一个项目，推荐使用 Node.js 18 及以上版本。
 
 ```bash
 $ npx @js-lib/cli new mylib
@@ -71,6 +71,11 @@ $ npm publish # 发布到npm
 ```
 
 ## :kissing_heart: 贡献者指南
+
+如果你想修cli生成的库代码，可以直接修改模版代码，这比较简单，合并后我会将模版搬运到cli，模版仓库如下：
+
+- [jslib](https://github.com/yanhaijing/jslib)
+- [tslit](https://github.com/yanhaijing/tslib)
 
 本项目使用 lerna 来管理多个插件，lerna 常用命令如下：
 

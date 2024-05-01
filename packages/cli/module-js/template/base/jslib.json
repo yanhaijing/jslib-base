@@ -1,0 +1,8 @@
+{
+    "name": "jslibname",
+    "npmname": "jslibnpmname",
+    "umdname": "jslibumdname",
+    "username": "jslibusername",
+    "type": "js",
+    "version": "2.3.4"
+}

@@ -1,0 +1,31 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": "last 2 versions, > 1%, ie >= 11, Android >= 4.1, iOS >= 10.3",
+          "node": "14"
+        },
+        "modules": "commonjs",
+        "loose": false
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3,
+        "versions": "^7.23.2",
+        "helpers": true,
+        "regenerator": false
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  }
+}

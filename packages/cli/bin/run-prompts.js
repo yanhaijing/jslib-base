@@ -12,7 +12,7 @@ function prompts(promptList) {
 let promptList = [];
 
 function runInitPrompts(pathname, argv) {
-  const { npmname, umdname, username, type, lang, manager } = argv;
+  const { npmname, umdname, username, type, manager } = argv;
 
   promptList.push({
     type: 'input',
@@ -30,7 +30,7 @@ function runInitPrompts(pathname, argv) {
   if (!npmname) {
     promptList.push({
       type: 'input',
-      message: 'publish to npm name:',
+      message: 'npm package name:',
       name: 'npmname',
       default: pathname,
       validate: function (val) {
@@ -44,7 +44,7 @@ function runInitPrompts(pathname, argv) {
   if (!umdname) {
     promptList.push({
       type: 'input',
-      message: 'publish to umd name:',
+      message: 'UMD name for package:',
       name: 'umdname',
       default: pathname,
       validate: function (val) {
@@ -71,27 +71,13 @@ function runInitPrompts(pathname, argv) {
   if (!type) {
     promptList.push({
       type: 'list',
-      message: 'use JavaScript|TypeScript:',
+      message: 'select template:',
       name: 'type',
       choices: ['JavaScript', 'TypeScript'],
       filter: function (value) {
         return {
           TypeScript: 'ts',
           JavaScript: 'js',
-        }[value];
-      },
-    });
-  }
-  if (!lang) {
-    promptList.push({
-      type: 'list',
-      message: 'project language:',
-      name: 'lang',
-      choices: ['Chinese', 'English'],
-      filter: function (value) {
-        return {
-          Chinese: 'zh',
-          English: 'en',
         }[value];
       },
     });
@@ -113,41 +99,4 @@ function runInitPrompts(pathname, argv) {
   return prompts(promptList);
 }
 
-function runUpdatePrompts() {
-  const promptList = [
-    {
-      type: 'confirm',
-      message: '是否更新<root>插件:',
-      name: 'root',
-      default: false,
-    },
-    {
-      type: 'confirm',
-      message: '是否更新<package>插件:',
-      name: 'package',
-      default: false,
-    },
-    {
-      type: 'confirm',
-      message: '是否更新<lint>插件:',
-      name: 'lint',
-      default: false,
-    },
-    {
-      type: 'confirm',
-      message: '是否更新<build>插件:',
-      name: 'build',
-      default: false,
-    },
-    {
-      type: 'confirm',
-      message: '是否更新<test>插件:',
-      name: 'test',
-      default: false,
-    },
-  ];
-  return prompts(promptList);
-}
-
 exports.runInitPrompts = runInitPrompts;
-exports.runUpdatePrompts = runUpdatePrompts;

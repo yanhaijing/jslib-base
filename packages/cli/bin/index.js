@@ -5,7 +5,7 @@ const yargs = require('yargs');
 
 const log = require('../util/log');
 
-const { runUpdatePrompts, runInitPrompts } = require('./run-prompts');
+const { runInitPrompts } = require('./run-prompts');
 const { checkProjectExists } = require('../util/file');
 const { init } = require('./init');
 const { update } = require('./update');
@@ -15,45 +15,41 @@ log.init();
 yargs
   .usage('usage: jslib [options]')
   .usage('usage: jslib <command> [options]')
-  .example('jslib new myproject', '新建一个项目 myproject')
+  .example('jslib new myproject', 'Create a new project myproject')
   .alias('h', 'help')
   .alias('v', 'version')
   .command(
     ['new', 'n'],
-    '新建一个项目',
+    'Create a new project',
     function (yargs) {
       return yargs
         .option('force', {
           alias: 'f',
-          describe: '强制新建',
+          describe: 'Force create',
         })
         .option('config', {
           alias: 'c',
-          describe: '仅初始化配置文件',
+          describe: 'Initialize only the configuration file',
         })
         .option('npmname', {
           alias: 'n',
-          describe: '仅初始化 npm 项目名称',
+          describe: 'Initialize the npm package name',
         })
         .option('umdname', {
           alias: 'umd',
-          describe: '仅初始化打包时umd name',
+          describe: 'Initialize the UMD name for package',
         })
         .option('username', {
           alias: 'u',
-          describe: '仅初始化用户名称',
+          describe: 'Initialize the username',
         })
         .option('type', {
           alias: 't',
-          describe: '仅初始化 js/ts 选择',
-        })
-        .option('lang', {
-          alias: 'l',
-          describe: '仅初始化中英文选择',
+          describe: 'Initialize the js/ts selection',
         })
         .option('manager', {
           alias: 'm',
-          describe: '选择仓库包管理方式',
+          describe: 'Select the package management method',
         });
     },
     function (argv) {
@@ -62,9 +58,11 @@ yargs
       });
     },
   )
-  .command(['update', 'u'], '更新一个项目', function (_yargs) {
+  .command(['update', 'u'], 'Update a project', function (_yargs) {
     if (!checkProjectExists(process.cwd(), 'jslib.json')) {
-      console.error('error: 这不是一个jslib库，缺少jslib.json文件');
+      console.error(
+        'error: This is not a jslib library, missing jslib.json file',
+      );
       return;
     }
 
@@ -74,9 +72,7 @@ yargs
       }),
     );
 
-    runUpdatePrompts().then(function (answers) {
-      update(json, answers);
-    });
+    update(json);
   })
   .demandCommand()
-  .epilog('copyright 2018-2023').argv;
+  .epilog('copyright 2018-2025').argv;

@@ -1,25 +1,25 @@
-# 计划列表
+# TODO List
 
-这里列出会在未来添加的新功能，和已经完成的功能
+This document lists new features to be added in the future and features that have already been completed.
 
-- [x] 升级 babel 7
-- [x] 增加 typescript 的支持
-- [x] 测试覆盖率
-- [x] 统一 eslint
-- [x] 提供 CLI 支持
-- [x] 升级依赖工具版本
-- [x] 统一 babel 编译 ts
-- [x] 添加 prettier
-- [x] 添加 commitlint
-- [x] 添加 husky
-- [x] 添加一个本地 server
-- [x] 支持 node exports condition
-- [x] 迁移 travis 到 github action
-- [ ] 支持区分环境打包
-- [ ] 添加 jsdom
-- [ ] 添加 puppeteer
-- [ ] 添加 watch 功能
-- [ ] 添加 chrome headless 等
-- [ ] 支持 github action 自动发包
-- [ ] 升级 eslint v9
-- [ ] 升级 rollup v4
+- [x] Upgrade to Babel 7
+- [x] Add TypeScript support
+- [x] Test coverage
+- [x] Unified ESLint configuration
+- [x] Provide CLI support
+- [x] Upgrade dependency versions
+- [x] Unified Babel compilation for TypeScript
+- [x] Add Prettier
+- [x] Add Commitlint
+- [x] Add Husky
+- [x] Add a local server
+- [x] Support Node.js exports condition
+- [x] Migrate from Travis to GitHub Actions
+- [ ] Support environment-specific builds
+- [ ] Add jsdom
+- [ ] Add Puppeteer
+- [ ] Add watch functionality
+- [ ] Add Chrome Headless and related features
+- [ ] Support GitHub Actions for automated package publishing
+- [ ] Upgrade to ESLint v9
+- [ ] Upgrade to Rollup v4
