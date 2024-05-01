@@ -1,5 +1,10 @@
 # Change Log
 
+## 3.0.6 / 2024-5-1
+
+- template:jslib: update package-lock.json
+- template:tslib: update package-lock.json
+
 ## 3.0.5 / 2024-5-1
 
 - cli: fix update miss package.json

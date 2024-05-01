@@ -1,5 +1,10 @@
 # 变更日志
 
+## 3.0.6 / 2024-5-1
+
+- template:jslib: 更新 package-lock.json
+- template:tslib: 更新 package-lock.json
+
 ## 3.0.5 / 2024-5-1
 
 - cli: fix update 不更新 package.json
