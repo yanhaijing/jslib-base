@@ -21,3 +21,5 @@
 - [ ] 添加 watch 功能
 - [ ] 添加 chrome headless 等
 - [ ] 支持 github action 自动发包
+- [ ] 升级 eslint v9
+- [ ] 升级 rollup v4
