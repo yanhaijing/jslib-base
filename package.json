@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "husky install",
     "preinstall": "npx only-allow yarn",
+    "lint": "eslint packages --ext .js,.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,6 +36,6 @@
     "access": "public"
   },
   "engines": {
-    "node": ">= 14.0.0"
+    "node": ">= 16.0.0"
   }
 }

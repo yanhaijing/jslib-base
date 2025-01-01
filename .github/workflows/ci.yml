@@ -1,0 +1,106 @@
+name: CI for jslib
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint:
+    name: Run Lint on jslib-base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies with Yarn
+        run: yarn install
+
+      - name: Run Lint
+        run: yarn lint
+
+  test-jslib-js:
+    needs: lint
+    name: Test jslib with JS projects
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16, 18, 20, 22]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '${{ matrix.node-version }}'
+
+      - name: Install jslib globally
+        run: yarn install
+
+      - name: Link jslib globally
+        working-directory: packages/cli
+        run: npm link
+
+      - name: Create new JS project
+        working-directory: ../
+        run: echo js-project | jslib new --npmname js-project --umdname js-project --username yanhaijing --type js --lang en --manager npm
+
+      - name: Run lint in JS project
+        working-directory: ../js-project
+        run: npm run lint
+
+      - name: Run tests in JS project
+        working-directory: ../js-project
+        run: npm run test
+
+      - name: Build JS project
+        working-directory: ../js-project
+        run: npm run build
+
+  test-jslib-ts:
+    needs: lint
+    name: Test jslib with TS projects
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16, 18, 20, 22]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '${{ matrix.node-version }}'
+
+      - name: Install jslib globally
+        run: yarn install
+
+      - name: Link jslib globally
+        working-directory: packages/cli
+        run: npm link
+
+      - name: Create new TS project
+        working-directory: ../
+        run: echo ts-project | jslib new --npmname ts-project --umdname ts-project --username yanhaijing --type ts --lang en --manager npm
+
+      - name: Run lint in JS project
+        working-directory: ../ts-project
+        run: npm run lint
+
+      - name: Run tests in JS project
+        working-directory: ../ts-project
+        run: npm run test
+
+      - name: Build JS project
+        working-directory: ../ts-project
+        run: npm run build

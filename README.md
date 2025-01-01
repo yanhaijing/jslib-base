@@ -5,6 +5,7 @@
 [![npm](https://img.shields.io/badge/npm-2.3.4-orange.svg)](https://www.npmjs.com/package/@js-lib/cli)
 [![NPM downloads](http://img.shields.io/npm/dm/@js-lib/cli.svg?style=flat-square)](http://www.npmtrends.com/@js-lib/cli)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/yanhaijing/jslib-base.svg)](http://isitmaintained.com/project/yanhaijing/jslib-base 'Percentage of issues still open')
+![example workflow](https://github.com/yanhaijing/jslib-base/actions/workflows/ci.yml/badge.svg)
 
 English | [简体中文](./README.zh-CN.md)
 
