@@ -1,10 +1,15 @@
-const cli = require('../index.js');
 const pkg = require('../package.json');
+const modulejs = require('../module-js');
+const modulets = require('../module-ts');
 
-function update(option, answers) {
+function update(option) {
   const cmdPath = process.cwd();
   option.version = pkg.version;
-  cli.update(cmdPath, option, answers);
+  if (option.type === 'js') {
+    modulejs.update(cmdPath, option);
+  } else if (option.type === 'ts') {
+    modulets.update(cmdPath, option);
+  }
 }
 
 exports.update = update;

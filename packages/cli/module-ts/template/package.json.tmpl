@@ -1,0 +1,107 @@
+{
+    "name": "<%=npmname%>",
+    "version": "0.1.0",
+    "description": "The best third party JS|TS library scaffold",
+    "sideEffects": false,
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "exports": {
+      "node": {
+        "import": "./dist/index.mjs",
+        "default": "./dist/index.js"
+      },
+      "default": {
+        "import": "./dist/index.mjs",
+        "default": "./dist/index.js"
+      }
+    },
+    "types": "./types/index.d.ts",
+    "scripts": {
+      "preinstall": "npx only-allow npm",
+      "clean": "rimraf ./dist ./types",
+      "start": "http-server -p 3000 -c-1",
+      "release": "npm test && npm run build && git commit -am \\"build: $npm_package_version\\" && git tag $npm_package_version && git push && git push --tags",
+      "build:self": "rollup -c config/rollup.config.cjs",
+      "build:esm": "rollup -c config/rollup.config.esm.cjs",
+      "build:aio": "rollup -c config/rollup.config.aio.cjs",
+      "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio",
+      "test": "nyc mocha",
+      "coveralls": "nyc report --reporter=text-lcov | coveralls",
+      "lint": "eslint -c .eslintrc.cjs 'src/**/*.ts'",
+      "lint:fix": "eslint --fix -c .eslintrc.cjs 'src/**/*.ts' --fix",
+      "prepare": "husky install",
+      "ci": "commit",
+      "cz": "git-cz"
+    },
+    "config": {
+      "commitizen": {
+        "path": "@commitlint/cz-commitlint"
+      }
+    },
+    "author": "<%=username%>",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/<%=username%>/<%=name%>.git"
+    },
+    "bugs": {
+      "url": "https://github.com/<%=username%>/<%=name%>/issues"
+    },
+    "files": [
+      "/dist",
+      "/types",
+      "*.d.ts"
+    ],
+    "engines": {
+      "node": ">=14.0.0",
+      "npm": ">=6.0.0"
+    },
+    "publishConfig": {
+      "registry": "https://registry.npmjs.org",
+      "access": "public"
+    },
+    "devDependencies": {
+      "@js-lib/cli": "^<%=version%>",
+      "cross-env": "^7.0.3",
+      "rimraf": "^5.0.5",
+      "http-server": "^14.1.1",
+      "es5-shim": "^4.6.7",
+      "@babel/plugin-transform-runtime": "^7.23.3",
+      "@babel/preset-env": "^7.23.3",
+      "@jsmini/extend": "^0.5.0",
+      "@rollup/plugin-babel": "^6.0.4",
+      "@rollup/plugin-commonjs": "^25.0.7",
+      "@rollup/plugin-node-resolve": "^15.2.3",
+      "@rollup/plugin-terser": "^0.4.4",
+      "rollup": "^3.29.4",
+      "rollup-plugin-typescript2": "^0.36.0",
+      "tslib": "^2.6.2",
+      "typescript": "^5.2.2",
+      "eslint": "^8.54.0",
+      "eslint-config-prettier": "^9.0.0",
+      "eslint-plugin-import": "^2.29.0",
+      "eslint-plugin-prettier": "^5.0.1",
+      "husky": "^8.0.0",
+      "lint-staged": "^14.0.1",
+      "prettier": "3.1.0",
+      "commitizen": "^4.2.4",
+      "@commitlint/cli": "^16.3.0",
+      "@commitlint/config-conventional": "^16.2.4",
+      "@commitlint/cz-commitlint": "^16.3.0",
+      "@commitlint/format": "^12.1.1",
+      "@commitlint/prompt-cli": "^16.3.0",
+      "@typescript-eslint/eslint-plugin": "^6.11.0",
+      "@typescript-eslint/parser": "^6.11.0",
+      "babel-plugin-istanbul": "^6.1.1",
+      "coveralls": "^3.1.1",
+      "expect.js": "^0.3.1",
+      "mocha": "^10.2.0",
+      "nyc": "^15.1.0",
+      "source-map-support": "^0.5.21",
+      "ts-node": "^10.9.1"
+    },
+    "dependencies": {
+      "@babel/runtime-corejs3": "^7.23.2"
+    }
+  }
+  

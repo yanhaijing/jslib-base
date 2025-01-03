@@ -1,12 +1,16 @@
 const config = require('../module/config');
-const cli = require('../index.js');
+const modulejs = require('../module-js');
+const modulets = require('../module-ts');
 const pkg = require('../package.json');
 const { checkProjectExists } = require('../util/file');
 
 function init(argv, answers) {
   const cmdPath = process.cwd();
-  const { name, npmname, umdname, username, type, lang, manager } =
-    Object.assign({}, argv, answers);
+  const { name, npmname, umdname, username, type, manager } = Object.assign(
+    {},
+    argv,
+    answers,
+  );
   const pathname = String(typeof argv._[1] !== 'undefined' ? argv._[1] : name);
 
   const option = {
@@ -16,7 +20,6 @@ function init(argv, answers) {
     umdname: String(umdname),
     username: String(username),
     type,
-    lang,
     manager,
     version: pkg.version,
   };
@@ -40,7 +43,11 @@ function init(argv, answers) {
     return;
   }
 
-  cli.init(cmdPath, option);
+  if (option.type === 'js') {
+    modulejs.init(cmdPath, option);
+  } else if (option.type === 'ts') {
+    modulets.init(cmdPath, option);
+  }
 }
 
 exports.init = init;

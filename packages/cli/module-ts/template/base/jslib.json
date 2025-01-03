@@ -1,0 +1,8 @@
+{
+    "name": "tslibname",
+    "npmname": "tslibname",
+    "umdname": "tslibname",
+    "username": "tslibusername",
+    "type": "ts",
+    "version": "2.3.4"
+}
